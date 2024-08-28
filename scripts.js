@@ -43,7 +43,7 @@ function initThreeJS() {
 
         // Adjust the model's position and scale
         model.position.set(0, 0, 0);
-        model.scale.set(1, 1, 1);
+        model.scale.set(5, 5, 5);
 
         // Animation loop
         function animate() {
