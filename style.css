@@ -20,6 +20,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: dark background */
+    padding: 20px; /* Optional: some padding around the loader */
+    border-radius: 10px; /* Optional: rounded corners */
 }
 
 #content {
