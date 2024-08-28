@@ -28,26 +28,37 @@ function initThreeJS() {
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
 
-    // Add a basic cube geometry
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    // Add a basic ambient light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
 
-    // Add lighting
-    const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(10, 10, 10);
-    scene.add(light);
+    // Add a directional light
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(10, 10, 10).normalize();
+    scene.add(directionalLight);
 
-    // Animation loop
-    function animate() {
-        requestAnimationFrame(animate);
+    // Load the GLB model
+    const loader = new THREE.GLTFLoader();
+    loader.load('assets/model.glb', function(gltf) {
+        const model = gltf.scene;
+        scene.add(model);
+        
+        // Optional: Adjust model position, scale, or rotation
+        model.position.set(0, 0, 0);
+        model.scale.set(1, 1, 1); // Adjust scale if necessary
 
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        // Animate the model (e.g., rotate)
+        function animate() {
+            requestAnimationFrame(animate);
 
-        renderer.render(scene, camera);
-    }
+            // Example animation: rotate model
+            model.rotation.y += 0.01;
 
-    animate();
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    }, undefined, function(error) {
+        console.error('An error happened while loading the model:', error);
+    });
 }
