@@ -98,9 +98,10 @@ nav ul li a {
 
 #three-d-container {
     width: 100%;
-    max-width: 400px;
-    height: 300px;
-    margin-top: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Footer */
