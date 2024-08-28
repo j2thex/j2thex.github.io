@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const loader = document.getElementById('loader');
     const content = document.getElementById('content');
 
     // Simulate loading time
-    setTimeout(function() {
+    setTimeout(function () {
         loader.style.display = 'none';
         content.style.display = 'block';
         initThreeJS(); // Initialize three.js after loading
@@ -35,9 +35,15 @@ function initThreeJS() {
     directionalLight.position.set(5, 5, 5).normalize();
     scene.add(directionalLight);
 
+    // Initialize OrbitControls
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true; // Enable damping (inertia)
+    controls.dampingFactor = 0.25;
+    controls.screenSpacePanning = false; // Disable panning
+
     // Load the GLB model using GLTFLoader
     const loader = new THREE.GLTFLoader();
-    loader.load('assets/model.glb', function(gltf) {
+    loader.load('assets/model.glb', function (gltf) {
         const model = gltf.scene;
         scene.add(model);
 
@@ -53,7 +59,7 @@ function initThreeJS() {
         }
 
         animate();
-    }, undefined, function(error) {
+    }, undefined, function (error) {
         console.error('An error occurred while loading the model:', error);
     });
 }
