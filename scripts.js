@@ -54,7 +54,7 @@ function initThreeJS() {
         // Animation loop
         function animate() {
             requestAnimationFrame(animate);
-            model.rotation.y += 0.01; // Rotate the model
+            model.rotation.y += 0.00; // Rotate the model
             renderer.render(scene, camera);
         }
 
