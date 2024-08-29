@@ -123,3 +123,36 @@ footer {
         padding: 20px;
     }
 }
+#projects {
+    margin: 50px 0;
+    text-align: left;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project p {
+    font-size: 1em;
+    color: #ccc; /* Slightly lighter color for description */
+    margin: 0;
+}
+
+.project:last-child {
+    margin-bottom: 0; /* Remove margin from the last project */
+}
