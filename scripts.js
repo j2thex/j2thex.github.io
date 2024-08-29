@@ -1,16 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
-
-    // Simulate loading time
-    setTimeout(function () {
-        loader.style.display = 'none';
-        content.style.display = 'block';
-        initThreeJS(); // Initialize three.js after loading
-    }, 2000); // 2 seconds delay for demonstration
-});
-
-function initThreeJS() {
+document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('three-d-container');
 
     // Create a scene
@@ -27,7 +15,7 @@ function initThreeJS() {
     container.appendChild(renderer.domElement);
 
     // Add ambient light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1); // White ambient light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
     scene.add(ambientLight);
 
     // Add directional light
@@ -35,31 +23,36 @@ function initThreeJS() {
     directionalLight.position.set(5, 5, 5).normalize();
     scene.add(directionalLight);
 
-    // Initialize OrbitControls
+    // Initialize OrbitControls for interaction
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true; // Enable damping (inertia)
+    controls.enableDamping = true;
     controls.dampingFactor = 0.25;
-    controls.screenSpacePanning = false; // Disable panning
 
     // Load the GLB model using GLTFLoader
     const loader = new THREE.GLTFLoader();
-    loader.load('assets/model.glb', function (gltf) {
+    loader.load('assets/model.glb', function(gltf) {
         const model = gltf.scene;
         scene.add(model);
 
-        // Adjust the model's position and scale
-        model.position.set(0, 0, 0);
+        // Scale the model
         model.scale.set(5, 5, 5);
 
         // Animation loop
         function animate() {
             requestAnimationFrame(animate);
-            model.rotation.y += 0.00; // Rotate the model
+            controls.update(); // Update controls
             renderer.render(scene, camera);
         }
 
         animate();
-    }, undefined, function (error) {
+    }, undefined, function(error) {
         console.error('An error occurred while loading the model:', error);
     });
-}
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+});

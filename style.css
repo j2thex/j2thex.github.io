@@ -1,174 +1,72 @@
-/* Reset some default styles */
-* {
+/* Global styles */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #121212;
-    color: #e0e0e0;
-    overflow-x: hidden;
+    color: #ffffff;
 }
 
-/* Loader Styles */
-#loader {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    background-color: rgba(0, 0, 0, 1); /* Optional: dark background */
-    padding: 20px; /* Optional: some padding around the loader */
-    border-radius: 10px; /* Optional: rounded corners */
-}
-
-#content {
-    display: none;
-}
-
-/* Header and Navigation */
-header {
-    background-color: #1f1f1f;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Parallax Effect */
-.parallax {
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-#hero {
-    background-image: url('assets/hero-bg.jpg');
-}
-
-#projects {
-    background-image: url('assets/projects-bg.jpg');
-}
-
-.hero-content {
-    text-align: center;
-}
-
-/* Content Section */
-.content-section {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    margin: auto;
-}
-
-#three-d-container {
-    width: 100%;
-    height: 800px;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #1f1f1f;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    z-index: 1000;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .about-content {
-        padding: 20px;
-    }
-}
-/* Flexbox setup for the about-content */
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
     padding: 20px;
-}
-
-/* 3D container takes 70% of the width */
-#three-d-container {
-    width: 70%;
-    height: 400px; /* Adjust height as needed */
-    padding-right: 20px; /* Add some padding to the right for spacing */
-}
-
-/* Text content takes 30% of the width */
-.text-content {
-    width: 30%;
-    padding-left: 20px; /* Add some padding to the left for spacing */
-}
-
-/* Styling for the section title */
-#about h2 {
-    margin-bottom: 20px;
-}
-
-/* Optional: Ensure the section itself has padding and proper alignment */
-.content-section {
-    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.grid-column-12 {
+    grid-column: span 12;
+}
+
+.grid-column-8 {
+    grid-column: span 8;
+}
+
+.grid-column-4 {
+    grid-column: span 4;
+}
+
+/* Twitter Embed Styles */
+header {
+    margin-bottom: 40px;
+}
+
+/* 3D Model Container */
+#three-d-container {
+    width: 100%;
+    height: 400px; /* Adjust the height of the 3D model */
+    background-color: #1a1a1a; /* Dark background color for the model container */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr); /* Reduce the number of columns on smaller screens */
     }
 
-    #three-d-container,
-    .text-content {
-        width: 100%;
-        padding: 0;
+    .grid-column-12 {
+        grid-column: span 6;
     }
 
-    #three-d-container {
-        margin-bottom: 20px;
+    .grid-column-8 {
+        grid-column: span 6;
+    }
+
+    .grid-column-4 {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on very small screens */
+    }
+
+    .grid-column-12,
+    .grid-column-8,
+    .grid-column-4 {
+        grid-column: span 1;
     }
 }
