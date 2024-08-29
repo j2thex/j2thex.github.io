@@ -1,41 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeff Smith Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <!-- Include three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Include GLTFLoader -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
+
 <body>
-    <header class="grid-container">
-        <div class="grid-column-12">
-            <!-- Twitter Embed -->
-            <a class="twitter-timeline" data-width="100%" data-height="300" href="https://twitter.com/yourtwitterhandle?ref_src=twsrc%5Etfw">Tweets by Jeff</a> 
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-    </header>
+    <!-- Loader -->
+    <div id="loader">
+        <img src="assets/loader.svg" alt="Loading..." />
+    </div>
 
-    <section id="about" class="grid-container">
-        <div class="grid-column-8">
-            <div id="three-d-container">
-                <!-- Three.js container for 3D model -->
-            </div>
-        </div>
-        <div class="grid-column-4">
-            <h2>About Me</h2>
-            <p>Hi, my name is Jeff Smith, but you might know me as that crypto guy. Beyond the buzz of blockchain, I've got a knack for breathing life into digital products and SaaS.</p>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <div id="content" style="display: none;">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section id="additional-content" class="grid-container">
-        <div class="grid-column-12">
-            <!-- Placeholder for additional content -->
-            <p>Add more content here</p>
-        </div>
-    </section>
+        <main>
+            <!-- Hero Section with Parallax Effect -->
+            <section id="hero" class="parallax">
+                <div class="hero-content">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>Discover my work and experience in Fintech, Web3, Blockchain, and AI.</p>
+                </div>
+            </section>
 
-    <script src="scripts.js"></script>
+            <!-- About Section with 3D Model Placeholder -->
+            <section id="about" class="content-section">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Hi, my name is Jeff Smith, but you might know me as that crypto guy. Beyond the buzz of blockchain, I've got a knack for breathing life into digital products and SaaS.</p>
+                    <div id="three-d-container">
+                        <!-- Three.js container -->
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Projects Section with Parallax Effect -->
+            <section id="projects" class="parallax">
+                <h2>Projects</h2>
+                <div class="projects-content">
+                    <div class="project">
+                        <h3>Web DEX Platform</h3>
+                        <p>An innovative trading platform with restaking options.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Non-Custodial Wallet</h3>
+                        <p>A Web3 wallet with staking options for digital assets.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Mobile Bank Digital Euro PoC</h3>
+                        <p>A proof of concept app for digital Euro transactions.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Jeff Smith Portfolio</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
+
 </html>
