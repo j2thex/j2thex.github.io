@@ -39,27 +39,40 @@ function initThreeJS() {
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true; // Enable damping (inertia)
     controls.dampingFactor = 0.25;
+    controls.enableZoom = false;
     controls.screenSpacePanning = false; // Disable panning
 
-    // Load the GLB model using GLTFLoader
-    const loader = new THREE.GLTFLoader();
-    loader.load('assets/model.glb', function (gltf) {
-        const model = gltf.scene;
-        scene.add(model);
+    // Load the MTL and OBJ files together
+    const mtlLoader = new THREE.MTLLoader();
+    mtlLoader.load('assets/model.mtl', function (materials) {
+        materials.preload();
 
-        // Adjust the model's position and scale
-        model.position.set(0, 0, 0);
-        model.scale.set(5, 5, 5);
+        const objLoader = new THREE.OBJLoader();
+        objLoader.setMaterials(materials);
+        objLoader.load('assets/model.obj', function (obj) {
+            obj.scale.set(5, 5, 5); // Adjust the scale if needed
+            scene.add(obj);
 
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            model.rotation.y += 0.00; // Rotate the model
-            renderer.render(scene, camera);
-        }
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                obj.rotation.y += 0.01;
+                controls.update(); // Update controls
+                renderer.render(scene, camera);
+            }
 
-        animate();
-    }, undefined, function (error) {
-        console.error('An error occurred while loading the model:', error);
+            animate();
+        }, undefined, function (error) {
+            console.error('An error occurred while loading the model:', error);
+        });
+    }, function (error) {
+        console.error('An error occurred while loading the materials:', error);
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
     });
 }

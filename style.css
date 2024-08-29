@@ -1,4 +1,8 @@
 /* Reset some default styles */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +10,53 @@
 }
 
 body {
+    font-family: Poppins, Arial, sans-serif;
     line-height: 1.6;
     background-color: #121212;
     color: #e0e0e0;
     overflow-x: hidden;
 }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('assets/fonts/ComicNeue-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('assets/fonts/ComicNeue-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/* Apply the fonts */
+body,
+html {
+    font-family: 'Comic Neue', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
 
 /* Loader Styles */
 #loader {
@@ -19,9 +65,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    background-color: rgba(0, 0, 0, 1); /* Optional: dark background */
-    padding: 20px; /* Optional: some padding around the loader */
-    border-radius: 10px; /* Optional: rounded corners */
+    background-color: rgba(0, 0, 0, 1);
+    /* Optional: dark background */
+    padding: 20px;
+    /* Optional: some padding around the loader */
+    border-radius: 10px;
+    /* Optional: rounded corners */
 }
 
 #content {
@@ -69,9 +118,20 @@ nav ul li a {
     color: white;
 }
 
+
+
 #hero {
     background-image: url('assets/bg.webp');
 }
+#hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem; /* Increase the font size */
+    margin-bottom: 10px;
+    color: #ffffff; /* Ensure the text is white */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Keep or adjust the text shadow */
+}
+
+
 
 #projects {
     background-image: url('assets/projects-bg.jpg');
@@ -79,6 +139,11 @@ nav ul li a {
 
 .hero-content {
     text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Increase opacity to 0.6 for better contrast */
+    border-radius: 10px;
+
 }
 
 /* Content Section */
@@ -125,25 +190,30 @@ footer {
 
 /* Projects Section Styling */
 #projects {
-    padding: 60px 20px; /* Padding around the section */
+    padding: 60px 20px;
+    /* Padding around the section */
 }
 
 #projects h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    text-align: left; /* Align the section title to the left */
+    text-align: left;
+    /* Align the section title to the left */
 }
 
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Space out project items evenly */
+    justify-content: space-between;
+    /* Space out project items evenly */
 }
 
 .project-item {
-    flex: 1 1 30%; /* Ensure each project takes up about 30% of the width */
-    background-color: #1a1a1a; /* Dark background color for the project blocks */
+    flex: 1 1 30%;
+    /* Ensure each project takes up about 30% of the width */
+    background-color: #1a1a1a;
+    /* Dark background color for the project blocks */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -172,7 +242,8 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .project-item {
-        flex: 1 1 45%; /* On smaller screens, project items take up more space */
+        flex: 1 1 45%;
+        /* On smaller screens, project items take up more space */
     }
 }
 
