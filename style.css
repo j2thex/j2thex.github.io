@@ -6,7 +6,6 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #121212;
     color: #e0e0e0;
@@ -71,7 +70,7 @@ nav ul li a {
 }
 
 #hero {
-    background-image: url('assets/hero-bg.jpg');
+    background-image: url('assets/bg.webp');
 }
 
 #projects {
@@ -123,36 +122,66 @@ footer {
         padding: 20px;
     }
 }
+
+/* Projects Section Styling */
 #projects {
-    margin: 50px 0;
-    text-align: left;
-    padding: 0 20px;
-    max-width: 800px;
-    margin: 0 auto; /* Center the section horizontally */
+    padding: 60px 20px; /* Padding around the section */
 }
 
 #projects h2 {
-    text-align: center;
-    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: left; /* Align the section title to the left */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out project items evenly */
+}
+
+.project-item {
+    flex: 1 1 30%; /* Ensure each project takes up about 30% of the width */
+    background-color: #1a1a1a; /* Dark background color for the project blocks */
+    padding: 20px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project {
-    margin-bottom: 30px;
-}
-
-.project h3 {
-    font-size: 1.5em;
+.project-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
-.project p {
-    font-size: 1em;
-    color: #ccc; /* Slightly lighter color for description */
-    margin: 0;
+.project-item p {
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.project:last-child {
-    margin-bottom: 0; /* Remove margin from the last project */
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-item {
+        flex: 1 1 45%; /* On smaller screens, project items take up more space */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-item {
+        flex: 1 1 100%;
+    }
 }
