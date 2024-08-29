@@ -123,3 +123,52 @@ footer {
         padding: 20px;
     }
 }
+/* Flexbox setup for the about-content */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* 3D container takes 70% of the width */
+#three-d-container {
+    width: 70%;
+    height: 400px; /* Adjust height as needed */
+    padding-right: 20px; /* Add some padding to the right for spacing */
+}
+
+/* Text content takes 30% of the width */
+.text-content {
+    width: 30%;
+    padding-left: 20px; /* Add some padding to the left for spacing */
+}
+
+/* Styling for the section title */
+#about h2 {
+    margin-bottom: 20px;
+}
+
+/* Optional: Ensure the section itself has padding and proper alignment */
+.content-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    #three-d-container,
+    .text-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    #three-d-container {
+        margin-bottom: 20px;
+    }
+}
