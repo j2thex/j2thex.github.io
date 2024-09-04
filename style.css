@@ -182,7 +182,10 @@ footer {
         display: block;
         margin: 10px 0;
     }
-
+    #hero {
+        background-size: cover;
+        background-position: center;
+    }
     .about-content {
         padding: 20px;
     }
@@ -239,6 +242,27 @@ footer {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Funky Book a Meeting button */
+.book-meeting-btn {
+    background-color: #ff4081; /* Funky pink button */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-decoration: none; /* Remove underline */
+}
+
+.book-meeting-btn:hover {
+    background-color: #ff6585;
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .project-item {
@@ -255,4 +279,62 @@ footer {
     .project-item {
         flex: 1 1 100%;
     }
+}
+
+
+/* Footer styling */
+.footer {
+    padding: 40px 20px;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Footer heading */
+.footer h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Contact form styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none; /* Disable resizing for the textarea */
+}
+
+button.contact-btn {
+    background-color: #ff4081;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button.contact-btn:hover {
+    background-color: #ff6585;
 }
