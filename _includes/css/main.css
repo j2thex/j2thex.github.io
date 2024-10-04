@@ -214,12 +214,13 @@ section.success {
   }
 /* Mobile responsiveness */
 @media (max-width: 900px) {
-    .custom-list li:first-child {
-        margin-top: 20px; /* Increase this value as needed */
-      }
-    .custom-list {
+       .custom-list {
       flex-direction: column; /* Stack the buttons vertically on small screens */
       gap: 10px;
+
+      .custom-list a:first-child {
+        margin-top: 20px; /* Increase this value as needed */
+      }
     }
   
     .custom-list a {
