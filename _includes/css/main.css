@@ -206,16 +206,23 @@ section.success {
 .custom-list li {
   margin: 0;
 }
+.custom-list a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+  }
+/* Mobile responsiveness */
 @media (max-width: 600px) {
-  .custom-list {
-    flex-direction: column; /* Stack the buttons vertically */
-    gap: 10px;
+    .custom-list {
+      flex-direction: column; /* Stack the buttons vertically on small screens */
+      gap: 10px;
+    }
+  
+    .custom-list a {
+      width: 100%; /* Make buttons take full width on small screens */
+      box-sizing: border-box;
+    }
   }
-
-  .custom-list a {
-    width: 100%; /* Make buttons full-width on mobile */
-  }
-}
 
 #portfolio .portfolio-item {
     right: 0;
