@@ -206,6 +206,16 @@ section.success {
 .custom-list li {
   margin: 0;
 }
+@media (max-width: 600px) {
+  .custom-list {
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 10px;
+  }
+
+  .custom-list a {
+    width: 100%; /* Make buttons full-width on mobile */
+  }
+}
 
 #portfolio .portfolio-item {
     right: 0;
