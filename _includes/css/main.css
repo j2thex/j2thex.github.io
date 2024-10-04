@@ -80,11 +80,26 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-header {
-    text-align: center;
-    color: #fff;
-    background: #{{ site.color.primary }};
-}
+/* Gradient background animation */
+@keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  header {
+      background: linear-gradient(45deg, #6a11cb, #2575fc, #ff5f6d, #ffc371);
+      background-size: 300% 300%;
+      animation: gradientBackground 15s ease infinite;
+      text-align: center;
+      color: #fff;
+  }
 
 header .container {
     padding-top: 100px;
@@ -194,6 +209,7 @@ section.success {
         padding-top: 75px;
     }
 }
+
 
 .custom-list {
   list-style: none; /* Removes bullet points */
