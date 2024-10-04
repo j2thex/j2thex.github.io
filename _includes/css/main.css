@@ -201,6 +201,7 @@ section.success {
   display: flex; /* Aligns items next to each other */
   justify-content: center;
   gap: 10px; /* Adds 10px spacing between list items */
+  flex-wrap: wrap;
 }
 
 .custom-list li {
@@ -212,14 +213,16 @@ section.success {
     text-align: center;
   }
 /* Mobile responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .custom-list {
       flex-direction: column; /* Stack the buttons vertically on small screens */
       gap: 10px;
     }
   
     .custom-list a {
-      width: 100%; /* Make buttons take full width on small screens */
+      width: 90%; /* Make buttons take full width on small screens */
+      max-width: 400px; /* Set a better max width for iPhone */
+      margin: 0 auto;
       box-sizing: border-box;
     }
   }
