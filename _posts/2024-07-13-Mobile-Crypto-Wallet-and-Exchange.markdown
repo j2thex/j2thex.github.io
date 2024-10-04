@@ -1,7 +1,7 @@
 ---
 layout: default
 modal-id: 6
-date: 2014-07-15
+date: 2018-07-15
 img: utorg.png
 alt: image-alt
 project-date: April 2014
