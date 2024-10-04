@@ -217,10 +217,7 @@ section.success {
        .custom-list {
       flex-direction: column; /* Stack the buttons vertically on small screens */
       gap: 10px;
-
-      .custom-list li:first-child {
-        margin-top: 20px !important; /* Increase this value as needed */
-      }
+      margin-top: 20px !important;
     }
   
     .custom-list a {
