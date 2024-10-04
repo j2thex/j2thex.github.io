@@ -18,6 +18,9 @@
           </div>
           <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
         </a>
+        <div class="caption">
+          <p>{{ post.title }}</p> <!-- This line adds the caption for each item -->
+        </div>
       </div>
       {% endfor %}
     </div>
