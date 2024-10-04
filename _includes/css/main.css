@@ -218,8 +218,8 @@ section.success {
       flex-direction: column; /* Stack the buttons vertically on small screens */
       gap: 10px;
 
-      .custom-list a:first-child {
-        margin-top: 20px; /* Increase this value as needed */
+      .custom-list li:first-child {
+        margin-top: 20px !important; /* Increase this value as needed */
       }
     }
   
