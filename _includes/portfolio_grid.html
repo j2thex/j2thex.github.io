@@ -1,4 +1,44 @@
 <!-- Portfolio Grid Section -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Open modal if there's a hash in the URL on page load
+    const hash = window.location.hash;
+    if (hash) {
+        const modal = document.querySelector(hash);
+        if (modal) {
+            $(modal).modal('show'); // Show the modal if the hash matches an element
+        }
+    }
+
+    // Add click event listener to all portfolio links
+    document.querySelectorAll('.portfolio-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const targetModal = this.getAttribute('href'); // Get modal id from href
+            history.pushState(null, null, targetModal);    // Update the URL hash without reloading the page
+        });
+    });
+
+    // Handle browser back/forward navigation (popstate)
+    window.addEventListener('popstate', function () {
+        const hash = window.location.hash;
+        if (hash) {
+            const modal = document.querySelector(hash);
+            if (modal) {
+                $(modal).modal('show'); // Open modal based on hash
+            }
+        } else {
+            // Close any open modal if the hash is removed
+            $('.portfolio-modal').modal('hide');
+        }
+    });
+
+    // When a modal is closed, reset the URL hash
+    $('.portfolio-modal').on('hidden.bs.modal', function () {
+        history.pushState(null, null, window.location.pathname); // Remove the hash from the URL
+    });
+});
+
+ </script>
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
     <div class="row">
