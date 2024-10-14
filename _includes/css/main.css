@@ -478,7 +478,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 .portfolio-modal .modal-content img {
@@ -533,4 +533,31 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+/* Style headers inside modals */
+
+
+
+
+
+.modal-body ul li {
+    font-size: 1.1em; /* Match font size with the text */
+    line-height: 1.5; /* Add space between lines */
+    margin-bottom: 10px; /* Add spacing between bullet points */
+}
+/* Align text to the left inside modal */
+.modal-body p, .modal-body div, .modal-body ul {
+    text-align: left; /* Ensure all text is left-aligned */
+    font-size: 1.1em; /* Ensure the text size is consistent */
+}
+/* Set a base font size for modal body */
+.modal-body {
+    font-size: 1em;
+}
+/* Increase top padding for h2 headers inside modal */
+.modal-body h2 {
+    padding-top: 50px; /* Adjust this value to whatever padding you want */
+    padding-bottom: 10px; /* Adjust this value to whatever padding you want */
+    font-size: 1.5em; /* Keep this or adjust if needed */
+    margin-top: 0; /* Ensure there's no conflicting margin */
 }

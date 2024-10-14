@@ -41,6 +41,12 @@
               </li>
               {% endif %}
             </ul>
+            {% if post.case_study %}
+            <div class="case-study-content">
+              {{ post.case_study | markdownify }}
+            </div>
+            {% endif %}
+            <br>&nbsp;</br>
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
           </div>
