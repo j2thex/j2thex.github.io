@@ -141,26 +141,29 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     .navbar-fixed-top {
-        padding: 25px 0;
+        padding: 10px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
-
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-
     .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+        padding: 0px 0; /* Reduced padding when shrunk */
     }
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+    .navbar-brand img {
+        height: 35px; /* Initial height */
+        margin-top: -5px; /* Move up by 5px */
+    margin-left: -10px; /* Move left by 10px */
+    transition: height 0.3s ease-in-out, margin 0.3s ease-in-out; /* Smooth transition */
     }
+    
+    /* When the navbar shrinks on scroll */
+    .navbar-shrink .navbar-brand img {
+        height: 25px; /* Smaller height when scrolling */
+        margin-top: 0; /* Ensure it's properly centered when shrunk */
+        margin-left: 0;
+    }
+    
 }
 
 .navbar {
