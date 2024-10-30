@@ -7,28 +7,27 @@ alt: image-alt
 project-date: October 2024
 client: JibX
 category: Web Development
-description: A decentralized exchange (DEX) built on Ethereum Virtual Machine (EVM)-compatible blockchains. It supports perpetual futures trading, allowing users to trade digital assets with high leverage.
+description: A decentralized exchange (DEX) built on Ethereum Virtual Machine (EVM)-compatible blockchains. It supports perpetual futures trading, and deposit restaking, allowing users to trade digital assets with high leverage and earn interest in the process using restaking technology.
 link: https://jibx.io
-services: Product roadmap, Product Requirements, User stories, Prototyping, Glossary
+services: Product vision, Roadmap, Requirements, User stories, Prototypes, Glossary, Landing page, 
+deliverables: Platform MVP, Platform Roadmap, Requirements specification, documentation 
 case_study: |
-  ## Goal
-  The goal of **jibx.io** is to create a simple, effective perpetual DEX. We’ve added restaking mechanisms so users can generate extra income, which helps reduce their fees and improve their trading experience.
+  ### Objective
+  To build a streamlined perpetual DEX that maximizes user profitability with restaking, lowering fees, and creating a superior trading experience.
 
-  ## Key Features
-  - **Interface**: Clean and easy-to-use for all types of traders.
-  - **Restaking**: Lets users earn yields on their deposited collateral.
-  - **Price Oracles**: Provide accurate pricing for trades and margin calculations.
-  - **Security**: Smart contracts and decentralized tech make it transparent and safe.
+  ### Core Features
+  - **Intuitive Interface**: Simple for new and advanced traders alike.
+  - **Restaking Yield**: Users earn returns on collateral, enhancing profits.
+  - **Accurate Price Feeds**: Reliable oracles ensure trade accuracy.
+  - **High Security**: Transparent, fully decentralized smart contracts.
 
-  ## Recent Achievements
-  We’ve made solid progress on key features:
-  - **Collateral Integration**: Supports ETH and stablecoins.
-  - **Restaking**: Developed a system for users to earn on their collateral.
-  - **Price Oracles**: Set up for reliable price feeds.
-  - **UI Design**: Finished the first version of the user-friendly interface.
+  ### Achievements
+  - Launched ETH and stablecoin collateral support
+  - Operational restaking for collateral-based earnings
+  - Initial UI with clean, trader-focused design
 
-  ## Upcoming Developments
-  - **Advanced Order Types**: Adding stop loss and take profit options.
-  - **Cross-Chain Integration**: Expanding to other EVM blockchains.
-  - **Community Feedback**: Launching a way to gather and act on user input.
+  ### Upcoming Enhancements
+  - **Advanced Orders**: Integrate stop loss and take profit functions
+  - **Cross-Chain Trading**: Expansion to additional EVM chains
+  - **User Feedback Hub**: Create a loop for user-driven improvements
 ---

@@ -3,7 +3,7 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
+@import "project-grid";
 body {
     overflow-x: hidden;
 }
@@ -560,4 +560,66 @@ footer .footer-below {
     padding-bottom: 10px; /* Adjust this value to whatever padding you want */
     font-size: 1.5em; /* Keep this or adjust if needed */
     margin-top: 0; /* Ensure there's no conflicting margin */
+}
+.#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(24, 188, 156, 0.9);
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content .eye-icon {
+    width: 48px;
+    height: 48px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content .eye-outer {
+    stroke: #fff;
+    stroke-width: 2;
+    fill: none;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content .eye-inner {
+    fill: #e74c3c;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.1); }
+}
+
+#portfolio * {
+    z-index: 2;
 }
