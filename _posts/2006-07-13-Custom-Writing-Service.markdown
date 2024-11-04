@@ -7,6 +7,7 @@ alt: image-alt
 project-date: April 2008
 client: Uvocorp.com
 category: Web Development, Microsoft Office Plug-in
-description: A popular plagiarism detection service which identifies plagiarism in texts using advanced algorithms.
+title: Custom Writing Service
+description: A custom writing service platform that connects clients with professional writers. The platform includes advanced project management features, secure payment processing, and quality control systems.
 link: https://uvocorp.com
 ---
