@@ -79,64 +79,90 @@ hr.star-primary:after {
 .img-centered {
     margin: 0 auto;
 }
-
-/* Gradient background animation */
-@keyframes gradientBackground {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  header {
-      background: linear-gradient(45deg, #6a11cb, #2575fc, #ff5f6d, #ffc371);
-      background-size: 300% 300%;
-      animation: gradientBackground 15s ease infinite;
-      text-align: center;
-      color: #fff;
-  }
-
-header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+.solid-white-text {
+    color: #ffffff !important; /* Pure white with !important to override any other styles */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Optional: adds slight shadow for better readability */
 }
 
-header img {
-    display: block;
-    margin: 0 auto 20px;
+.solid-white-text:hover {
+    color: #ffffff !important;
+}
+/* Modern gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 150px 0;
+  color: white;
+}
+
+header .intro-text {
+  text-align: center;
 }
 
 header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
+  font-size: 4.5em;
+  font-weight: 700;
+  text-transform: none;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 40px;
 }
 
-@media(min-width:768px) {
-    header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
-    }
+.header-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
 
-    header .intro-text .name {
-        font-size: 4.75em;
-    }
+.btn-primary, .btn-outline-light {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 5px;
+  min-width: 200px;
+}
 
-    header .intro-text .skills {
-        font-size: 1.75em;
-    }
+.btn-primary:hover, .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-outline-light {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 @media(min-width:768px) {
@@ -454,11 +480,25 @@ footer .footer-below {
 }
 
 .scroll-top .btn {
+    border-radius: 0;
     width: 50px;
     height: 50px;
-    border-radius: 100%;
-    font-size: 20px;
-    line-height: 28px;
+    background: none;        /* Remove background */
+    border: none;           /* Remove border */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top .btn i {
+    font-size: 32px;        /* Make chevron larger */
+    color: #2c3e50;         /* Dark color for the chevron */
+    margin: 0;
+}
+
+.scroll-top .btn:hover i {
+    color: #233140;         /* Slightly darker on hover */
 }
 
 .scroll-top .btn:focus {
@@ -622,4 +662,107 @@ footer .footer-below {
 
 #portfolio * {
     z-index: 2;
+}
+
+/* Add these styles after the existing header styles */
+
+header .profile-image {
+  margin: 0 auto 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+header .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+header .profile-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+  header .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  header .intro-text .name {
+    font-size: 3em;
+  }
+  
+  header .intro-text .skills {
+    font-size: 1.4em;
+  }
+  
+  .header-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-outline-light {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Fix modal issues */
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.modal-open {
+    overflow: auto !important;
+    padding-right: 0 !important;
+}
+
+/* Add smooth scrolling to the document */
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-top {
+    z-index: 1049;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+}
+
+.scroll-top .btn {
+    border-radius: 0;
+    width: 50px;
+    height: 50px;
+    background: none;        /* Remove background */
+    border: none;           /* Remove border */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top .btn i {
+    font-size: 32px;        /* Make chevron larger */
+    color: #2c3e50;         /* Dark color for the chevron */
+    margin: 0;
+}
+
+.scroll-top .btn:hover i {
+    color: #233140;         /* Slightly darker on hover */
+}
+
+.scroll-top .btn:focus {
+    outline: 0;
 }
