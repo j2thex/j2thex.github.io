@@ -40,3 +40,20 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Add this after your existing code
+$(document).ready(function() {
+    // Proper modal initialization
+    $('.portfolio-modal').modal({
+        backdrop: 'static',
+        keyboard: true,
+        show: false
+    });
+
+    // Prevent background clicks from closing modal
+    $('.modal').on('click', function(e) {
+        if ($(e.target).hasClass('modal')) {
+            e.stopPropagation();
+        }
+    });
+});

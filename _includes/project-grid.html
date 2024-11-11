@@ -9,9 +9,9 @@
       <div class="grid">
         {% for post in site.posts %}
           <div class="project-card portfolio-item">
-            <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-              <div class="project-image-container">
-                <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}" class="project-image">
+            <div class="project-image-container">
+              <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}" class="project-image">
+              <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                 <div class="caption">
                   <div class="caption-content">
                     <svg class="eye-icon" viewBox="0 0 24 24" width="48" height="48">
@@ -20,23 +20,31 @@
                     </svg>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
             <div class="project-content">
               <h3>{{ post.title }}</h3>
               <p>{{ post.description | strip_html | truncatewords: 20 }}</p>
-              {% if post.tags %}
+              {% if post.category %}
                 <div class="project-tags">
-                  {% for service in post.services limit:3 %}
-                    <span class="tag">{{ service }}</span>
+                  {% assign categories = post.category | split: ", " %}
+                  {% for category in categories %}
+                    <span class="tag">{{ category | strip }}</span>
                   {% endfor %}
                 </div>
               {% endif %}
             </div>
             <div class="project-links">
-              <a href="#portfolioModal-{{ post.modal-id }}" class="button portfolio-link" data-toggle="modal">Details</a>
+              <div class="left-buttons">
+                <a href="#portfolioModal-{{ post.modal-id }}" class="button portfolio-link" data-toggle="modal">Details</a>
+                {% if post.link %}
+                  <a href="{{ post.link }}" class="live-link" target="_blank" rel="nofollow noopener noreferrer">
+                    <i class="fas fa-globe"></i>
+                  </a>
+                {% endif %}
+              </div>
               {% if post.github_url %}
-                <a href="{{ post.github_url }}" class="button github-button" target="_blank" rel="noopener noreferrer">
+                <a href="{{ post.github_url }}" class="button github-button" target="_blank" rel="nofollow noopener noreferrer">
                   <i class="fab fa-github"></i>
                 </a>
               {% endif %}
@@ -49,35 +57,38 @@
   
   <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const hash = window.location.hash;
-    if (hash) {
-      const modal = document.querySelector(hash);
-      if (modal) {
-        $(modal).modal('show');
-      }
-    }
-  
-    document.querySelectorAll('.portfolio-link').forEach(link => {
-      link.addEventListener('click', function (e) {
-        const targetModal = this.getAttribute('href');
-        history.pushState(null, null, targetModal);
-      });
+    // Modal handling
+    const modalLinks = document.querySelectorAll('.portfolio-link[data-toggle="modal"]');
+    modalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const targetModal = this.getAttribute('href');
+            if (targetModal) {
+                $(targetModal).modal('show');
+                history.pushState(null, null, targetModal);
+            }
+        });
     });
-  
-    window.addEventListener('popstate', function () {
-      const hash = window.location.hash;
-      if (hash) {
-        const modal = document.querySelector(hash);
-        if (modal) {
-          $(modal).modal('show');
+
+    // Handle back/forward navigation
+    window.addEventListener('popstate', function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const modal = document.querySelector(hash);
+            if (modal) {
+                $(modal).modal('show');
+            }
+        } else {
+            $('.portfolio-modal').modal('hide');
         }
-      } else {
-        $('.portfolio-modal').modal('hide');
-      }
     });
-  
-    $('.portfolio-modal').on('hidden.bs.modal', function () {
-      history.pushState(null, null, window.location.pathname);
+
+    // Clean up URL when modal is closed
+    $('.portfolio-modal').on('hidden.bs.modal', function() {
+        if (window.location.hash) {
+            history.pushState(null, null, window.location.pathname);
+        }
     });
   });
   </script>
