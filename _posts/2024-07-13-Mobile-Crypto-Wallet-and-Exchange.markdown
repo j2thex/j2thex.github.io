@@ -6,7 +6,7 @@ img: utorg.png
 alt: image-alt
 project-date: April 2014
 client: UTORG
-category: Web Development
+category: Mobile App Development, Backend Development
 description: Centralized cryptocurrency exchange and mobile wallet enabling smooth conversion and transfer transactions.
 link: https://utorg.pro/
 services: Wallet Development, Exchange Integration, Security Implementation, UX Design

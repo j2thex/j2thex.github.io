@@ -64,11 +64,5 @@ credits: 'Thank you for your business!'
 # Build settings
 markdown: kramdown
 permalink: pretty
-
-#for posts
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      permalink: ""
+baseurl: ""
+url: ""

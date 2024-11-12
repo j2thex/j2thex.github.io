@@ -45,15 +45,33 @@ $('.navbar-collapse ul li a').click(function() {
 $(document).ready(function() {
     // Proper modal initialization
     $('.portfolio-modal').modal({
-        backdrop: 'static',
+        backdrop: true,
         keyboard: true,
         show: false
     });
 
-    // Prevent background clicks from closing modal
+    // Show close button
+    $('.close-modal').show();
+
+    // Ensure modal close button works
+    $('[data-dismiss="modal"]').on('click', function() {
+        $(this).closest('.modal').modal('hide');
+        history.pushState(null, null, window.location.pathname);
+    });
+
+    // Handle modal closing on backdrop click
     $('.modal').on('click', function(e) {
         if ($(e.target).hasClass('modal')) {
-            e.stopPropagation();
+            $(this).modal('hide');
+            history.pushState(null, null, window.location.pathname);
+        }
+    });
+
+    // Handle keyboard escape
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') {
+            $('.modal').modal('hide');
+            history.pushState(null, null, window.location.pathname);
         }
     });
 });

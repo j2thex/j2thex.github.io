@@ -7,7 +7,7 @@ alt: image-alt
 project-date: October 2024
 client: JibX
 
-description: A decentralized exchange (DEX) built on Ethereum Virtual Machine (EVM)-compatible blockchains. It supports perpetual futures trading, and deposit restaking, allowing users to trade digital assets with high leverage and earn interest in the process using restaking technology.
+description: A decentralized exchange built on Ethereum Virtual Machine-compatible blockchains. It supports perpetual futures trading, and deposit restaking, allowing users to trade digital assets with high leverage and earn interest in the process using restaking technology.
 link: https://jibx.io
 services: Product vision, Roadmap, Requirements, User stories, Prototypes, Glossary, Landing page, 
 category: Web Development, Product Roadmap, Requirements specification, Product documentation 
