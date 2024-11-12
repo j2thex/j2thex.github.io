@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#page-top">
+      <a class="navbar-brand" href="/">
         <img src="/img/n0thn-logo.svg" alt="n0thn logo" class="logo">
       </a>
     </div>
@@ -17,17 +17,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
-          <a href="#page-top"></a>
+        <li class="{% if page.url == '/' %}active{% endif %}">
+          <a href="/">Home</a>
         </li>
-        <li class="page-scroll">
-          <a href="#portfolio">Projects</a>
+        <li class="page-scroll {% if page.url contains 'portfolio' %}active{% endif %}">
+          <a href="/#portfolio">Projects</a>
         </li>
-        <li class="page-scroll">
-          <a href="#about">About</a>
+        <li class="page-scroll {% if page.url contains 'about' %}active{% endif %}">
+          <a href="/#about">About</a>
         </li>
-        <li class="page-scroll">
-          <a href="#contact">Contact</a>
+        <li class="{% if page.url contains 'blog' %}active{% endif %}">
+          <a href="/blog">Blog</a>
+        </li>
+        <li class="page-scroll {% if page.url contains 'contact' %}active{% endif %}">
+          <a href="/#contact">Contact</a>
         </li>
       </ul>
     </div>

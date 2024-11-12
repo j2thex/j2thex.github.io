@@ -8,6 +8,7 @@
       </div>
       <div class="grid">
         {% for post in site.posts %}
+          {% unless post.categories contains 'blog' %}
           <div class="project-card portfolio-item">
             <a href="#portfolioModal-{{ post.modal-id }}" class="card-link portfolio-link" data-toggle="modal">
               <div class="project-image-container">
@@ -53,6 +54,7 @@
               </div>
             </div>
           </div>
+          {% endunless %}
         {% endfor %}
       </div>
     </div>
