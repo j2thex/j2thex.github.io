@@ -1,5 +1,8 @@
 <!-- Header -->
 <header>
+  <!-- Add particle container -->
+  <div class="particle-container"></div>
+  
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -8,9 +11,17 @@
           <div class="profile-image">
             <img class="img-responsive img-circle" src="img/profile.png" alt="Profile Photo">
           </div>
-          <span class="name">{{ site.hero }}</span>
+          
+          <!-- Add about section -->
+          <div class="about">
+            <h1>{{ site.hero }}</h1>
+            <h2>{{ site.skills }}</h2>
+            <h3>Use your mouse to interact with the particles</h3>
+          </div>
+          
           <hr class="star-light" />
-          <span class="skills">{{ site.skills }}</span>
+          
+          <!-- Update header buttons with new styling -->
           <div class="header-buttons">
             <a href="https://calendly.com/jnamed" class="btn btn-outline-light btn-lg solid-white-text" target="_blank" rel="nofollow">
               <i class="fa fa-calendar"></i> Schedule a Call
