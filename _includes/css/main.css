@@ -103,12 +103,14 @@ hr.star-primary:after {
   }
 }
 
-/* Updated header style with particle effect */
+/* Updated header style with particle effect and gradient */
 header {
   position: relative;
   padding: 150px 0;
   color: white;
-  background: #111;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   overflow: hidden;
 }
 
@@ -119,7 +121,22 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: auto;  /* Enable pointer events */
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.1); /* Lighter overlay */
+  mix-blend-mode: multiply; /* Change to multiply for dark particles */
+}
+
+/* Keep the gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Container should be above particles but allow events to pass through */

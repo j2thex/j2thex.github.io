@@ -2,7 +2,7 @@ var NUM_PARTICLES = ((ROWS = 50) * (COLS = 150)),
     THICKNESS = Math.pow(80, 2),
     SPACING = 3,
     MARGIN = 0,
-    COLOR = 220,
+    COLOR = 40,
     DRAG = 0.95,
     EASE = 0.25;
 
@@ -95,7 +95,9 @@ function initParticles() {
                 p = list[i];
                 if (p.x >= 0 && p.x < w && p.y >= 0 && p.y < h) {
                     n = (~~p.x + (~~p.y * w)) * 4;
-                    b[n] = b[n+1] = b[n+2] = COLOR;
+                    b[n] = COLOR;
+                    b[n+1] = COLOR;
+                    b[n+2] = COLOR;
                     b[n+3] = 255;
                 }
             }
