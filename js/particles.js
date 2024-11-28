@@ -15,6 +15,8 @@ var particle = {
 
 function initParticles() {
     var container = document.querySelector('.particle-container');
+    if (!container) return;
+    
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
     var man = false;
@@ -30,12 +32,18 @@ function initParticles() {
     canvas.style.height = '100%';
     
     function resize() {
-        w = canvas.width = container.offsetWidth;
-        h = canvas.height = container.offsetHeight;
+        if (container.offsetWidth === 0 || container.offsetHeight === 0) {
+            requestAnimationFrame(resize);
+            return;
+        }
+        
+        w = canvas.width = Math.max(container.offsetWidth, 1);
+        h = canvas.height = Math.max(container.offsetHeight, 1);
         
         var xSpacing = w / COLS;
         var ySpacing = h / ROWS;
         
+        list = [];
         for (var i = 0; i < NUM_PARTICLES; i++) {
             var p = Object.create(particle);
             p.x = p.ox = (i % COLS) * xSpacing;
@@ -61,10 +69,17 @@ function initParticles() {
     });
     
     container.appendChild(canvas);
-    resize();
+    
+    setTimeout(resize, 100);
+    
     window.addEventListener('resize', resize);
     
     function step() {
+        if (!w || !h) {
+            requestAnimationFrame(step);
+            return;
+        }
+        
         if (tog = !tog) {
             if (man) {
                 for (i = 0; i < NUM_PARTICLES; i++) {
@@ -89,20 +104,22 @@ function initParticles() {
                 }
             }
         } else {
-            b = (a = ctx.createImageData(w, h)).data;
-            
-            for (i = 0; i < NUM_PARTICLES; i++) {
-                p = list[i];
-                if (p.x >= 0 && p.x < w && p.y >= 0 && p.y < h) {
-                    n = (~~p.x + (~~p.y * w)) * 4;
-                    b[n] = COLOR;
-                    b[n+1] = COLOR;
-                    b[n+2] = COLOR;
-                    b[n+3] = 255;
+            if (w > 0 && h > 0) {
+                b = (a = ctx.createImageData(w, h)).data;
+                
+                for (i = 0; i < NUM_PARTICLES; i++) {
+                    p = list[i];
+                    if (p.x >= 0 && p.x < w && p.y >= 0 && p.y < h) {
+                        n = (~~p.x + (~~p.y * w)) * 4;
+                        b[n] = COLOR;
+                        b[n+1] = COLOR;
+                        b[n+2] = COLOR;
+                        b[n+3] = 255;
+                    }
                 }
+                
+                ctx.putImageData(a, 0, 0);
             }
-            
-            ctx.putImageData(a, 0, 0);
         }
         requestAnimationFrame(step);
     }
