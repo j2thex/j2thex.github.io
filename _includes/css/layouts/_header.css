@@ -1,0 +1,16 @@
+.header {
+  padding: var(--spacing-lg) 0;
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.header p {
+  font-size: var(--font-size-h3);
+  opacity: 0.9;
+} 

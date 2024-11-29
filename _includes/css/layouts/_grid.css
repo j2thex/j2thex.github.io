@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-grid {
+  padding: var(--spacing-lg) 0;
+}
+
+.project-grid h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+} 

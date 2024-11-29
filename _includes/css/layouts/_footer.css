@@ -1,0 +1,26 @@
+.footer {
+  padding: var(--spacing-lg) 0;
+  background-color: var(--color-text);
+  color: white;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: var(--transition-base);
+}
+
+.footer-links a:hover {
+  opacity: 1;
+} 
