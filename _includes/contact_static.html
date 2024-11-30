@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <form action="//formspree.io/mbljrgow" method="POST" name="sentMessage" id="contactForm" novalidate>
+        <form action="https://formspree.io/f/mbljrgow" method="POST" name="sentMessage" id="contactForm" novalidate>
           <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label for="name">Name</label>
@@ -26,9 +26,13 @@
               <p class="help-block text-danger"></p>
             </div>
           </div>
-          <div>
-            <input type="hidden" name="_subject" value="New submission!">
-            <input type="text" name="_gotcha" style="display:none" />
+          <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label for="phone">Phone Number</label>
+              <input type="tel" name="phone" class="form-control" placeholder="Phone Number" id="phone" required
+                data-validation-required-message="Please enter your phone number.">
+              <p class="help-block text-danger"></p>
+            </div>
           </div>
           <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -38,6 +42,8 @@
               <p class="help-block text-danger"></p>
             </div>
           </div>
+          <input type="hidden" name="_subject" value="New submission!">
+          <input type="text" name="_gotcha" style="display:none">
           <br>
           <div id="success"></div>
           <div class="row">
