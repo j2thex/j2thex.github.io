@@ -4,14 +4,17 @@
     <div class="container">
       <div class="row">
         <div class="footer-col col-md-4">
-          <h3>{{ site.footer.location }}</h3>
-          <p>
+          <center>
+            <h3>{{ site.footer.location }}</h3>
+            <p>
             {% for adress in site.address %}
             {{ adress.line }} <br>
             {% endfor %}
           </p>
+        </center>
         </div>
         <div class="footer-col col-md-4">
+        <center>
           <h3>{{ site.footer.social }}</h3>
           <ul class="list-inline">
             {% for network in site.social %}
@@ -21,10 +24,13 @@
             </li>
             {% endfor %}
           </ul>
+        </center>
         </div>
         <div class="footer-col col-md-4">
+        <center>
           <h3>{{ site.footer.credits }}</h3>
           <p>{{ site.credits }}</p>
+        </center>
         </div>
       </div>
     </div>

@@ -7,7 +7,30 @@
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--spacing-md);
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--spacing-md);
+  }
+  
+  .project-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    margin-right: var(--spacing-sm);
+  }
+  
+  .project-card:last-child {
+    margin-right: var(--spacing-md);
+  }
+  
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+  .grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

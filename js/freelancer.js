@@ -38,7 +38,9 @@ $('body').scrollspy({
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
+    if($('.navbar-toggle').is(':visible')) {
+        $('.navbar-collapse').collapse('hide');
+    }
 });
 
 // Add this after your existing code
@@ -73,5 +75,26 @@ $(document).ready(function() {
             $('.modal').modal('hide');
             history.pushState(null, null, window.location.pathname);
         }
+    });
+
+    // Initialize Bootstrap navbar toggle with proper event handling
+    $('.navbar-toggle').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.navbar-collapse').toggleClass('in');
+    });
+
+    // Close menu when clicking outside
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.navbar-collapse').length && 
+            !$(event.target).is('.navbar-toggle') && 
+            $('.navbar-collapse').hasClass('in')) {
+            $('.navbar-collapse').removeClass('in');
+        }
+    });
+
+    // Prevent menu from closing when clicking inside
+    $('.navbar-collapse').on('click', function(e) {
+        e.stopPropagation();
     });
 });

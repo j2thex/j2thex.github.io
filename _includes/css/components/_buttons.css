@@ -52,4 +52,39 @@
 .disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* Social icons styles */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.social-link {
+  color: white;
+  font-size: 1.5rem;
+  transition: var(--transition-base);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Specific social icon colors on hover */
+.fa-x:hover,
+[title="x-twitter"]:hover {
+  color: #000000;
+}
+
+.fa-facebook:hover {
+  color: #1877f2;
+}
+
+.fa-youtube:hover {
+  color: #ff0000;
+}
+
+.fa-telegram:hover {
+  color: #0088cc;
 } 

@@ -44,7 +44,7 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: x
+  - title: x-twitter
     url: https://x.com/jeff_smith01
   - title: facebook
     url: https://www.facebook.com/blockchain.jeff
@@ -58,7 +58,7 @@ social:
 # Postal address (add as many lines as necessary)
 address:
   - line: 01133 Konovaltsya str. 37
-  - line: Kyiv, Ukraine 🇺🇦
+  - line: Kyiv, Ukraine 🇺🇦 
 
 # Credits content
 credits: 'Thank you for your business!'

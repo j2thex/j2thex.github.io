@@ -6,7 +6,7 @@
   transition: var(--transition-base);
   display: flex;
   flex-direction: column;
-
+  height: 100%;
   cursor: pointer;
 }
 
@@ -30,10 +30,16 @@
   text-decoration: none;
   color: inherit;
   background: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-content {
   padding: var(--spacing-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-content h3 {
@@ -47,12 +53,12 @@
 }
 
 .project-links {
-
+  padding: var(--spacing-md);
   padding-top: 0;
-  margin-top: auto;
   display: flex;
   justify-content: flex-start;
   gap: var(--spacing-sm);
+  margin-top: auto;
 }
 
 .link-icons {

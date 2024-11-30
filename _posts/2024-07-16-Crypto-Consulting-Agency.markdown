@@ -6,7 +6,7 @@ img: 0hub.png
 alt: image-alt
 project-date: April 2018
 client: Zerohub
-category: Web Development
+category: Web Development, Investment Strategy, WEB3 Education
 description: A consulting business helping investors submerge into the world of WEB3 and crypto exchange opportunities.
 link: https://0hub.com
 services: Investment Strategy, WEB3 Education, Market Analysis, Portfolio Management
