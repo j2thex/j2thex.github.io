@@ -19,8 +19,9 @@
           <ul class="list-inline">
             {% for network in site.social %}
             <li>
-              <a href="{{ network.url }}" class="btn-social btn-outline"><i
-                  class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
+              <a href="{{ network.url }}" class="btn-social">
+                <i class="fa-brands {% if network.title == 'twitter' %}fa-x-twitter{% else %}fa-{{ network.title }}{% endif %}"></i>
+              </a>
             </li>
             {% endfor %}
           </ul>
