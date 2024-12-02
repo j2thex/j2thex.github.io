@@ -243,61 +243,40 @@
   }
   
   @media (max-width: 768px) {
+    .grid-container {
+      width: 100%;
+      overflow-x: hidden;
+      padding: 0;
+      position: relative;
+    }
+
     .grid {
       display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      scroll-padding: var(--spacing-md);
+      overflow-x: auto; /* Changed back to auto */
       -webkit-overflow-scrolling: touch;
-      padding-bottom: var(--spacing-md);
-      gap: var(--spacing-md);
-      scroll-behavior: smooth;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      width: 100%;
-      padding: 0 1rem;
+      scroll-snap-type: x mandatory;
+      gap: 15px;
+      padding: 15px;
       margin: 0;
-      flex-wrap: nowrap;
+      width: 100%;
+      /* Remove potentially conflicting properties */
+      position: relative;
       touch-action: pan-x;
-      user-select: none;
-      cursor: grab;
     }
-    
+
     .project-card {
       flex: 0 0 85%;
-      scroll-snap-align: center;
-      margin-right: 0;
       min-width: 280px;
-      flex-shrink: 0;
-      width: 85%;
+      max-width: 400px;
+      scroll-snap-align: start;
+      /* Remove margin and other potentially conflicting properties */
     }
-    
-    .grid:active {
-      cursor: grabbing;
-    }
-    
-    .grid::-webkit-scrollbar {
-      display: none;
-    }
-    
-    .project-grid {
-      overflow-x: hidden;
-      width: 100%;
-      padding: 4rem 0;
-    }
-    
-    .project-grid h2 {
-      font-size: 3rem;
-    }
-    
-    .project-content h3 {
-      font-size: calc(var(--font-size-h3) * 0.9);
-    }
-    
-    .project-content p,
-    .tag,
-    .button {
-        font-size: var(--font-size-base);
+
+    /* Ensure no pointer events interference */
+    .project-card a,
+    .project-card .project-links,
+    .project-card .link-icons {
+      pointer-events: auto;
     }
   }
   

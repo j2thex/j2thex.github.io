@@ -57,30 +57,39 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const grid = document.querySelector('.grid');
-  if (!grid) {
-    console.error('Grid element not found');
-    return;
-  }
+  if (!grid) return;
 
-  console.log('Grid element found:', grid);
-  console.log('Grid styles:', window.getComputedStyle(grid));
+  let startX;
+  let scrollLeft;
+  let isDown = false;
 
   grid.addEventListener('touchstart', (e) => {
-    console.log('Touch start:', {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY
-    });
+    isDown = true;
+    startX = e.touches[0].pageX - grid.offsetLeft;
+    scrollLeft = grid.scrollLeft;
+    console.log('Touch start:', startX);
+  });
+
+  grid.addEventListener('touchend', () => {
+    isDown = false;
+    console.log('Touch end');
   });
 
   grid.addEventListener('touchmove', (e) => {
-    console.log('Touch move:', {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY
-    });
+    if (!isDown) return;
+    e.preventDefault(); // Prevent default touch behavior
+    const x = e.touches[0].pageX - grid.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed multiplier
+    grid.scrollLeft = scrollLeft - walk;
+    console.log('Scrolling to:', grid.scrollLeft);
   });
 
-  grid.addEventListener('scroll', () => {
-    console.log('Scroll position:', grid.scrollLeft);
-  });
+  // Prevent click events from interfering with scroll
+  grid.addEventListener('click', (e) => {
+    if (Math.abs(startX - (e.pageX - grid.offsetLeft)) > 5) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
 });
 </script>
