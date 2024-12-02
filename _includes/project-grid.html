@@ -11,7 +11,7 @@
     <div class="grid">
       {% for post in site.posts %}
         {% unless post.categories contains 'blog' %}
-        <div class="project-card">
+        <div class="project-card" data-modal="portfolioModal-{{ post.modal-id }}">
           <div class="project-image-container">
             <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}" class="project-image">
           </div>
@@ -43,6 +43,7 @@
               </a>
             {% endif %}
           </div>
+          <a href="#portfolioModal-{{ post.modal-id }}" data-toggle="modal" style="display: none;"></a>
         </div>
         {% endunless %}
       {% endfor %}
