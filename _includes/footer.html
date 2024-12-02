@@ -57,71 +57,32 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const grid = document.querySelector('.grid');
-  if (!grid) return;
-
-  const cards = Array.from(grid.querySelectorAll('.project-card'));
-  let isScrolling;
-  
-  function handleScroll() {
-    clearTimeout(isScrolling);
-    
-    isScrolling = setTimeout(() => {
-      const gridRect = grid.getBoundingClientRect();
-      const centerX = gridRect.left + gridRect.width / 2;
-      
-      let closestCard = null;
-      let closestDistance = Infinity;
-      
-      cards.forEach(card => {
-        const cardRect = card.getBoundingClientRect();
-        const cardCenterX = cardRect.left + cardRect.width / 2;
-        const distance = Math.abs(centerX - cardCenterX);
-        
-        card.classList.remove('active');
-        
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestCard = card;
-        }
-      });
-      
-      if (closestCard) {
-        closestCard.classList.add('active');
-      }
-    }, 100);
-  }
+  if (!grid || window.innerWidth > 768) return;
 
   let startX;
   let scrollLeft;
-  let isDown = false;
+  let isDragging = false;
 
-  grid.addEventListener('touchstart', (e) => {
-    isDown = true;
-    grid.style.scrollBehavior = 'auto';
+  function handleTouchStart(e) {
+    isDragging = true;
     startX = e.touches[0].pageX - grid.offsetLeft;
     scrollLeft = grid.scrollLeft;
-  });
+  }
 
-  grid.addEventListener('touchend', () => {
-    isDown = false;
-    grid.style.scrollBehavior = 'smooth';
-    handleScroll();
-  });
-
-  grid.addEventListener('touchmove', (e) => {
-    if (!isDown) return;
+  function handleTouchMove(e) {
+    if (!isDragging) return;
+    e.preventDefault();
     const x = e.touches[0].pageX - grid.offsetLeft;
-    const walk = (x - startX);
-    grid.scrollLeft = scrollLeft - walk;
-  });
+    const walk = startX - x;
+    grid.scrollLeft = scrollLeft + walk;
+  }
 
-  grid.addEventListener('scroll', () => {
-    if (!isDown) {
-      handleScroll();
-    }
-  });
+  function handleTouchEnd() {
+    isDragging = false;
+  }
 
-  // Initial call
-  handleScroll();
+  grid.addEventListener('touchstart', handleTouchStart);
+  grid.addEventListener('touchmove', handleTouchMove);
+  grid.addEventListener('touchend', handleTouchEnd);
 });
 </script>
