@@ -1,84 +1,65 @@
 document.addEventListener('DOMContentLoaded', function() {
-  try {
-    const grid = document.querySelector('.grid');
-    if (!grid || window.innerWidth > 768) return;
+  const grid = document.querySelector('.grid');
+  if (!grid || window.innerWidth > 768) return;
 
-    // Add mouse events for testing
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+  let startX;
+  let currentX;
+  let isDown = false;
 
-    grid.addEventListener('mousedown', (e) => {
-      isDown = true;
-      grid.style.cursor = 'grabbing';
-      startX = e.pageX - grid.offsetLeft;
-      scrollLeft = grid.scrollLeft;
-      console.log('Mouse down:', { startX, scrollLeft });
-    });
-
-    grid.addEventListener('mouseleave', () => {
-      isDown = false;
-      grid.style.cursor = 'grab';
-    });
-
-    grid.addEventListener('mouseup', () => {
-      isDown = false;
-      grid.style.cursor = 'grab';
-    });
-
-    grid.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - grid.offsetLeft;
-      const walk = (x - startX);
-      grid.scrollLeft = scrollLeft - walk;
-      console.log('Mouse move:', { 
-        scrollLeft: grid.scrollLeft,
-        walk,
-        x
-      });
-    });
-
-    // Touch events
-    function handleTouchStart(e) {
-      isDown = true;
-      startX = e.touches[0].pageX - grid.offsetLeft;
-      scrollLeft = grid.scrollLeft;
-      console.log('Touch start:', { startX, scrollLeft });
-    }
-
-    function handleTouchMove(e) {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.touches[0].pageX - grid.offsetLeft;
-      const walk = (x - startX);
-      grid.scrollLeft = scrollLeft - walk;
-      console.log('Touch move:', {
-        scrollLeft: grid.scrollLeft,
-        walk,
-        x
-      });
-    }
-
-    function handleTouchEnd() {
-      isDown = false;
-      console.log('Touch end');
-    }
-
-    grid.addEventListener('touchstart', handleTouchStart, { passive: false });
-    grid.addEventListener('touchmove', handleTouchMove, { passive: false });
-    grid.addEventListener('touchend', handleTouchEnd);
-
-    // Log initial metrics
-    console.log('Grid metrics:', {
-      width: grid.offsetWidth,
-      scrollWidth: grid.scrollWidth,
-      clientWidth: grid.clientWidth,
-      children: grid.children.length,
-      firstChildWidth: grid.children[0]?.offsetWidth
-    });
-
-  } catch (error) {
-    console.error('Grid initialization error:', error);
+  function handleStart(x) {
+    isDown = true;
+    startX = x;
+    currentX = x;
+    grid.style.cursor = 'grabbing';
   }
+
+  function handleMove(x) {
+    if (!isDown) return;
+    const dx = x - currentX;
+    currentX = x;
+    grid.scrollLeft -= dx;
+  }
+
+  function handleEnd() {
+    isDown = false;
+    grid.style.cursor = 'grab';
+  }
+
+  // Touch Events
+  grid.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    handleStart(e.touches[0].pageX);
+  }, { passive: false });
+
+  grid.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    handleMove(e.touches[0].pageX);
+  }, { passive: false });
+
+  grid.addEventListener('touchend', () => {
+    handleEnd();
+  });
+
+  // Mouse Events (for testing)
+  grid.addEventListener('mousedown', (e) => {
+    handleStart(e.pageX);
+  });
+
+  grid.addEventListener('mousemove', (e) => {
+    handleMove(e.pageX);
+  });
+
+  grid.addEventListener('mouseup', handleEnd);
+  grid.addEventListener('mouseleave', handleEnd);
+
+  // Log initial state
+  console.log('Grid setup:', {
+    offsetWidth: grid.offsetWidth,
+    scrollWidth: grid.scrollWidth,
+    scrollable: grid.scrollWidth > grid.offsetWidth,
+    children: Array.from(grid.children).map(child => ({
+      width: child.offsetWidth,
+      margin: window.getComputedStyle(child).marginRight
+    }))
+  });
 }); 
