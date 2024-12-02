@@ -245,25 +245,24 @@
   @media (max-width: 768px) {
     .grid-container {
       width: 100%;
-      overflow-x: hidden;
-      padding: 0;
-      position: relative;
+      overflow: hidden;
+      padding: 0 15px;
+      margin: 0;
     }
 
     .grid {
       display: flex;
       overflow-x: auto;
-      scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x proximity;
-      gap: 20px;
-      padding: 20px;
-      margin: 0;
-      width: 100%;
+      scroll-snap-type: x mandatory;
+      gap: 15px;
+      margin: 0 -15px;
+      padding: 15px;
+      width: calc(100% + 30px);
       position: relative;
-      touch-action: pan-x;
-      -ms-overflow-style: none;
+      /* Hide scrollbar */
       scrollbar-width: none;
+      -ms-overflow-style: none;
     }
 
     .grid::-webkit-scrollbar {
@@ -275,27 +274,15 @@
       min-width: 280px;
       max-width: 400px;
       scroll-snap-align: center;
-      transform-origin: center center;
-      transition: all 0.3s ease;
-      opacity: 0.8;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.7;
       transform: scale(0.95);
     }
 
+    /* Remove perspective to fix vertical scroll issues */
     .project-card.active {
       opacity: 1;
       transform: scale(1);
-    }
-
-    .grid-container {
-      perspective: 1000px;
-    }
-
-    .project-card {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .project-card.active {
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
   }

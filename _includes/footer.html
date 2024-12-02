@@ -62,12 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const cards = Array.from(grid.querySelectorAll('.project-card'));
   let isScrolling;
   
-  // Initialize first card as active
-  if (cards.length > 0) {
-    cards[0].classList.add('active');
-  }
-
-  // Function to handle scroll animations
   function handleScroll() {
     clearTimeout(isScrolling);
     
@@ -83,16 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardCenterX = cardRect.left + cardRect.width / 2;
         const distance = Math.abs(centerX - cardCenterX);
         
-        // Remove active class from all cards
         card.classList.remove('active');
-        
-        // Calculate scale and opacity based on distance from center
-        const maxDistance = gridRect.width / 2;
-        const scale = Math.max(0.95, 1 - (distance / maxDistance) * 0.1);
-        const opacity = Math.max(0.8, 1 - (distance / maxDistance) * 0.3);
-        
-        card.style.transform = `scale(${scale})`;
-        card.style.opacity = opacity;
         
         if (distance < closestDistance) {
           closestDistance = distance;
@@ -100,46 +85,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      // Add active class to closest card
       if (closestCard) {
         closestCard.classList.add('active');
-        closestCard.style.transform = 'scale(1)';
-        closestCard.style.opacity = '1';
       }
-    }, 50); // Small timeout for performance
+    }, 100);
   }
 
-  // Smooth scroll handling
   let startX;
   let scrollLeft;
   let isDown = false;
 
   grid.addEventListener('touchstart', (e) => {
     isDown = true;
+    grid.style.scrollBehavior = 'auto';
     startX = e.touches[0].pageX - grid.offsetLeft;
     scrollLeft = grid.scrollLeft;
   });
 
   grid.addEventListener('touchend', () => {
     isDown = false;
+    grid.style.scrollBehavior = 'smooth';
     handleScroll();
   });
 
   grid.addEventListener('touchmove', (e) => {
     if (!isDown) return;
-    e.preventDefault();
     const x = e.touches[0].pageX - grid.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX);
     grid.scrollLeft = scrollLeft - walk;
-    handleScroll();
   });
 
-  // Handle scroll events
   grid.addEventListener('scroll', () => {
-    handleScroll();
+    if (!isDown) {
+      handleScroll();
+    }
   });
 
-  // Initial call to set first card active
+  // Initial call
   handleScroll();
 });
 </script>
