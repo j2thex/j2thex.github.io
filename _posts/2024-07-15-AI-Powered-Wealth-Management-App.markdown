@@ -6,10 +6,9 @@ img: ego.png
 alt: image-alt
 project-date: April 2023
 client: ego
-category: Web Development, Mobile App Development
+category: Web Development, Mobile App Development, AI Integration, LLM Development, API Orchestration, UX Design
 description: AI powered chat-based payment platform, allowing to perform complex actions by writing 1 simple sentence even with typos by orchestrating LLMs with various APIs.
 link: https://egos.com
-services: AI Integration, LLM Development, API Orchestration, UX Design
 deliverables: Chat Interface, Payment System, API Integration Layer, Documentation
 case_study: |
   ### Objective

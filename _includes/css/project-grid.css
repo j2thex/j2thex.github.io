@@ -244,7 +244,31 @@
   
   @media (max-width: 768px) {
     .grid {
-      grid-template-columns: 1fr;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding: var(--spacing-md);
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: var(--spacing-md);
+      gap: var(--spacing-md);
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    .project-card {
+      flex: 0 0 85%;
+      scroll-snap-align: start;
+      margin-right: 0;
+      min-width: 280px;
+    }
+    
+    .grid::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .grid {
+      touch-action: pan-x pan-y pinch-zoom;
     }
     
     .project-grid h2 {
