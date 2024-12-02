@@ -97,4 +97,94 @@ $(document).ready(function() {
     $('.navbar-collapse').on('click', function(e) {
         e.stopPropagation();
     });
+
+    // Mobile menu functionality
+    $('.mobile-menu-btn').on('click', function() {
+        $(this).find('i').toggleClass('fa-bars fa-times');
+        $('.nav-menu').toggleClass('active');
+        $('body').toggleClass('menu-open');
+    });
+
+    // Close mobile menu when clicking a link
+    $('.nav-link').on('click', function() {
+        $('.mobile-menu-btn').find('i').removeClass('fa-times').addClass('fa-bars');
+        $('.nav-menu').removeClass('active');
+        $('body').removeClass('menu-open');
+    });
+
+    // Disable particles.js on mobile
+    function handleParticles() {
+        if (window.innerWidth <= 768) {
+            if (window.pJSDom && window.pJSDom[0]) {
+                window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                window.pJSDom = [];
+            }
+            $('.particle-container').hide();
+        } else {
+            if (!window.pJSDom || !window.pJSDom[0]) {
+                // Proper particles configuration for desktop
+                particlesJS("particle-container", {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "shape": {
+                            "type": "circle"
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 6,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        }
+                    },
+                    "retina_detect": true
+                });
+                $('.particle-container').show();
+            }
+        }
+    }
+
+    // Handle particles on load and resize
+    $(window).on('load', handleParticles);
+    $(window).on('resize', handleParticles);
 });
