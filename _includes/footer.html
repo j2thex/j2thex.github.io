@@ -59,6 +59,57 @@ document.addEventListener('DOMContentLoaded', function() {
   const grid = document.querySelector('.grid');
   if (!grid) return;
 
+  const cards = Array.from(grid.querySelectorAll('.project-card'));
+  let isScrolling;
+  
+  // Initialize first card as active
+  if (cards.length > 0) {
+    cards[0].classList.add('active');
+  }
+
+  // Function to handle scroll animations
+  function handleScroll() {
+    clearTimeout(isScrolling);
+    
+    isScrolling = setTimeout(() => {
+      const gridRect = grid.getBoundingClientRect();
+      const centerX = gridRect.left + gridRect.width / 2;
+      
+      let closestCard = null;
+      let closestDistance = Infinity;
+      
+      cards.forEach(card => {
+        const cardRect = card.getBoundingClientRect();
+        const cardCenterX = cardRect.left + cardRect.width / 2;
+        const distance = Math.abs(centerX - cardCenterX);
+        
+        // Remove active class from all cards
+        card.classList.remove('active');
+        
+        // Calculate scale and opacity based on distance from center
+        const maxDistance = gridRect.width / 2;
+        const scale = Math.max(0.95, 1 - (distance / maxDistance) * 0.1);
+        const opacity = Math.max(0.8, 1 - (distance / maxDistance) * 0.3);
+        
+        card.style.transform = `scale(${scale})`;
+        card.style.opacity = opacity;
+        
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestCard = card;
+        }
+      });
+      
+      // Add active class to closest card
+      if (closestCard) {
+        closestCard.classList.add('active');
+        closestCard.style.transform = 'scale(1)';
+        closestCard.style.opacity = '1';
+      }
+    }, 50); // Small timeout for performance
+  }
+
+  // Smooth scroll handling
   let startX;
   let scrollLeft;
   let isDown = false;
@@ -67,29 +118,28 @@ document.addEventListener('DOMContentLoaded', function() {
     isDown = true;
     startX = e.touches[0].pageX - grid.offsetLeft;
     scrollLeft = grid.scrollLeft;
-    console.log('Touch start:', startX);
   });
 
   grid.addEventListener('touchend', () => {
     isDown = false;
-    console.log('Touch end');
+    handleScroll();
   });
 
   grid.addEventListener('touchmove', (e) => {
     if (!isDown) return;
-    e.preventDefault(); // Prevent default touch behavior
+    e.preventDefault();
     const x = e.touches[0].pageX - grid.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll speed multiplier
+    const walk = (x - startX) * 2;
     grid.scrollLeft = scrollLeft - walk;
-    console.log('Scrolling to:', grid.scrollLeft);
+    handleScroll();
   });
 
-  // Prevent click events from interfering with scroll
-  grid.addEventListener('click', (e) => {
-    if (Math.abs(startX - (e.pageX - grid.offsetLeft)) > 5) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  }, true);
+  // Handle scroll events
+  grid.addEventListener('scroll', () => {
+    handleScroll();
+  });
+
+  // Initial call to set first card active
+  handleScroll();
 });
 </script>

@@ -252,31 +252,51 @@
 
     .grid {
       display: flex;
-      overflow-x: auto; /* Changed back to auto */
+      overflow-x: auto;
+      scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      gap: 15px;
-      padding: 15px;
+      scroll-snap-type: x proximity;
+      gap: 20px;
+      padding: 20px;
       margin: 0;
       width: 100%;
-      /* Remove potentially conflicting properties */
       position: relative;
       touch-action: pan-x;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .grid::-webkit-scrollbar {
+      display: none;
     }
 
     .project-card {
       flex: 0 0 85%;
       min-width: 280px;
       max-width: 400px;
-      scroll-snap-align: start;
-      /* Remove margin and other potentially conflicting properties */
+      scroll-snap-align: center;
+      transform-origin: center center;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+      transform: scale(0.95);
     }
 
-    /* Ensure no pointer events interference */
-    .project-card a,
-    .project-card .project-links,
-    .project-card .link-icons {
-      pointer-events: auto;
+    .project-card.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .grid-container {
+      perspective: 1000px;
+    }
+
+    .project-card {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-card.active {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
   }
   
