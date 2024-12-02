@@ -53,3 +53,34 @@
     <i class="fa fa-arrow-up"></i>
   </a>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const grid = document.querySelector('.grid');
+  if (!grid) {
+    console.error('Grid element not found');
+    return;
+  }
+
+  console.log('Grid element found:', grid);
+  console.log('Grid styles:', window.getComputedStyle(grid));
+
+  grid.addEventListener('touchstart', (e) => {
+    console.log('Touch start:', {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY
+    });
+  });
+
+  grid.addEventListener('touchmove', (e) => {
+    console.log('Touch move:', {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY
+    });
+  });
+
+  grid.addEventListener('scroll', () => {
+    console.log('Scroll position:', grid.scrollLeft);
+  });
+});
+</script>

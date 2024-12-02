@@ -6,56 +6,58 @@
           <hr class="star-primary">
         </div>
       </div>
-      <div class="grid">
-        {% for post in site.posts %}
-          {% unless post.categories contains 'blog' %}
-          <div class="project-card portfolio-item">
-            <a href="#portfolioModal-{{ post.modal-id }}" class="card-link portfolio-link" data-toggle="modal">
-              <div class="project-image-container">
-                <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}" class="project-image">
-                <div class="caption">
-                  <div class="caption-content">
-                    <svg class="eye-icon" viewBox="0 0 24 24" width="48" height="48">
-                      <circle class="eye-outer" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-                      <circle class="eye-inner" cx="12" cy="12" r="4" fill="currentColor"/>
-                    </svg>
+      <div class="grid-container">
+        <div class="grid">
+          {% for post in site.posts %}
+            {% unless post.categories contains 'blog' %}
+            <div class="project-card portfolio-item">
+              <a href="#portfolioModal-{{ post.modal-id }}" class="card-link portfolio-link" data-toggle="modal">
+                <div class="project-image-container">
+                  <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}" class="project-image">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <svg class="eye-icon" viewBox="0 0 24 24" width="48" height="48">
+                        <circle class="eye-outer" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle class="eye-inner" cx="12" cy="12" r="4" fill="currentColor"/>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="project-content">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.description | strip_html | truncatewords: 20 }}</p>
-                {% if post.category %}
-                  <div class="project-tags">
-                    {% assign categories = post.category | split: ", " %}
-                    {% for category in categories %}
-                      <span class="tag">{{ category | strip }}</span>
-                    {% endfor %}
-                  </div>
-                {% endif %}
-              </div>
-            </a>
-            <div class="project-links" onclick="document.querySelector('[href=\'#portfolioModal-{{ post.modal-id }}\']').click()">
-              <div class="link-icons" onclick="event.stopPropagation()">
-                {% if post.link %}
-                  <a href="{{ post.link }}" class="live-link" target="_blank" rel="nofollow noopener noreferrer">
-                    <i class="fas fa-globe"></i>
-                  </a>
-                {% else %}
-                  <span class="live-link disabled">
-                    <i class="fas fa-lock"></i>
-                  </span>
-                {% endif %}
-                {% if post.github_url %}
-                  <a href="{{ post.github_url }}" class="github-link" target="_blank" rel="nofollow noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                  </a>
-                {% endif %}
+                <div class="project-content">
+                  <h3>{{ post.title }}</h3>
+                  <p>{{ post.description | strip_html | truncatewords: 20 }}</p>
+                  {% if post.category %}
+                    <div class="project-tags">
+                      {% assign categories = post.category | split: ", " %}
+                      {% for category in categories %}
+                        <span class="tag">{{ category | strip }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              </a>
+              <div class="project-links" onclick="document.querySelector('[href=\'#portfolioModal-{{ post.modal-id }}\']').click()">
+                <div class="link-icons" onclick="event.stopPropagation()">
+                  {% if post.link %}
+                    <a href="{{ post.link }}" class="live-link" target="_blank" rel="nofollow noopener noreferrer">
+                      <i class="fas fa-globe"></i>
+                    </a>
+                  {% else %}
+                    <span class="live-link disabled">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                  {% endif %}
+                  {% if post.github_url %}
+                    <a href="{{ post.github_url }}" class="github-link" target="_blank" rel="nofollow noopener noreferrer">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  {% endif %}
+                </div>
               </div>
             </div>
-          </div>
-          {% endunless %}
-        {% endfor %}
+            {% endunless %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </section>
