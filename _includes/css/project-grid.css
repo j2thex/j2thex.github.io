@@ -245,7 +245,7 @@
   @media (max-width: 768px) {
     .grid {
       display: flex;
-      overflow-x: auto;
+      overflow-x: scroll;
       scroll-snap-type: x mandatory;
       scroll-padding: var(--spacing-md);
       -webkit-overflow-scrolling: touch;
@@ -254,21 +254,36 @@
       scroll-behavior: smooth;
       -ms-overflow-style: none;
       scrollbar-width: none;
+      width: 100%;
+      padding: 0 1rem;
+      margin: 0;
+      flex-wrap: nowrap;
+      touch-action: pan-x;
+      user-select: none;
+      cursor: grab;
     }
     
     .project-card {
       flex: 0 0 85%;
-      scroll-snap-align: start;
+      scroll-snap-align: center;
       margin-right: 0;
       min-width: 280px;
+      flex-shrink: 0;
+      width: 85%;
+    }
+    
+    .grid:active {
+      cursor: grabbing;
     }
     
     .grid::-webkit-scrollbar {
       display: none;
     }
     
-    .grid {
-      touch-action: pan-x pan-y pinch-zoom;
+    .project-grid {
+      overflow-x: hidden;
+      width: 100%;
+      padding: 4rem 0;
     }
     
     .project-grid h2 {
