@@ -6,6 +6,8 @@ gem "bigdecimal"
 
 group :jekyll_plugins do
   gem "jekyll-sass-converter", "~> 1.5.2"
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
 end
 
 # Add these to silence warnings
