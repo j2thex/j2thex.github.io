@@ -1,11 +1,11 @@
-@use "../base/variables" as v;
-@use "../base/mixins" as m;
+
+
 @use "sass:color";
 
 .services {
   position: relative;
-  padding: v.$section-spacing 0;
-  background: linear-gradient(135deg, v.$color-background 0%, color.adjust(v.$color-background, $lightness: -5%) 100%);
+  padding: $section-spacing 0;
+  background: linear-gradient(135deg, $color-background 0%, color.adjust(v.$color-background, $lightness: -5%) 100%);
   overflow: hidden;
   
   &::before {
@@ -14,7 +14,7 @@
     left: -5%;
     top: 50%;
     transform: rotate(-90deg);
-    font-family: v.$font-headers;
+    font-family: $font-headers;
     font-size: 12rem;
     font-weight: 900;
     opacity: 0.03;
@@ -28,14 +28,14 @@
 
   &__header {
     text-align: left;
-    margin-bottom: v.$spacing-unit * 12;
+    margin-bottom: $spacing-unit * 12;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__title {
-    font-family: v.$font-primary;
+    font-family: $font-primary;
     font-size: 3.6rem;
     font-weight: 300;
     margin: 0;
@@ -44,49 +44,49 @@
 
   &__subtitle {
     font-size: 1.8rem;
-    color: v.$color-text-secondary;
+    color: $color-text-secondary;
     max-width: 400px;
     margin: 0;
     position: relative;
-    padding-left: v.$spacing-unit * 3;
+    padding-left: $spacing-unit * 3;
 
     &::before {
       content: '';
       position: absolute;
       left: 0;
       top: 50%;
-      width: v.$spacing-unit * 2;
+      width: $spacing-unit * 2;
       height: 2px;
-      background: v.$color-accent;
+      background: $color-accent;
     }
   }
 
   &__grid {
     display: grid;
-    gap: v.$spacing-unit * 4;
+    gap: $spacing-unit * 4;
     
-    @include m.respond-to(v.$breakpoint-md) {
+    @include m.respond-to($breakpoint-md) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
 .service-card {
-  padding: v.$spacing-unit * 4;
-  background: rgba(v.$color-secondary, 0.3);
+  padding: $spacing-unit * 4;
+  background: rgba($color-secondary, 0.3);
   border-radius: 12px;
   backdrop-filter: blur(10px);
-  transition: v.$transition-base;
+  transition: $transition-base;
 
   &:hover {
     transform: translateY(-5px);
-    background: rgba(v.$color-secondary, 0.5);
+    background: rgba($color-secondary, 0.5);
   }
 
   &__icon {
     width: 80px;
     height: 80px;
-    margin-bottom: v.$spacing-unit * 3;
+    margin-bottom: $spacing-unit * 3;
 
     img {
       width: 100%;
@@ -96,10 +96,10 @@
   }
 
   &__title {
-    font-family: v.$font-primary;
+    font-family: $font-primary;
     font-size: 2.4rem;
     font-weight: 300;
-    margin-bottom: v.$spacing-unit * 3;
+    margin-bottom: $spacing-unit * 3;
     line-height: 1.2;
     letter-spacing: -0.02em;
 
@@ -108,8 +108,8 @@
       display: block;
       width: 40px;
       height: 2px;
-      background: v.$color-accent;
-      margin-top: v.$spacing-unit * 2;
+      background: $color-accent;
+      margin-top: $spacing-unit * 2;
     }
   }
 
@@ -120,9 +120,9 @@
 
     li {
       position: relative;
-      padding-left: v.$spacing-unit * 2;
-      margin-bottom: v.$spacing-unit * 1.5;
-      color: v.$color-text-secondary;
+      padding-left: $spacing-unit * 2;
+      margin-bottom: $spacing-unit * 1.5;
+      color: $color-text-secondary;
       font-size: 1.4rem;
 
       &::before {
@@ -134,7 +134,7 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: v.$color-accent;
+        background: $color-accent;
       }
 
       &:last-child {

@@ -1,14 +1,14 @@
-@use "../base/variables" as v;
+
 
 .lang-switcher {
   position: relative;
-  margin-left: v.$spacing-unit * 3;
+  margin-left: $spacing-unit * 3;
   
   &__current {
     display: flex;
     align-items: center;
-    gap: v.$spacing-unit;
-    font-size: v.$font-size-small;
+    gap: $spacing-unit;
+    font-size: $font-size-small;
     font-weight: 500;
     cursor: pointer;
 
@@ -23,10 +23,10 @@
       content: '';
       width: 8px;
       height: 8px;
-      border-right: 2px solid v.$color-text;
-      border-bottom: 2px solid v.$color-text;
+      border-right: 2px solid $color-text;
+      border-bottom: 2px solid $color-text;
       transform: rotate(45deg);
-      transition: v.$transition-base;
+      transition: $transition-base;
     }
   }
   
@@ -34,23 +34,23 @@
     position: absolute;
     top: 100%;
     right: 0;
-    margin-top: v.$spacing-unit;
+    margin-top: $spacing-unit;
     background: rgba(26, 26, 26, 0.98);
     border-radius: 8px;
-    padding: v.$spacing-unit;
+    padding: $spacing-unit;
     min-width: 120px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: v.$transition-base;
+    transition: $transition-base;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     
     a {
       display: flex;
       align-items: center;
-      gap: v.$spacing-unit;
-      padding: v.$spacing-unit;
-      transition: v.$transition-base;
+      gap: $spacing-unit;
+      padding: $spacing-unit;
+      transition: $transition-base;
 
       .flag {
         width: 24px;
@@ -60,7 +60,7 @@
       }
 
       &:hover {
-        background: rgba(v.$color-text, 0.1);
+        background: rgba($color-text, 0.1);
       }
     }
     

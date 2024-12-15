@@ -1,41 +1,41 @@
 @use "sass:color";
-@use "../base/variables" as v;
+
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: (v.$spacing-unit * 2) (v.$spacing-unit * 4);
+  padding: ($spacing-unit * 2) (v.$spacing-unit * 4);
   border-radius: 8px;
-  font-size: v.$font-size-base;
+  font-size: $font-size-base;
   font-weight: 500;
-  transition: v.$transition-base;
+  transition: $transition-base;
   cursor: pointer;
   
   &--primary {
-    background: v.$color-accent;
-    color: v.$color-text;
+    background: $color-accent;
+    color: $color-text;
     
     &:hover {
-      background: color.adjust(v.$color-accent, $lightness: -10%);
+      background: color.adjust($color-accent, $lightness: -10%);
       transform: translateY(-2px);
     }
   }
   
   &--outline {
     background: transparent;
-    border: 2px solid v.$color-border;
-    color: v.$color-text;
+    border: 2px solid $color-border;
+    color: $color-text;
     
     &:hover {
-      border-color: v.$color-accent;
-      color: v.$color-accent;
+      border-color: $color-accent;
+      color: $color-accent;
       transform: translateY(-2px);
     }
   }
   
   &--large {
-    padding: (v.$spacing-unit * 2.5) (v.$spacing-unit * 5);
-    font-size: v.$font-size-base * 1.1;
+    padding: ($spacing-unit * 2.5) (v.$spacing-unit * 5);
+    font-size: $font-size-base * 1.1;
   }
 }

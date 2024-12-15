@@ -1,9 +1,9 @@
-@use "../base/variables" as v;
-@use "../base/mixins" as m;
+
+
 
 .footer {
-  background: v.$color-card;
-  padding: v.$spacing-unit * 8 0;
+  background: $color-card;
+  padding: $spacing-unit * 8 0;
   
   &__container {
     @include m.container;
@@ -11,9 +11,9 @@
   
   &__content {
     display: grid;
-    gap: v.$spacing-unit * 4;
+    gap: $spacing-unit * 4;
     
-    @include m.respond-to(v.$breakpoint-md) {
+    @include m.respond-to($breakpoint-md) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -25,11 +25,11 @@
     letter-spacing: -0.02em;
     
     a {
-      color: v.$color-text;
+      color: $color-text;
       text-decoration: none;
       
       .zero {
-        color: v.$color-accent;
+        color: $color-accent;
       }
     }
   }
@@ -37,38 +37,38 @@
   &__links {
     display: flex;
     flex-direction: column;
-    gap: v.$spacing-unit * 2;
+    gap: $spacing-unit * 2;
     
     a {
-      color: v.$color-text;
+      color: $color-text;
       text-decoration: none;
-      transition: v.$transition-base;
+      transition: $transition-base;
       
       &:hover {
-        color: v.$color-accent;
+        color: $color-accent;
       }
     }
   }
   
   &__social {
     display: flex;
-    gap: v.$spacing-unit * 3;
+    gap: $spacing-unit * 3;
     justify-content: flex-end;
     
     a {
-      color: v.$color-text;
+      color: $color-text;
       text-decoration: none;
-      transition: v.$transition-base;
+      transition: $transition-base;
       line-height: 0;
       
       svg {
         width: 24px;
         height: 24px;
-        transition: v.$transition-base;
+        transition: $transition-base;
       }
       
       &:hover {
-        color: v.$color-accent;
+        color: $color-accent;
         
         svg {
           transform: translateY(-2px);
@@ -78,10 +78,10 @@
   }
   
   &__bottom {
-    margin-top: v.$spacing-unit * 6;
-    padding-top: v.$spacing-unit * 3;
-    border-top: 1px solid v.$color-border;
+    margin-top: $spacing-unit * 6;
+    padding-top: $spacing-unit * 3;
+    border-top: 1px solid $color-border;
     text-align: center;
-    color: v.$color-text-secondary;
+    color: $color-text-secondary;
   }
 } 

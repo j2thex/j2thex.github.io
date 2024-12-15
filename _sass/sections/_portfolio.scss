@@ -1,49 +1,46 @@
-@use "../base/variables" as v;
-@use "../base/mixins" as m;
-
 .portfolio {
-  padding: v.$section-spacing 0;
-  background: v.$color-background;
+  padding: $section-spacing 0;
+  background: $color-background;
   
   &__container {
-    @include m.container;
+    @include container;
   }
   
   &__header {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto v.$spacing-unit * 8;
+    margin: 0 auto $spacing-unit * 8;
   }
   
   &__filters {
     display: flex;
     flex-wrap: wrap;
-    gap: v.$spacing-unit * 2;
+    gap: $spacing-unit * 2;
     justify-content: center;
-    margin-bottom: v.$spacing-unit * 6;
+    margin-bottom: $spacing-unit * 6;
   }
   
   &__filter {
-    padding: v.$spacing-unit * 1.5 v.$spacing-unit * 3;
-    border: 2px solid v.$color-border;
+    padding: $spacing-unit * 1.5 $spacing-unit * 3;
+    border: 2px solid $color-border;
     border-radius: 8px;
     background: transparent;
-    color: v.$color-text;
-    font-size: v.$font-size-base;
+    color: $color-text;
+    font-size: $font-size-base;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: pointer;
     
     &:hover {
-      border-color: v.$color-accent;
-      color: v.$color-accent;
+      border-color: $color-accent;
+      color: $color-accent;
       transform: translateY(-2px);
     }
     
     &.active {
-      background: v.$color-accent;
-      border-color: v.$color-accent;
-      color: v.$color-text;
+      background: $color-accent;
+      border-color: $color-accent;
+      color: $color-text;
       transform: translateY(-2px);
     }
   }
@@ -51,7 +48,7 @@
   &__grid {
     position: relative;
     margin: 0;
-    margin-bottom: v.$spacing-unit * 4;
+    margin-bottom: $spacing-unit * 4;
     min-height: 500px;
   }
   
@@ -61,19 +58,19 @@
     opacity: 1;
     transition: all 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
     will-change: transform, opacity;
-    margin-bottom: v.$spacing-unit * 2;
+    margin-bottom: $spacing-unit * 2;
     padding: 0;
     
-    @include m.respond-to(v.$breakpoint-md) {
+    @include respond-to($breakpoint-md) {
       width: 50%;
-      padding: 0 v.$spacing-unit;
-      margin-bottom: v.$spacing-unit * 3;
+      padding: 0 $spacing-unit;
+      margin-bottom: $spacing-unit * 3;
     }
     
-    @include m.respond-to(v.$breakpoint-lg) {
+    @include respond-to($breakpoint-lg) {
       width: 33.333%;
-      padding: 0 v.$spacing-unit * 2;
-      margin-bottom: v.$spacing-unit * 4;
+      padding: 0 $spacing-unit * 2;
+      margin-bottom: $spacing-unit * 4;
     }
     
     &.hidden {
@@ -88,7 +85,7 @@
     flex-direction: column;
     height: 100%;
     min-height: 400px;
-    background: v.$color-card;
+    background: $color-card;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -127,16 +124,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: v.$color-card;
+    background: $color-card;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: v.$color-text-secondary;
-    font-size: v.$font-size-small;
+    color: $color-text-secondary;
+    font-size: $font-size-small;
   }
   
   &__content {
-    padding: v.$spacing-unit * 4;
+    padding: $spacing-unit * 4;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -145,14 +142,14 @@
   &__item-title {
     font-size: 2.4rem;
     font-weight: 500;
-    margin-bottom: v.$spacing-unit * 2;
-    color: v.$color-text;
+    margin-bottom: $spacing-unit * 2;
+    color: $color-text;
   }
   
   &__item-description {
-    font-size: v.$font-size-base;
-    color: v.$color-text-secondary;
-    margin-bottom: v.$spacing-unit * 3;
+    font-size: $font-size-base;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-unit * 3;
     line-height: 1.6;
     flex-grow: 1;
     display: -webkit-box;
@@ -166,14 +163,14 @@
   &__technologies {
     display: flex;
     flex-wrap: wrap;
-    gap: v.$spacing-unit;
+    gap: $spacing-unit;
     margin-top: auto;
   }
   
   &__empty {
     text-align: center;
-    padding: v.$spacing-unit * 8;
-    color: v.$color-text-secondary;
+    padding: $spacing-unit * 8;
+    color: $color-text-secondary;
     grid-column: 1 / -1;
   }
   
@@ -185,14 +182,14 @@
 // Tag component styles
 .tag {
   display: inline-block;
-  padding: v.$spacing-unit v.$spacing-unit * 2;
+  padding: $spacing-unit $spacing-unit * 2;
   border-radius: 4px;
-  background: rgba(v.$color-accent, 0.1);
-  color: v.$color-accent;
-  font-size: v.$font-size-base;
+  background: rgba($color-accent, 0.1);
+  color: $color-accent;
+  font-size: $font-size-base;
   
   &--small {
-    padding: v.$spacing-unit * 0.5 v.$spacing-unit;
-    font-size: v.$font-size-small;
+    padding: $spacing-unit * 0.5 $spacing-unit;
+    font-size: $font-size-small;
   }
 }

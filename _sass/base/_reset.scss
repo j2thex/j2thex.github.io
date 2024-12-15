@@ -1,4 +1,4 @@
-@use "variables" as v;
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -12,11 +12,11 @@ html {
 }
 
 body {
-  font-family: v.$font-primary;
-  font-size: v.$font-size-base;
-  line-height: v.$line-height-base;
-  color: v.$color-text;
-  background-color: v.$color-background;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

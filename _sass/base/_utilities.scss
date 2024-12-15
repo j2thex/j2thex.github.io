@@ -1,16 +1,16 @@
-@use "variables" as v;
-@use "mixins" as m;
+
+
 
 // Layout
 .container {
-  max-width: v.$container-max-width;
+  max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 v.$container-padding;
+  padding: 0 $container-padding;
   width: 100%;
 }
 
 .section {
-  padding: v.$section-spacing 0;
+  padding: $section-spacing 0;
 }
 
 // Flexbox utilities
@@ -35,15 +35,15 @@
 }
 
 // Spacing
-.mt-1 { margin-top: v.$spacing-unit; }
-.mt-2 { margin-top: v.$spacing-unit * 2; }
-.mt-3 { margin-top: v.$spacing-unit * 3; }
-.mt-4 { margin-top: v.$spacing-unit * 4; }
+.mt-1 { margin-top: $spacing-unit; }
+.mt-2 { margin-top: $spacing-unit * 2; }
+.mt-3 { margin-top: $spacing-unit * 3; }
+.mt-4 { margin-top: $spacing-unit * 4; }
 
-.mb-1 { margin-bottom: v.$spacing-unit; }
-.mb-2 { margin-bottom: v.$spacing-unit * 2; }
-.mb-3 { margin-bottom: v.$spacing-unit * 3; }
-.mb-4 { margin-bottom: v.$spacing-unit * 4; }
+.mb-1 { margin-bottom: $spacing-unit; }
+.mb-2 { margin-bottom: $spacing-unit * 2; }
+.mb-3 { margin-bottom: $spacing-unit * 3; }
+.mb-4 { margin-bottom: $spacing-unit * 4; }
 
 // Text alignment
 .text-center {
@@ -65,5 +65,5 @@ body.nav-open {
 
 // Add padding for fixed header
 .has-fixed-header {
-  padding-top: v.$nav-height;
+  padding-top: $nav-height;
 }

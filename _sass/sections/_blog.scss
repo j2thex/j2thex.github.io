@@ -1,60 +1,60 @@
-@use "../base/variables" as v;
-@use "../base/mixins" as m;
+
+
 
 .blog {
-  padding-top: v.$spacing-unit * 12;
+  padding-top: $spacing-unit * 12;
   
   &__hero {
-    padding: v.$spacing-unit * 8 0;
-    background: v.$color-card;
-    margin-bottom: v.$spacing-unit * 8;
+    padding: $spacing-unit * 8 0;
+    background: $color-card;
+    margin-bottom: $spacing-unit * 8;
 
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 0 v.$container-padding;
+      padding: 0 $container-padding;
     }
   }
   
   &__title {
-    font-size: v.$font-size-h1;
-    margin-bottom: v.$spacing-unit * 2;
+    font-size: $font-size-h1;
+    margin-bottom: $spacing-unit * 2;
   }
   
   &__subtitle {
-    font-size: v.$font-size-h4;
-    color: v.$color-text-secondary;
+    font-size: $font-size-h4;
+    color: $color-text-secondary;
   }
   
   &__content {
-    padding: v.$spacing-unit * 4 0;
+    padding: $spacing-unit * 4 0;
 
     .container {
-      max-width: v.$container-max-width;
+      max-width: $container-max-width;
       margin: 0 auto;
-      padding: 0 v.$container-padding;
+      padding: 0 $container-padding;
     }
   }
   
   &__grid {
     display: grid;
-    gap: v.$spacing-unit * 4;
+    gap: $spacing-unit * 4;
     
-    @include m.respond-to(v.$breakpoint-md) {
+    @include m.respond-to($breakpoint-md) {
       grid-template-columns: repeat(2, 1fr);
     }
     
-    @include m.respond-to(v.$breakpoint-lg) {
+    @include m.respond-to($breakpoint-lg) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
 .blog-card {
-  background: v.$color-card;
+  background: $color-card;
   border-radius: 12px;
   overflow: hidden;
-  transition: v.$transition-base;
+  transition: $transition-base;
   
   &:hover {
     transform: translateY(-5px);
@@ -83,77 +83,77 @@
   }
   
   &__content {
-    padding: v.$spacing-unit * 3;
+    padding: $spacing-unit * 3;
   }
   
   &__title {
     font-size: 2.4rem;
-    margin-bottom: v.$spacing-unit * 2;
+    margin-bottom: $spacing-unit * 2;
   }
   
   &__date {
     display: block;
-    font-size: v.$font-size-small;
-    color: v.$color-text-secondary;
-    margin-bottom: v.$spacing-unit * 2;
+    font-size: $font-size-small;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-unit * 2;
   }
   
   &__excerpt {
-    color: v.$color-text-secondary;
-    margin-bottom: v.$spacing-unit * 3;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-unit * 3;
     line-height: 1.6;
   }
   
   &__categories {
     display: flex;
     flex-wrap: wrap;
-    gap: v.$spacing-unit;
+    gap: $spacing-unit;
   }
 }
 
 // Single post styles
 .post {
-  padding-top: v.$spacing-unit * 12;
+  padding-top: $spacing-unit * 12;
   
   &__hero {
-    padding: v.$spacing-unit * 8 0;
-    background: v.$color-card;
-    margin-bottom: v.$spacing-unit * 8;
+    padding: $spacing-unit * 8 0;
+    background: $color-card;
+    margin-bottom: $spacing-unit * 8;
     
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 0 v.$container-padding;
+      padding: 0 $container-padding;
     }
   }
   
   &__meta {
     display: flex;
     align-items: center;
-    gap: v.$spacing-unit * 3;
-    margin-bottom: v.$spacing-unit * 4;
+    gap: $spacing-unit * 3;
+    margin-bottom: $spacing-unit * 4;
   }
   
   &__date {
-    font-size: v.$font-size-small;
-    color: v.$color-text-secondary;
+    font-size: $font-size-small;
+    color: $color-text-secondary;
   }
   
   &__categories {
     display: flex;
-    gap: v.$spacing-unit;
+    gap: $spacing-unit;
   }
   
   &__title {
     font-size: clamp(3.2rem, 5vw, 4.8rem);
     line-height: 1.2;
-    margin-bottom: v.$spacing-unit * 3;
+    margin-bottom: $spacing-unit * 3;
     letter-spacing: -0.02em;
   }
   
   &__description {
-    font-size: v.$font-size-h4;
-    color: v.$color-text-secondary;
+    font-size: $font-size-h4;
+    color: $color-text-secondary;
     line-height: 1.5;
   }
   
@@ -161,7 +161,7 @@
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: v.$spacing-unit * 4 v.$container-padding;
+      padding: $spacing-unit * 4 v.$container-padding;
     }
   }
   
@@ -171,7 +171,7 @@
     max-height: 500px;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: v.$spacing-unit * 6;
+    margin-bottom: $spacing-unit * 6;
   }
   
   &__body {
@@ -179,7 +179,7 @@
     line-height: 1.8;
     
     > * {
-      margin-bottom: v.$spacing-unit * 3;
+      margin-bottom: $spacing-unit * 3;
       
       &:last-child {
         margin-bottom: 0;
@@ -187,30 +187,30 @@
     }
     
     h2 {
-      font-size: v.$font-size-h2;
+      font-size: $font-size-h2;
       line-height: 1.2;
-      margin: v.$spacing-unit * 8 0 v.$spacing-unit * 4;
+      margin: $spacing-unit * 8 0 v.$spacing-unit * 4;
       letter-spacing: -0.02em;
     }
     
     h3 {
-      font-size: v.$font-size-h3;
+      font-size: $font-size-h3;
       line-height: 1.2;
-      margin: v.$spacing-unit * 6 0 v.$spacing-unit * 3;
+      margin: $spacing-unit * 6 0 v.$spacing-unit * 3;
       letter-spacing: -0.02em;
     }
     
     p {
-      margin-bottom: v.$spacing-unit * 4;
+      margin-bottom: $spacing-unit * 4;
     }
     
     ul, ol {
-      margin: v.$spacing-unit * 4 0;
-      padding-left: v.$spacing-unit * 4;
+      margin: $spacing-unit * 4 0;
+      padding-left: $spacing-unit * 4;
       
       li {
-        margin-bottom: v.$spacing-unit * 2;
-        padding-left: v.$spacing-unit;
+        margin-bottom: $spacing-unit * 2;
+        padding-left: $spacing-unit;
         
         &:last-child {
           margin-bottom: 0;
@@ -221,32 +221,32 @@
     img {
       width: 100%;
       border-radius: 12px;
-      margin: v.$spacing-unit * 6 0;
+      margin: $spacing-unit * 6 0;
     }
     
     blockquote {
-      margin: v.$spacing-unit * 6 0;
-      padding: v.$spacing-unit * 3 v.$spacing-unit * 4;
-      border-left: 4px solid v.$color-accent;
-      background: rgba(v.$color-accent, 0.05);
+      margin: $spacing-unit * 6 0;
+      padding: $spacing-unit * 3 v.$spacing-unit * 4;
+      border-left: 4px solid $color-accent;
+      background: rgba($color-accent, 0.05);
       font-style: italic;
-      color: v.$color-text-secondary;
+      color: $color-text-secondary;
       border-radius: 0 12px 12px 0;
     }
     
     code {
-      background: rgba(v.$color-accent, 0.1);
+      background: rgba($color-accent, 0.1);
       padding: 0.2em 0.4em;
       border-radius: 4px;
       font-size: 0.9em;
     }
     
     pre {
-      background: v.$color-card;
-      padding: v.$spacing-unit * 3;
+      background: $color-card;
+      padding: $spacing-unit * 3;
       border-radius: 12px;
       overflow-x: auto;
-      margin: v.$spacing-unit * 6 0;
+      margin: $spacing-unit * 6 0;
       
       code {
         background: none;
@@ -256,11 +256,11 @@
   }
   
   &__tags {
-    margin-top: v.$spacing-unit * 8;
-    padding-top: v.$spacing-unit * 4;
-    border-top: 1px solid v.$color-border;
+    margin-top: $spacing-unit * 8;
+    padding-top: $spacing-unit * 4;
+    border-top: 1px solid $color-border;
     display: flex;
     flex-wrap: wrap;
-    gap: v.$spacing-unit;
+    gap: $spacing-unit;
   }
 } 

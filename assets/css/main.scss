@@ -3,19 +3,24 @@
 # only Main files contain this front matter, not partials.
 ---
 
-@use "sass:color";
-@use "base";
-@use "base/reset";
-@use "base/typography";
-@use "base/utilities";
-@use "components/buttons";
-@use "components/navigation";
-@use "components/language-switcher";
-@use "components/footer";
-@use "sections/hero";
-@use "sections/services";
-@use "sections/how-we-work";
-@use "sections/portfolio";
-@use "sections/contact";
-@use "sections/blog";
-@use "sections/project";
+// Import base
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+// Import components
+@import "components/buttons";
+@import "components/navigation";
+@import "components/language-switcher";
+@import "components/footer";
+
+// Import sections
+@import "sections/hero";
+@import "sections/services";
+@import "sections/how-we-work";
+@import "sections/portfolio";
+@import "sections/contact";
+@import "sections/blog";
+@import "sections/project";

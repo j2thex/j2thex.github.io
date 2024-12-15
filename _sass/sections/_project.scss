@@ -1,52 +1,52 @@
-@use "../base/variables" as v;
-@use "../base/mixins" as m;
+
+
 
 .project {
-  background: v.$color-background;
+  background: $color-background;
   
   &__hero {
-    background: v.$color-card;
-    padding: v.$spacing-unit * 8 0;
+    background: $color-card;
+    padding: $spacing-unit * 8 0;
   }
   
   &__title {
-    font-size: v.$font-size-h1;
+    font-size: $font-size-h1;
     font-weight: 700;
-    margin-bottom: v.$spacing-unit * 4;
-    color: v.$color-text;
+    margin-bottom: $spacing-unit * 4;
+    color: $color-text;
   }
   
   &__technologies {
     display: flex;
     flex-wrap: wrap;
-    gap: v.$spacing-unit;
+    gap: $spacing-unit;
   }
   
   &__content {
-    padding: v.$spacing-unit * 8 0;
+    padding: $spacing-unit * 8 0;
   }
   
   &__section {
-    margin-bottom: v.$spacing-unit * 8;
+    margin-bottom: $spacing-unit * 8;
     
     h2 {
-      font-size: v.$font-size-h2;
-      margin-bottom: v.$spacing-unit * 4;
+      font-size: $font-size-h2;
+      margin-bottom: $spacing-unit * 4;
     }
     
     p {
-      font-size: v.$font-size-base;
-      line-height: v.$line-height-base;
-      color: v.$color-text-secondary;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      color: $color-text-secondary;
     }
   }
   
   &__gallery {
-    margin: v.$spacing-unit * 8 0;
+    margin: $spacing-unit * 8 0;
     display: grid;
-    gap: v.$spacing-unit * 4;
+    gap: $spacing-unit * 4;
     
-    @include m.respond-to(v.$breakpoint-md) {
+    @include m.respond-to($breakpoint-md) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -60,7 +60,7 @@
   
   &__links {
     display: flex;
-    gap: v.$spacing-unit * 2;
+    gap: $spacing-unit * 2;
     justify-content: center;
   }
 } 
