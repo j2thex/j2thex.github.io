@@ -121,39 +121,21 @@
     justify-content: center;
     width: 100%;
     padding: $spacing-unit * 2;
-    background: $color-accent;
-    color: $color-white;
-    border: none;
+    border: 2px solid $color-accent;
+    color: $color-accent;
+    background: transparent;
     border-radius: 8px;
     font-size: $font-size-base;
     font-weight: $font-weight-medium;
     text-decoration: none;
     letter-spacing: $letter-spacing-base;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $transition-base;
     position: relative;
     overflow: hidden;
     
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 120%;
-      height: 0;
-      padding-bottom: 120%;
-      border-radius: 50%;
-      background: rgba($color-white, 0.1);
-      transform: translate(-50%, -50%) scale(0);
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
     &:hover {
+      background: rgba($color-accent, 0.1);
       transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba($color-accent, 0.3);
-      
-      &::before {
-        transform: translate(-50%, -50%) scale(1);
-      }
     }
   }
   
