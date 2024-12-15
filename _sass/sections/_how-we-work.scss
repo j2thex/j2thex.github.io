@@ -12,28 +12,110 @@
   
   &__title {
     font-size: $font-size-h1;
+    font-weight: $font-weight-light;
     margin-bottom: $spacing-unit * 3;
   }
   
-  &__description {
+  &__subtitle {
+    font-family: $font-subheaders;
     font-size: $font-size-h4;
     color: $color-text-secondary;
     max-width: 800px;
     margin: 0 auto;
+    letter-spacing: $letter-spacing-base;
+    text-transform: uppercase;
   }
   
-  &__grid {
-    display: grid;
-    gap: $spacing-unit * 4;
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 6;
     
     @include respond-to($breakpoint-md) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    @include respond-to($breakpoint-lg) {
-      grid-template-columns: repeat(4, 1fr);
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
     }
   }
+  
+  &__step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 32px;
+      right: -30px;
+      width: 60px;
+      height: 2px;
+      background: $color-accent;
+      display: none;
+      
+      @include respond-to($breakpoint-md) {
+        display: block;
+      }
+    }
+  }
+  
+  &__step-circle {
+    width: 64px;
+    height: 64px;
+    background: rgba($color-accent, 0.1);
+    border-radius: 50%;
+    margin: 0 auto $spacing-unit * 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: $transition-base;
+    
+    &::before {
+      content: counter(step);
+      counter-increment: step;
+      font-family: $font-mono;
+      font-size: $font-size-h3;
+      color: $color-accent;
+      transition: $transition-base;
+    }
+    
+    &:hover {
+      background: $color-accent;
+      
+      &::before {
+        color: $color-white;
+      }
+    }
+  }
+  
+  &__step-title {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-light;
+    margin-bottom: $spacing-unit * 2;
+    position: absolute;
+    width: max-content;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: $spacing-unit * 2;
+  }
+  
+  &__step-description {
+    font-size: $font-size-base;
+    color: $color-text-secondary;
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing-base;
+    margin-top: $spacing-unit * 8;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Reset counter for steps
+.how-we-work {
+  counter-reset: step;
 }
 
 .process-card {

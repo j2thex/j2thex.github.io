@@ -12,14 +12,18 @@
   
   &__title {
     font-size: $font-size-h1;
+    font-weight: $font-weight-light;
     margin-bottom: $spacing-unit * 3;
   }
   
   &__subtitle {
+    font-family: $font-subheaders;
     font-size: $font-size-h4;
     color: $color-text-secondary;
     max-width: 800px;
     margin: 0 auto;
+    letter-spacing: $letter-spacing-base;
+    text-transform: uppercase;
   }
   
   &__filters {
@@ -38,8 +42,9 @@
     cursor: pointer;
     transition: $transition-base;
     border: none;
-    font-family: inherit;
-    font-size: inherit;
+    font-family: $font-body;
+    font-size: $font-size-base;
+    letter-spacing: $letter-spacing-base;
     
     &:hover {
       background: rgba($color-card, 0.8);
@@ -131,10 +136,13 @@
   
   &__item-title {
     font-size: $font-size-h3;
+    font-weight: $font-weight-light;
     margin-bottom: $spacing-unit * 2;
   }
   
   &__item-description {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
     color: $color-text-secondary;
     margin-bottom: $spacing-unit * 3;
     display: -webkit-box;
@@ -142,6 +150,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     flex: 1;
+    letter-spacing: $letter-spacing-base;
+    line-height: $line-height-base;
   }
   
   &__technologies {
@@ -157,7 +167,7 @@
   background: rgba($color-accent, 0.1);
   border-radius: 4px;
   color: $color-accent;
-  font-family: $font-headers;
+  font-family: $font-mono;
   
   &--small {
     font-size: $font-size-small;
