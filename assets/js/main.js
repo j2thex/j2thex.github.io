@@ -92,4 +92,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Scroll Progress Bar
+  const scrollProgress = document.querySelector('.scroll-progress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      
+      scrollProgress.classList.add('active');
+      scrollProgress.style.setProperty('--scroll-width', `${scrolled}%`);
+    });
+  }
 }); 

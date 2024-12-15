@@ -1,0 +1,24 @@
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba($color-accent, 0.1);
+  z-index: $z-index-nav + 1;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: $color-accent;
+    transition: width 50ms ease;
+  }
+  
+  &.active::after {
+    width: var(--scroll-width, 0%);
+  }
+} 
