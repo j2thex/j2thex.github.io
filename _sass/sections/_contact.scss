@@ -1,21 +1,24 @@
-
-
-
 .contact {
-  padding: $section-spacing 0;
+  padding: $spacing-unit * 12 0;
   
   &__container {
-    @include m.container;
-  }
-  
-  &__header {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto $spacing-unit * 8;
+    @include container;
   }
   
   &__content {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+  }
+  
+  &__title {
+    font-size: $font-size-h1;
+    margin-bottom: $spacing-unit * 3;
+  }
+  
+  &__description {
+    font-size: $font-size-h4;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-unit * 6;
   }
 }

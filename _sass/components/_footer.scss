@@ -1,86 +1,89 @@
-
-
-
 .footer {
-  background: $color-card;
   padding: $spacing-unit * 8 0;
+  background: $color-card;
   
   &__container {
-    @include m.container;
+    @include container;
   }
   
   &__content {
     display: grid;
     gap: $spacing-unit * 4;
     
-    @include m.respond-to($breakpoint-md) {
-      grid-template-columns: repeat(3, 1fr);
+    @include respond-to($breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
   
   &__logo {
-    font-family: 'Consolas', monospace;
-    font-size: 2.4rem;
+    font-family: $font-headers;
+    font-size: $font-size-h4;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    color: $color-text;
+    text-decoration: none;
+    margin-bottom: $spacing-unit * 2;
     
-    a {
-      color: $color-text;
-      text-decoration: none;
-      
-      .zero {
-        color: $color-accent;
-      }
+    span {
+      color: $color-accent;
     }
   }
   
-  &__links {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-unit * 2;
-    
-    a {
-      color: $color-text;
-      text-decoration: none;
-      transition: $transition-base;
-      
-      &:hover {
-        color: $color-accent;
-      }
-    }
+  &__description {
+    color: $color-text-secondary;
+    margin-bottom: $spacing-unit * 3;
   }
   
   &__social {
     display: flex;
-    gap: $spacing-unit * 3;
-    justify-content: flex-end;
+    gap: $spacing-unit * 2;
     
     a {
-      color: $color-text;
-      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba($color-accent, 0.1);
+      border-radius: 8px;
+      color: $color-accent;
       transition: $transition-base;
-      line-height: 0;
-      
-      svg {
-        width: 24px;
-        height: 24px;
-        transition: $transition-base;
-      }
       
       &:hover {
-        color: $color-accent;
-        
-        svg {
-          transform: translateY(-2px);
-        }
+        background: $color-accent;
+        color: $color-white;
+      }
+      
+      svg {
+        width: 20px;
+        height: 20px;
       }
     }
   }
   
+  &__title {
+    font-size: $font-size-h4;
+    margin-bottom: $spacing-unit * 3;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 2;
+  }
+  
+  &__link {
+    color: $color-text-secondary;
+    transition: $transition-base;
+    
+    &:hover {
+      color: $color-text;
+    }
+  }
+  
   &__bottom {
-    margin-top: $spacing-unit * 6;
-    padding-top: $spacing-unit * 3;
-    border-top: 1px solid $color-border;
+    margin-top: $spacing-unit * 8;
+    padding-top: $spacing-unit * 4;
+    border-top: 1px solid rgba($color-text, 0.1);
     text-align: center;
     color: $color-text-secondary;
   }

@@ -1,8 +1,7 @@
-
-
 .lang-switcher {
   position: relative;
-  margin-left: $spacing-unit * 3;
+  display: inline-block;
+  margin-left: $spacing-unit * 4;
   
   &__current {
     display: flex;
@@ -11,12 +10,20 @@
     font-size: $font-size-small;
     font-weight: 500;
     cursor: pointer;
+    padding: $spacing-unit $spacing-unit * 2;
+    background: rgba($color-card, 0.5);
+    border-radius: 8px;
+    transition: $transition-base;
 
     .flag {
       width: 24px;
       height: 16px;
       border-radius: 2px;
       object-fit: cover;
+    }
+    
+    &:hover {
+      background: rgba($color-card, 0.8);
     }
     
     &::after {
@@ -28,14 +35,18 @@
       transform: rotate(45deg);
       transition: $transition-base;
     }
+    
+    &.active::after {
+      transform: rotate(-135deg);
+      margin-top: 4px;
+    }
   }
   
   &__dropdown {
     position: absolute;
     top: 100%;
     right: 0;
-    margin-top: $spacing-unit;
-    background: rgba(26, 26, 26, 0.98);
+    background: rgba($color-card, 0.98);
     border-radius: 8px;
     padding: $spacing-unit;
     min-width: 120px;
@@ -44,6 +55,7 @@
     transform: translateY(-10px);
     transition: $transition-base;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: $spacing-unit;
     
     a {
       display: flex;
@@ -51,6 +63,9 @@
       gap: $spacing-unit;
       padding: $spacing-unit;
       transition: $transition-base;
+      border-radius: 4px;
+      color: $color-text;
+      text-decoration: none;
 
       .flag {
         width: 24px;

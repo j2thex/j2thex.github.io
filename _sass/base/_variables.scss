@@ -1,37 +1,31 @@
 // Colors
-$color-primary: #1a1a1a;
-$color-secondary: #333333;
-$color-accent: #e50000;
-$color-text: #FFFFFF;
-$color-text-secondary: rgba(255, 255, 255, 0.7);
-$color-background: #0D0D0D;
-$color-card: rgba(255, 255, 255, 0.05);
-$color-border: rgba(255, 255, 255, 0.1);
+$color-accent: #ff3333;
+$color-text: #ffffff;
+$color-text-secondary: rgba(#ffffff, 0.7);
+$color-background: #111111;
+$color-card: #1a1a1a;
+$color-border: rgba(#ffffff, 0.1);
+$color-white: #ffffff;
 
 // Typography
-$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-$font-headers: 'Muli', sans-serif;
-$font-subheaders: 'Bebas Neue', sans-serif;
+$font-headers: 'Consolas', monospace;
+$font-subheaders: 'Consolas', monospace;
+$font-body: 'Consolas', monospace;
 
-// Font Sizes
 $font-size-base: 1.6rem;
 $font-size-small: 1.4rem;
-$font-size-h1: 4rem;
-$font-size-h2: 3rem;
-$font-size-h3: 2rem;
-$font-size-h4: 1.5rem;
+$font-size-h1: 4.8rem;
+$font-size-h2: 3.6rem;
+$font-size-h3: 2.8rem;
+$font-size-h4: 2.4rem;
 
-// Line Heights
-$line-height-base: 1.5;
+$line-height-base: 1.6;
 $line-height-headers: 1.2;
 
 // Spacing
-$spacing-unit: 0.8rem;
-$container-padding: 2rem;
-$section-spacing: 12rem;
-
-// Container
+$spacing-unit: 8px;
 $container-max-width: 1200px;
+$container-padding: 20px;
 
 // Breakpoints
 $breakpoint-sm: 576px;
@@ -40,8 +34,7 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 // Transitions
-$transition-base: all 0.3s ease;
-$transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 // Z-indices
 $z-index-nav: 1000;

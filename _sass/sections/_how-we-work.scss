@@ -1,124 +1,90 @@
-
-
-@use "sass:color";
-
 .how-we-work {
-  padding: $section-spacing 0;
-  background: color.adjust($color-background, $lightness: -2%);
+  padding: $spacing-unit * 12 0;
   
   &__container {
-    @include m.container;
+    @include container;
   }
   
   &__header {
-    text-align: left;
-    max-width: 700px;
-    margin-bottom: $spacing-unit * 12;
+    text-align: center;
+    margin-bottom: $spacing-unit * 8;
   }
-
+  
   &__title {
-    font-size: clamp(3.2rem, 5vw, 4.8rem);
-    font-weight: 700;
+    font-size: $font-size-h1;
     margin-bottom: $spacing-unit * 3;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
   }
-
-  &__subtitle {
+  
+  &__description {
     font-size: $font-size-h4;
     color: $color-text-secondary;
-    position: relative;
-    padding-left: $spacing-unit * 3;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  &__grid {
+    display: grid;
+    gap: $spacing-unit * 4;
+    
+    @include respond-to($breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to($breakpoint-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: $spacing-unit * 2;
-      height: 2px;
+.process-card {
+  background: $color-card;
+  border-radius: 12px;
+  padding: $spacing-unit * 4;
+  text-align: center;
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(-5px);
+    
+    .process-card__number {
       background: $color-accent;
+      color: $color-white;
     }
   }
   
-  &__steps {
-    display: grid;
-    gap: $spacing-unit * 4;
-    margin-top: $spacing-unit * 8;
-    
-    @include m.respond-to($breakpoint-lg) {
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-    }
-  }
-
-  &__step {
-    text-align: center;
-    position: relative;
-    
-    @include m.respond-to($breakpoint-lg) {
-      padding: 0 $spacing-unit * 2;
-    }
-
-    &.active {
-      .how-we-work__step-circle {
-        background: $color-accent;
-        border-color: $color-accent;
-      }
-    }
-  }
-
-  &__step-circle {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: rgba($color-text, 0.1);
-    border: 2px dashed rgba($color-text, 0.2);
-    margin: 0 auto $spacing-unit * 4;
+  &__number {
+    width: 64px;
+    height: 64px;
+    background: rgba($color-accent, 0.1);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto $spacing-unit * 3;
+    color: $color-accent;
+    font-size: $font-size-h3;
+    font-weight: 700;
     transition: $transition-base;
   }
-
-  &__step-title {
-    font-size: 1.8rem;
-    font-weight: 500;
-    max-width: 120px;
-    line-height: 1.3;
+  
+  &__title {
+    font-size: $font-size-h4;
+    margin-bottom: $spacing-unit * 2;
   }
-
-  &__step-description {
-    font-size: $font-size-small;
+  
+  &__description {
     color: $color-text-secondary;
-    max-width: 250px;
-    margin: 0 auto;
     line-height: 1.6;
   }
-
-  &__step-arrow {
-    display: none;
+  
+  @include respond-to($breakpoint-md) {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
     
-    @include m.respond-to($breakpoint-lg) {
-      display: block;
-      position: absolute;
-      top: 80px;
-      right: -20px;
-      width: 40px;
-      height: 2px;
-      background: $color-accent;
-      z-index: 1;
-
-      &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 8px;
-        height: 8px;
-        border-right: 2px solid $color-accent;
-        border-bottom: 2px solid $color-accent;
-        transform: translateY(-50%) rotate(-45deg);
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
       }
     }
   }

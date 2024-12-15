@@ -1,11 +1,10 @@
 @mixin respond-to($breakpoint) {
-  @media (min-width: $breakpoint) {
+  @media screen and (min-width: $breakpoint) {
     @content;
   }
 }
 
 @mixin container {
-  width: 100%;
   max-width: $container-max-width;
   margin: 0 auto;
   padding: 0 $container-padding;
@@ -15,4 +14,105 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin hover-lift {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@mixin card {
+  background: $color-card;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@mixin section-padding {
+  padding: $spacing-unit * 8 0;
+  
+  @include respond-to($breakpoint-md) {
+    padding: $spacing-unit * 12 0;
+  }
+}
+
+@mixin section-margin {
+  margin: $spacing-unit * 8 0;
+  
+  @include respond-to($breakpoint-md) {
+    margin: $spacing-unit * 12 0;
+  }
+}
+
+@mixin grid {
+  display: grid;
+  gap: $spacing-unit * 4;
+  
+  @include respond-to($breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to($breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  
+  &:before {
+    content: "";
+    display: block;
+    padding-top: ($height / $width) * 100%;
+  }
+  
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color-background, 0.8);
 }

@@ -1,6 +1,3 @@
-
-
-
 .blog {
   padding-top: $spacing-unit * 12;
   
@@ -40,11 +37,11 @@
     display: grid;
     gap: $spacing-unit * 4;
     
-    @include m.respond-to($breakpoint-md) {
+    @include respond-to($breakpoint-md) {
       grid-template-columns: repeat(2, 1fr);
     }
     
-    @include m.respond-to($breakpoint-lg) {
+    @include respond-to($breakpoint-lg) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -161,7 +158,7 @@
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: $spacing-unit * 4 v.$container-padding;
+      padding: $spacing-unit * 4 $container-padding;
     }
   }
   
@@ -189,14 +186,14 @@
     h2 {
       font-size: $font-size-h2;
       line-height: 1.2;
-      margin: $spacing-unit * 8 0 v.$spacing-unit * 4;
+      margin: $spacing-unit * 8 0 $spacing-unit * 4;
       letter-spacing: -0.02em;
     }
     
     h3 {
       font-size: $font-size-h3;
       line-height: 1.2;
-      margin: $spacing-unit * 6 0 v.$spacing-unit * 3;
+      margin: $spacing-unit * 6 0 $spacing-unit * 3;
       letter-spacing: -0.02em;
     }
     
@@ -226,7 +223,7 @@
     
     blockquote {
       margin: $spacing-unit * 6 0;
-      padding: $spacing-unit * 3 v.$spacing-unit * 4;
+      padding: $spacing-unit * 3 $spacing-unit * 4;
       border-left: 4px solid $color-accent;
       background: rgba($color-accent, 0.05);
       font-style: italic;

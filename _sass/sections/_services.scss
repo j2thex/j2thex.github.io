@@ -1,144 +1,117 @@
-
-
 @use "sass:color";
 
 .services {
-  position: relative;
-  padding: $section-spacing 0;
-  background: linear-gradient(135deg, $color-background 0%, color.adjust(v.$color-background, $lightness: -5%) 100%);
-  overflow: hidden;
+  padding: $spacing-unit * 12 0;
+  background: $color-card;
   
-  &::before {
-    content: 'DIGITAL AGENCY';
-    position: absolute;
-    left: -5%;
-    top: 50%;
-    transform: rotate(-90deg);
-    font-family: $font-headers;
-    font-size: 12rem;
-    font-weight: 900;
-    opacity: 0.03;
-    white-space: nowrap;
-  }
-
   &__container {
-    @include m.container;
-    position: relative;
+    @include container;
   }
-
+  
   &__header {
-    text-align: left;
-    margin-bottom: $spacing-unit * 12;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    margin-bottom: $spacing-unit * 8;
   }
-
+  
   &__title {
-    font-family: $font-primary;
-    font-size: 3.6rem;
-    font-weight: 300;
-    margin: 0;
-    letter-spacing: -0.02em;
+    font-size: $font-size-h1;
+    margin-bottom: $spacing-unit * 3;
   }
-
-  &__subtitle {
-    font-size: 1.8rem;
+  
+  &__description {
+    font-size: $font-size-h4;
     color: $color-text-secondary;
-    max-width: 400px;
-    margin: 0;
-    position: relative;
-    padding-left: $spacing-unit * 3;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: $spacing-unit * 2;
-      height: 2px;
-      background: $color-accent;
-    }
+    max-width: 800px;
+    margin: 0 auto;
   }
-
+  
   &__grid {
     display: grid;
     gap: $spacing-unit * 4;
     
-    @include m.respond-to($breakpoint-md) {
+    @include respond-to($breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to($breakpoint-lg) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
 .service-card {
-  padding: $spacing-unit * 4;
-  background: rgba($color-secondary, 0.3);
+  background: rgba($color-accent, 0.05);
   border-radius: 12px;
-  backdrop-filter: blur(10px);
+  padding: $spacing-unit * 4;
   transition: $transition-base;
-
+  
   &:hover {
     transform: translateY(-5px);
-    background: rgba($color-secondary, 0.5);
-  }
-
-  &__icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: $spacing-unit * 3;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-
-  &__title {
-    font-family: $font-primary;
-    font-size: 2.4rem;
-    font-weight: 300;
-    margin-bottom: $spacing-unit * 3;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 2px;
+    background: rgba($color-accent, 0.1);
+    
+    .service-card__icon {
       background: $color-accent;
-      margin-top: $spacing-unit * 2;
+      color: $color-white;
     }
   }
-
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      position: relative;
-      padding-left: $spacing-unit * 2;
-      margin-bottom: $spacing-unit * 1.5;
-      color: $color-text-secondary;
-      font-size: 1.4rem;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: $color-accent;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
+  
+  &__icon {
+    width: 64px;
+    height: 64px;
+    background: rgba($color-accent, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $spacing-unit * 3;
+    color: $color-accent;
+    transition: $transition-base;
+    
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  
+  &__title {
+    font-size: $font-size-h3;
+    margin-bottom: $spacing-unit * 2;
+  }
+  
+  &__description {
+    color: $color-text-secondary;
+    line-height: 1.6;
+    margin-bottom: $spacing-unit * 3;
+  }
+  
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 2;
+  }
+  
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: $spacing-unit * 2;
+    color: $color-text-secondary;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+      color: $color-accent;
+      flex-shrink: 0;
+    }
+  }
+  
+  @include respond-to($breakpoint-md) {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+    
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
       }
     }
   }
