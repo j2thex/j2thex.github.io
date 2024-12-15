@@ -3,14 +3,18 @@ description: Digital Agency
 baseurl: ""
 url: "https://n0thn.com"
 
+# Build settings
 markdown: kramdown
 sass:
   style: compressed
   sass_dir: _sass
+  sourcemap: never
 
+# Site settings
 languages: ["en", "ru", "uk"]
 default_lang: "en"
 
+# Collections
 collections_dir: collections
 collections:
   projects_en:
