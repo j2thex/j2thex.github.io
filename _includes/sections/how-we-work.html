@@ -1,0 +1,22 @@
+<section id="process" class="how-we-work">
+  <div class="how-we-work__container">
+    <div class="how-we-work__header">
+      <h2 class="how-we-work__title">{{ site.data.translations[page.lang].process.title }}</h2>
+      <p class="how-we-work__subtitle">{{ site.data.translations[page.lang].process.subtitle }}</p>
+    </div>
+    <div class="how-we-work__steps">
+      {% assign steps = site.data.translations[page.lang].process.steps %}
+      {% for step in steps %}
+        <div class="how-we-work__step {% if forloop.index == 2 %}active{% endif %}">
+          <div class="how-we-work__step-circle">
+            <span class="how-we-work__step-title">{{ step.title }}</span>
+          </div>
+          <p class="how-we-work__step-description">{{ step.description }}</p>
+          {% unless forloop.last %}
+            <div class="how-we-work__step-arrow"></div>
+          {% endunless %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section> 

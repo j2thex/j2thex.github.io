@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16">
+  <rect width="24" height="16" fill="#ffffff" style="stroke-width: 0px;"/>
+  <circle cx="10.102" cy="10.987" r="2.465" fill="#D2B48C" style="" transform="matrix(1.305228, 0, 0, 1.21535, -3.729269, -0.703597)"/>
+  <circle cx="14.046" cy="10.987" r="2.465" fill="#D2B48C" style="" transform="matrix(1.305228, 0, 0, 1.21535, -3.729269, -0.703597)"/>
+  <rect x="10.629" y="1.745" width="2.611" height="9.704" fill="#D2B48C" style=""/>
+  <circle cx="12.561" cy="3.258" r="2.465" fill="#D2B48C" style="" transform="matrix(0.678317, 0, 0, 0.528566, 3.382856, -0.133948)"/>
+</svg>

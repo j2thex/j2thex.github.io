@@ -1,0 +1,43 @@
+<!-- Debug info -->
+{% comment %}
+  Current page lang: {{ page.lang }}
+  Available languages: {{ site.languages | join: ', ' }}
+{% endcomment %}
+
+<div class="lang-switcher">
+  <div class="lang-switcher__current">
+    {% case page.lang %}
+    {% when 'en' %}
+      <img class="flag" src="{{ '/assets/images/flags/en.svg' | relative_url }}" alt="English">
+      <span>EN</span>
+    {% when 'ru' %}
+      <img class="flag" src="{{ '/assets/images/flags/ru.svg' | relative_url }}" alt="Русский">
+      <span>RU</span>
+    {% when 'uk' %}
+      <img class="flag" src="{{ '/assets/images/flags/uk.svg' | relative_url }}" alt="Українська">
+      <span>UK</span>
+    {% endcase %}
+  </div>
+  <div class="lang-switcher__dropdown">
+    {% for lang in site.languages %}
+      {% if lang != page.lang %}
+        {% assign lang_name = lang | upcase %}
+        {% if page.url contains "/blog/" %}
+          {% assign target_url = "/" | append: lang | append: "/blog/" %}
+        {% elsif page.url contains "/projects/" %}
+          {% if page.slug %}
+            {% assign target_url = "/" | append: lang | append: "/projects/" | append: page.slug | append: "/" %}
+          {% else %}
+            {% assign target_url = "/" | append: lang | append: "/projects/" %}
+          {% endif %}
+        {% else %}
+          {% assign target_url = "/" | append: lang | append: "/" %}
+        {% endif %}
+        <a href="{{ target_url }}">
+          <img class="flag" src="{{ '/assets/images/flags/' | append: lang | append: '.svg' | relative_url }}" alt="{{ lang_name }}">
+          <span>{{ lang_name }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

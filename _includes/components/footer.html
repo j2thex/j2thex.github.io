@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <a href="/{{ page.lang }}/">n<span class="zero">0</span>thn</a>
+      </div>
+      <div class="footer__links">
+        <a href="#services">{{ site.data.translations[page.lang].nav.services }}</a>
+        <a href="#process">{{ site.data.translations[page.lang].nav.process }}</a>
+        <a href="#portfolio">{{ site.data.translations[page.lang].nav.portfolio }}</a>
+        <a href="/{{ page.lang }}/blog/">{{ site.data.translations[page.lang].nav.blog }}</a>
+        <a href="#contact">{{ site.data.translations[page.lang].nav.contact }}</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/jeffsmith01/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM9 17H6.477V10H9V17ZM7.694 8.717C6.923 8.717 6.408 8.203 6.408 7.517C6.408 6.831 6.922 6.317 7.779 6.317C8.55 6.317 9.065 6.831 9.065 7.517C9.065 8.203 8.551 8.717 7.694 8.717ZM18 17H15.558V13.174C15.558 12.116 14.907 11.872 14.663 11.872C14.419 11.872 13.605 12.035 13.605 13.174C13.605 13.337 13.605 17 13.605 17H11.082V10H13.605V10.977C13.93 10.407 14.581 10 15.802 10C17.023 10 18 10.977 18 13.174V17Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="https://x.com/jeff_smith01" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.258 10.152L23.176 0H21.063L13.314 8.813L7.133 0H0L9.352 13.279L0 23.914H2.113L10.296 14.618L16.812 23.914H23.945L14.258 10.152ZM11.363 13.395L10.414 12.086L2.902 1.715H6.094L12.109 10.01L13.058 11.319L21.002 22.276H17.81L11.363 13.395Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/blockchain.jeff" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 3H4C3.447 3 3 3.447 3 4V20C3 20.553 3.447 21 4 21H12.615V14.039H10.277V11.314H12.615V9.309C12.615 6.985 14.104 5.657 16.193 5.657C17.195 5.657 18.062 5.728 18.313 5.759V8.188H16.779C15.579 8.188 15.324 8.756 15.324 9.569V11.314H18.225L17.865 14.039H15.324V21H20C20.553 21 21 20.553 21 20V4C21 3.447 20.553 3 20 3Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="https://youtube.com/j2thex" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.543 6.498C22 8.28 22 12 22 12C22 12 22 15.72 21.543 17.502C21.289 18.487 20.546 19.262 19.605 19.524C17.896 20 12 20 12 20C12 20 6.107 20 4.395 19.524C3.45 19.258 2.708 18.484 2.457 17.502C2 15.72 2 12 2 12C2 12 2 8.28 2.457 6.498C2.711 5.513 3.454 4.738 4.395 4.476C6.107 4 12 4 12 4C12 4 17.896 4 19.605 4.476C20.55 4.742 21.292 5.516 21.543 6.498ZM10 15.5L16 12L10 8.5V15.5Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="https://t.me/jeffsmith" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.9337 3.33746L2.36687 10.6017C1.09876 11.0897 1.10478 11.7697 2.13604 12.0837L7.20107 13.6359L18.7937 6.54212C19.3327 6.22913 19.8267 6.39913 19.4237 6.74112L10.0897 15.0763H10.0877L10.0897 15.0773L9.69175 20.2625C10.1927 20.2625 10.4157 20.0305 10.7007 19.7565L13.1649 17.3654L18.2869 21.0768C19.2029 21.5858 19.8599 21.3238 20.0869 20.2645L23.2417 4.89149C23.5687 3.59745 22.7267 3.00346 21.9337 3.33746Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

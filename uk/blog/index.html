@@ -1,0 +1,48 @@
+---
+layout: default
+title: Блог
+lang: uk
+permalink: /uk/blog/
+---
+<section class="blog">
+  <div class="blog__hero">
+    <div class="container">
+      <h1 class="blog__title">Блог</h1>
+      <p class="blog__subtitle">Ідеї, оновлення та історії від нашої команди</p>
+    </div>
+  </div>
+
+  <div class="blog__content">
+    <div class="container">
+      <div class="blog__grid">
+        {% for post in site.posts_uk %}
+          <article class="blog-card">
+            <a href="{{ post.url | relative_url }}" class="blog-card__link">
+              {% if post.image %}
+                <div class="blog-card__image">
+                  <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                </div>
+              {% endif %}
+              <div class="blog-card__content">
+                <h2 class="blog-card__title">{{ post.title }}</h2>
+                <time class="blog-card__date" datetime="{{ post.date | date_to_xmlschema }}">
+                  {{ post.date | date: "%-d %B %Y" }}
+                </time>
+                {% if post.excerpt %}
+                  <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                {% endif %}
+                {% if post.categories %}
+                  <div class="blog-card__categories">
+                    {% for category in post.categories %}
+                      <span class="tag tag--small">{{ category }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section> 

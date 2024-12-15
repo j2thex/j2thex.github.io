@@ -1,34 +1,16 @@
 <!DOCTYPE html>
-<html>
-{% include head.html %}
-
-<body id="page-top" class="index">
-  {% include nav.html %}
-  {% include header.html %}
-  {% include video.html %}
-  {% include about.html %}
-  {% include project-grid.html %}
-  
-
-  {% if site.contact == "static" %}
-  {% include contact_static.html %}
-  {% elsif site.contact == "disqus" %}
-  {% include contact_disqus.html %}
-  {% else %}
-  {% include contact.html %}
-  {% endif %}
-
-  {% include footer.html %}
-
-  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-  <div class="scroll-top page-scroll visible-xs visible-sm">
-    <a  href="#page-top">
-      <i class="fa fa-chevron-up"></i>
-    </a>
-  </div>
-
-  {% include modals.html %}
-  {% include js.html %}
+<html lang="{{ page.lang | default: site.default_lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Muli:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  {% include components/navigation.html %}
+  <main>{{ content }}</main>
+  {% include components/footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
-
 </html>

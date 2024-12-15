@@ -1,0 +1,87 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer {
+  background: v.$color-card;
+  padding: v.$spacing-unit * 8 0;
+  
+  &__container {
+    @include m.container;
+  }
+  
+  &__content {
+    display: grid;
+    gap: v.$spacing-unit * 4;
+    
+    @include m.respond-to(v.$breakpoint-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__logo {
+    font-family: 'Consolas', monospace;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    
+    a {
+      color: v.$color-text;
+      text-decoration: none;
+      
+      .zero {
+        color: v.$color-accent;
+      }
+    }
+  }
+  
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-unit * 2;
+    
+    a {
+      color: v.$color-text;
+      text-decoration: none;
+      transition: v.$transition-base;
+      
+      &:hover {
+        color: v.$color-accent;
+      }
+    }
+  }
+  
+  &__social {
+    display: flex;
+    gap: v.$spacing-unit * 3;
+    justify-content: flex-end;
+    
+    a {
+      color: v.$color-text;
+      text-decoration: none;
+      transition: v.$transition-base;
+      line-height: 0;
+      
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: v.$transition-base;
+      }
+      
+      &:hover {
+        color: v.$color-accent;
+        
+        svg {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+  
+  &__bottom {
+    margin-top: v.$spacing-unit * 6;
+    padding-top: v.$spacing-unit * 3;
+    border-top: 1px solid v.$color-border;
+    text-align: center;
+    color: v.$color-text-secondary;
+  }
+} 

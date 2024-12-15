@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="post__hero">
+    <div class="container">
+      <div class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="post__date">
+          {{ page.date | date: "%-d %B %Y" }}
+        </time>
+        {% if page.categories %}
+        <div class="post__categories">
+          {% for category in page.categories %}
+            <span class="tag tag--small">{{ category }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      
+      <h1 class="post__title">
+        {% if page.translations[page.lang].title %}
+          {{ page.translations[page.lang].title }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </h1>
+      
+      {% if page.description or page.translations[page.lang].description %}
+        <p class="post__description">
+          {% if page.translations[page.lang].description %}
+            {{ page.translations[page.lang].description }}
+          {% else %}
+            {{ page.description }}
+          {% endif %}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="post__content">
+    <div class="container">
+      {% if page.image %}
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post__image">
+      {% endif %}
+      
+      <div class="post__body">
+        {{ content }}
+      </div>
+      
+      {% if page.tags %}
+        <div class="post__tags">
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article> 

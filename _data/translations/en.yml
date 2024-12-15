@@ -1,0 +1,83 @@
+nav:
+  home: Home
+  services: Services
+  process: Our Process
+  portfolio: Portfolio
+  blog: Blog
+  contact: Contact
+
+hero:
+  title: Creating Digital
+  highlight: Excellence
+  subtitle: Modern solutions for modern challenges
+  cta_primary: Get Started
+  cta_secondary: View Our Work
+
+services:
+  title: Our Services
+  subtitle: We specialize in solutions tailored to your stage of growth
+  items:
+    - title: Digital Transformation
+      icon: digital-transform
+      description: Modernizing your business with cutting-edge technology
+      features:
+        - Full-stack web development
+        - Mobile application design
+        - Enterprise system integration
+        - Scaling MVPs or launching Series A-ready products
+        - Refactoring, fixing technical debt
+    - title: Innovation Acceleration
+      icon: innovation
+      description: Fast-tracking your ideas to market
+      features:
+        - Rapid Prototyping
+        - MVP development
+        - Proof of concept creation
+        - Quick iteration cycles
+        - Faster go-to-market
+    - title: Strategic Upgrades
+      icon: strategic
+      description: Leveraging emerging technologies for growth
+      features:
+        - Custom AI solution design
+        - Natural language processing
+        - Predictive analytics
+        - Decentralized applications
+        - Smart contracts
+        - Crypto payment infrastructure
+
+process:
+  title: Our Process
+  subtitle: Our plan for dealing with a new project and solve clients' problems
+  steps:
+    - title: Identify Goals
+      description: We discuss your needs, goals, and vision for the project
+    - title: Discovery & Offer
+      description: We create a detailed project plan, including timeline, milestones, and project deliverables plan
+    - title: Development
+      description: Our team begins work on your project, with regular updates and demos to keep you involved in the process
+    - title: Testing & Review
+      description: Rigorous testing ensures everything works perfectly. You review the work and provide feedback
+    - title: Launch & Support
+      description: We deploy your project and provide ongoing support
+
+portfolio:
+  title: Portfolio
+  subtitle: Recent projects
+  categories:
+    all: All Projects
+    web: Web Development
+    mobile: Mobile Apps
+    design: UI/UX Design
+    blockchain: Blockchain
+
+contact:
+  title: Get in Touch
+  subtitle: Let's discuss your project
+  form:
+    name: Name
+    email: Email
+    message: Message
+    submit: Send
+  success: Thank you for your message! We'll get back to you soon.
+  error: An error occurred. Please try again.

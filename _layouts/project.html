@@ -1,0 +1,78 @@
+---
+layout: default
+---
+<article class="project has-fixed-header">
+  <div class="project__hero">
+    <div class="container">
+      <h1 class="project__title">
+        {% if page.translations[page.lang].title %}
+          {{ page.translations[page.lang].title }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </h1>
+      
+      {% if page.technologies %}
+      <div class="project__technologies">
+        {% for tech in page.technologies %}
+          <span class="tag">{{ tech }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="project__content container">
+    <div class="project__info">
+      {% if page.challenge %}
+      <section class="project__section">
+        <h2>{% if page.translations[page.lang].challenge_title %}{{ page.translations[page.lang].challenge_title }}{% else %}Challenge{% endif %}</h2>
+        <p>{% if page.translations[page.lang].challenge %}{{ page.translations[page.lang].challenge }}{% else %}{{ page.challenge }}{% endif %}</p>
+      </section>
+      {% endif %}
+
+      {% if page.solution %}
+      <section class="project__section">
+        <h2>{% if page.translations[page.lang].solution_title %}{{ page.translations[page.lang].solution_title }}{% else %}Solution{% endif %}</h2>
+        <p>{% if page.translations[page.lang].solution %}{{ page.translations[page.lang].solution }}{% else %}{{ page.solution }}{% endif %}</p>
+      </section>
+      {% endif %}
+
+      {% if page.results %}
+      <section class="project__section">
+        <h2>{% if page.translations[page.lang].results_title %}{{ page.translations[page.lang].results_title }}{% else %}Results{% endif %}</h2>
+        <p>{% if page.translations[page.lang].results %}{{ page.translations[page.lang].results }}{% else %}{{ page.results }}{% endif %}</p>
+      </section>
+      {% endif %}
+    </div>
+
+    {% if page.images %}
+    <div class="project__gallery">
+      {% for image in page.images %}
+        {% assign image_path = image | relative_url %}
+        {% assign file_exists = image_path | file_exists %}
+        {% if file_exists %}
+          <img src="{{ image_path }}" alt="{{ page.title }} screenshot {{ forloop.index }}" class="project__image">
+        {% else %}
+          <div class="project__image-placeholder">Image {{ forloop.index }}</div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.website or page.github %}
+    <div class="project__links">
+      {% if page.website %}
+        <a href="{{ page.website }}" class="btn btn--primary" target="_blank" rel="noopener">
+          {% if page.translations[page.lang].view_live %}{{ page.translations[page.lang].view_live }}{% else %}View Live{% endif %}
+        </a>
+      {% endif %}
+      {% if page.github %}
+        <a href="{{ page.github }}" class="btn btn--outline" target="_blank" rel="noopener">
+          {% if page.translations[page.lang].view_code %}{{ page.translations[page.lang].view_code }}{% else %}View Code{% endif %}
+        </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</article> 

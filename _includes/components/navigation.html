@@ -1,0 +1,22 @@
+<nav class="nav">
+  <div class="nav__container">
+    <a href="/{{ page.lang }}/" class="nav__logo">n<span class="zero">0</span>thn</a>
+    
+    <button class="nav__toggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav__menu">
+      <ul class="nav__list">
+        <li><a href="/{{ page.lang }}/#services" class="nav__link">{{ site.data.translations[page.lang].nav.services }}</a></li>
+        <li><a href="/{{ page.lang }}/#process" class="nav__link">{{ site.data.translations[page.lang].nav.process }}</a></li>
+        <li><a href="/{{ page.lang }}/#portfolio" class="nav__link">{{ site.data.translations[page.lang].nav.portfolio }}</a></li>
+        <li><a href="/{{ page.lang }}/blog/" class="nav__link">{{ site.data.translations[page.lang].nav.blog }}</a></li>
+        <li><a href="/{{ page.lang }}/#contact" class="nav__link">{{ site.data.translations[page.lang].nav.contact }}</a></li>
+      </ul>
+      {% include components/language-switcher.html %}
+    </div>
+  </div>
+</nav>

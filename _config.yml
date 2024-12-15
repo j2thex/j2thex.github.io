@@ -1,70 +1,110 @@
-# _config.yml
-# REMINDER: To start the server, use `bundle exec jekyll serve`
-
-# Site settings
-title: n0thn - Blockchain & Fintech Product Innovators
-hero: Innovative Blockchain, Web3, and AI Solutions
-email: jnamed@gmail.com
-url: https://n0thn.com
-description: "We specialize in developing digital products and SaaS solutions. Our team has scaled projects from $5M to $1B in revenue. We leverage blockchain, Web3, and AI to create fintech products that drive innovation and solve real-world problems."
-keywords: "Blockchain, Web3, crypto exchange, decentralized finance, product management, product vision, product roadmaps, AI, LLMs, fintech, digital wallets, staking options, mobile banking, crypto trading platforms, tokenomics, Agile, Scrum, team leadership, API integration, proof of concept (PoC), minimum viable product (MVP), product strategy, market analysis, remote team management, A/B testing, Product requirements, user stories."
-skills: "Digital Development - Product Management - Business Analysis - User Experience Design"
-meta_author: n0thn Team
-
-
-# Google webmaster tools
-google_verify:
-
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
-contact: static
-
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: myshortname
-
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary: 80B3FF #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
-
-# Footer settings
-footer:
-  copyright: Jeff Smith
-  location: Location
-  social: Around the Web
-  credits: Credits
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://x.com/jeff_smith01
-  - title: facebook
-    url: https://www.facebook.com/blockchain.jeff
-  - title: youtube
-    url: https://youtube.com/j2thex
-  - title: telegram
-    url: https://t.me/jeffsmith
- 
-
-
-# Postal address (add as many lines as necessary)
-address:
-  - line: 01133 Konovaltsya str. 37
-  - line: Kyiv, Ukraine 🇺🇦 
-
-# Credits content
-credits: 'Thank you for your business!'
-
-# Build settings
-markdown: kramdown
-permalink: pretty
+title: n0thn
+description: Digital Agency
 baseurl: ""
 url: ""
+
+markdown: kramdown
+sass:
+  style: compressed
+  sass_dir: _sass
+
+languages: ["en", "ru", "uk"]
+default_lang: "en"
+
+collections_dir: collections
+collections:
+  projects_en:
+    output: true
+    permalink: /en/projects/:slug/
+  projects_ru:
+    output: true
+    permalink: /ru/projects/:slug/
+  projects_uk:
+    output: true
+    permalink: /uk/projects/:slug/
+  posts_en:
+    output: true
+    permalink: /en/blog/:year/:month/:day/:title/
+  posts_ru:
+    output: true
+    permalink: /ru/blog/:year/:month/:day/:title/
+  posts_uk:
+    output: true
+    permalink: /uk/blog/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - README.md
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      lang: "en"
+  -
+    scope:
+      path: "en"
+    values:
+      lang: "en"
+  -
+    scope:
+      path: "ru"
+    values:
+      lang: "ru"
+  -
+    scope:
+      path: "uk"
+    values:
+      lang: "uk"
+  -
+    scope:
+      path: ""
+      type: "projects_en"
+    values:
+      layout: "project"
+      lang: "en"
+  -
+    scope:
+      path: ""
+      type: "projects_ru"
+    values:
+      layout: "project"
+      lang: "ru"
+  -
+    scope:
+      path: ""
+      type: "projects_uk"
+    values:
+      layout: "project"
+      lang: "uk"
+  -
+    scope:
+      path: ""
+      type: "posts_en"
+    values:
+      layout: "post"
+      lang: "en"
+  -
+    scope:
+      path: ""
+      type: "posts_ru"
+    values:
+      layout: "post"
+      lang: "ru"
+  -
+    scope:
+      path: ""
+      type: "posts_uk"
+    values:
+      layout: "post"
+      lang: "uk"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

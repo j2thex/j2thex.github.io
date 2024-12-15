@@ -1,0 +1,41 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: (v.$spacing-unit * 20) 0 (v.$spacing-unit * 10);
+  display: flex;
+  align-items: center;
+  background: v.$color-background;
+  
+  &__container {
+    @include m.container;
+  }
+  
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  &__title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: v.$spacing-unit * 3;
+  }
+  
+  &__subtitle {
+    font-family: v.$font-subheaders;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    opacity: 0.9;
+    margin-bottom: v.$spacing-unit * 6;
+  }
+  
+  &__buttons {
+    display: flex;
+    gap: v.$spacing-unit * 2;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

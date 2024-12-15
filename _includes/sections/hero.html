@@ -1,0 +1,21 @@
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        {{ site.data.translations[page.lang].hero.title }}
+        <span class="highlight">{{ site.data.translations[page.lang].hero.highlight }}</span>
+      </h1>
+      <p class="hero__subtitle">
+        {{ site.data.translations[page.lang].hero.subtitle }}
+      </p>
+      <div class="hero__buttons">
+        <a href="#contact" class="btn btn--primary btn--large">
+          {{ site.data.translations[page.lang].hero.cta_primary }}
+        </a>
+        <a href="#portfolio" class="btn btn--outline btn--large">
+          {{ site.data.translations[page.lang].hero.cta_secondary }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

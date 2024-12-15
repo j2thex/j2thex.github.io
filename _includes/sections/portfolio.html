@@ -1,0 +1,59 @@
+<section id="portfolio" class="portfolio">
+  <div class="portfolio__container">
+    <div class="portfolio__header">
+      <h2 class="portfolio__title">{{ site.data.translations[page.lang].portfolio.title }}</h2>
+      <p class="portfolio__subtitle">{{ site.data.translations[page.lang].portfolio.subtitle }}</p>
+    </div>
+
+    <div class="portfolio__filters">
+      {% assign categories = site.data.translations[page.lang].portfolio.categories %}
+      {% for category in categories %}
+        <button class="portfolio__filter {% if category[0] == 'all' %}active{% endif %}" data-filter="{{ category[0] }}">
+          {{ category[1] }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="portfolio__grid">
+      {% assign projects = site.projects_en %}
+      {% if page.lang == 'ru' %}
+        {% assign projects = site.projects_ru %}
+      {% elsif page.lang == 'uk' %}
+        {% assign projects = site.projects_uk %}
+      {% endif %}
+
+      {% if projects %}
+        {% for project in projects %}
+          {% if project.featured %}
+            <article class="portfolio__item" data-categories='{{ project.categories | jsonify }}'>
+              <a href="{{ project.url | relative_url }}" class="portfolio__link">
+                <div class="portfolio__image">
+                  {% if project.thumbnail %}
+                    <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
+                  {% else %}
+                    <div class="portfolio__image-placeholder">No Image</div>
+                  {% endif %}
+                </div>
+                <div class="portfolio__content">
+                  <h3 class="portfolio__item-title">{{ project.title }}</h3>
+                  <p class="portfolio__item-description">{{ project.description }}</p>
+                  {% if project.technologies %}
+                    <div class="portfolio__technologies">
+                      {% for tech in project.technologies | limit: 3 %}
+                        <span class="tag tag--small">{{ tech }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              </a>
+            </article>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <div class="portfolio__empty">
+          <p>Projects coming soon...</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section> 

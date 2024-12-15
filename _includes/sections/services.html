@@ -1,0 +1,27 @@
+<section class="services" id="services">
+  <div class="services__container">
+    <div class="services__header">
+      <h2 class="services__title">{{ site.data.translations[page.lang].services.title }}</h2>
+      <p class="services__subtitle">{{ site.data.translations[page.lang].services.subtitle }}</p>
+    </div>
+    
+    <div class="services__grid">
+      {% for service in site.data.translations[page.lang].services.items %}
+        <div class="service-card">
+          <div class="service-card__icon">
+            <img src="{{ '/assets/images/icons/' | append: service.icon | append: '.svg' | relative_url }}" alt="{{ service.title }}">
+          </div>
+          <h3 class="service-card__title">{{ service.title }}</h3>
+          <p class="service-card__description">{{ service.description }}</p>
+          {% if service.features %}
+            <ul class="service-card__list">
+              {% for feature in service.features %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section> 
