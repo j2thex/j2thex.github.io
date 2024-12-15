@@ -1,7 +1,7 @@
 title: n0thn
 description: Digital Agency
 baseurl: ""
-url: ""
+url: "https://n0thn.com"
 
 markdown: kramdown
 sass:
