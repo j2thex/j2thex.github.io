@@ -11,9 +11,7 @@
   }
   
   &__title {
-    font-size: $font-size-h1;
-    font-weight: $font-weight-light;
-    margin-bottom: $spacing-unit * 3;
+    @include section-title;
   }
   
   &__subtitle {

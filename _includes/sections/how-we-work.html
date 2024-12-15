@@ -7,14 +7,11 @@
     <div class="how-we-work__steps">
       {% assign steps = site.data.translations[page.lang].process.steps %}
       {% for step in steps %}
-        <div class="how-we-work__step {% if forloop.index == 2 %}active{% endif %}">
+        <div class="how-we-work__step">
           <div class="how-we-work__step-circle">
             <span class="how-we-work__step-title">{{ step.title }}</span>
           </div>
           <p class="how-we-work__step-description">{{ step.description }}</p>
-          {% unless forloop.last %}
-            <div class="how-we-work__step-arrow"></div>
-          {% endunless %}
         </div>
       {% endfor %}
     </div>

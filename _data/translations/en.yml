@@ -2,7 +2,7 @@ nav:
   home: Home
   services: Services
   process: Our Process
-  portfolio: Portfolio
+  portfolio: Projects
   blog: Blog
   contact: Contact
 
@@ -62,8 +62,7 @@ process:
       description: We deploy your project and provide ongoing support
 
 portfolio:
-  title: Portfolio
-  subtitle: Recent projects
+  title: Recent projects
   categories:
     all: All Projects
     web: Web Development

@@ -116,3 +116,10 @@
   height: 100%;
   background: rgba($color-background, 0.8);
 }
+
+@mixin section-title {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-light;
+  margin-bottom: $spacing-unit * 3;
+  letter-spacing: -0.02em;
+}

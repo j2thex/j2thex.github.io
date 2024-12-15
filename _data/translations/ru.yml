@@ -2,7 +2,7 @@ nav:
   home: Главная
   services: Услуги
   process: Процесс
-  portfolio: Портфолио
+  portfolio: Проекты
   blog: Блог
   contact: Контакты
 
@@ -62,8 +62,7 @@ process:
       description: Мы запускаем ваш проект и обеспечиваем постоянную поддержку
 
 portfolio:
-  title: Портфолио
-  subtitle: Недавние проекты
+  title: Проекты
   categories:
     all: Все Проекты
     web: Веб-разработка

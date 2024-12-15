@@ -18,12 +18,13 @@
   
   &__logo {
     font-family: $font-headers;
-    font-size: $font-size-h4;
+    font-size: $font-size-h3;
     font-weight: 700;
     color: $color-text;
     text-decoration: none;
     
     .zero {
+      font-family: $font-mono;
       color: $color-accent;
     }
   }

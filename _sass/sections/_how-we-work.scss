@@ -1,29 +1,46 @@
 .how-we-work {
   padding: $spacing-unit * 12 0;
+  background: $color-background;
   
   &__container {
     @include container;
   }
   
   &__header {
-    text-align: center;
-    margin-bottom: $spacing-unit * 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-unit * 12;
+    gap: $spacing-unit * 4;
+    
+    @include respond-to($breakpoint-md) {
+      gap: $spacing-unit * 8;
+    }
   }
   
   &__title {
-    font-size: $font-size-h1;
-    font-weight: $font-weight-light;
-    margin-bottom: $spacing-unit * 3;
+    @include section-title;
   }
   
   &__subtitle {
-    font-family: $font-subheaders;
-    font-size: $font-size-h4;
+    font-size: $font-size-base;
     color: $color-text-secondary;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 400px;
+    margin: 0;
+    position: relative;
+    padding-left: $spacing-unit * 3;
     letter-spacing: $letter-spacing-base;
-    text-transform: uppercase;
+    line-height: $line-height-base;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: $spacing-unit * 2;
+      height: 2px;
+      background: $color-accent;
+    }
   }
   
   &__steps {
@@ -43,62 +60,66 @@
     text-align: center;
     position: relative;
     
-    &:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 32px;
-      right: -30px;
-      width: 60px;
-      height: 2px;
-      background: $color-accent;
-      display: none;
-      
-      @include respond-to($breakpoint-md) {
-        display: block;
+    @include respond-to($breakpoint-md) {
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100px;
+          left: calc(50% + 100px);
+          width: calc(100% - 200px);
+          height: 2px;
+          border-top: 2px dotted $color-text-secondary;
+        }
+        
+        &::before {
+          content: '→';
+          position: absolute;
+          top: 95px;
+          left: calc(50% + 100px);
+          color: $color-accent;
+          font-size: 16px;
+          line-height: 1;
+          z-index: 1;
+          transform: scaleX(3);
+          transform-origin: left;
+        }
       }
     }
   }
   
   &__step-circle {
-    width: 64px;
-    height: 64px;
-    background: rgba($color-accent, 0.1);
+    width: 200px;
+    height: 200px;
+    border: 2px dashed $color-text-secondary;
     border-radius: 50%;
-    margin: 0 auto $spacing-unit * 3;
+    margin: 0 auto $spacing-unit * 4;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     transition: $transition-base;
+    background: $color-background;
     
-    &::before {
-      content: counter(step);
-      counter-increment: step;
-      font-family: $font-mono;
-      font-size: $font-size-h3;
-      color: $color-accent;
-      transition: $transition-base;
-    }
-    
-    &:hover {
+    .how-we-work__step:nth-child(2) & {
+      border-style: solid;
       background: $color-accent;
-      
-      &::before {
-        color: $color-white;
-      }
+      border-color: $color-accent;
     }
   }
   
   &__step-title {
-    font-size: $font-size-h4;
+    font-family: $font-headers;
+    font-size: $font-size-h3;
     font-weight: $font-weight-light;
-    margin-bottom: $spacing-unit * 2;
-    position: absolute;
-    width: max-content;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: $spacing-unit * 2;
+    color: $color-text;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 $spacing-unit * 3;
+    
+    .how-we-work__step:nth-child(2) & {
+      color: $color-white;
+    }
   }
   
   &__step-description {
@@ -106,10 +127,8 @@
     color: $color-text-secondary;
     line-height: $line-height-base;
     letter-spacing: $letter-spacing-base;
-    margin-top: $spacing-unit * 8;
     max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 }
 
@@ -119,55 +138,5 @@
 }
 
 .process-card {
-  background: $color-card;
-  border-radius: 12px;
-  padding: $spacing-unit * 4;
-  text-align: center;
-  transition: $transition-base;
-  
-  &:hover {
-    transform: translateY(-5px);
-    
-    .process-card__number {
-      background: $color-accent;
-      color: $color-white;
-    }
-  }
-  
-  &__number {
-    width: 64px;
-    height: 64px;
-    background: rgba($color-accent, 0.1);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto $spacing-unit * 3;
-    color: $color-accent;
-    font-size: $font-size-h3;
-    font-weight: 700;
-    transition: $transition-base;
-  }
-  
-  &__title {
-    font-size: $font-size-h4;
-    margin-bottom: $spacing-unit * 2;
-  }
-  
-  &__description {
-    color: $color-text-secondary;
-    line-height: 1.6;
-  }
-  
-  @include respond-to($breakpoint-md) {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s forwards;
-    
-    @for $i from 1 through 4 {
-      &:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.1}s;
-      }
-    }
-  }
+  display: none;
 }
