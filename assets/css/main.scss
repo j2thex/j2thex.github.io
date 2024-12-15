@@ -1,5 +1,7 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @use "sass:color";
 @use "base" as *;
 @use "base/reset";
@@ -14,4 +16,5 @@
 @use "sections/how-we-work";
 @use "sections/portfolio";
 @use "sections/contact";
-@use "sections/blog"; 
+@use "sections/blog";
+@use "sections/project";
