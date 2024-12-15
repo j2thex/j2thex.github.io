@@ -1,5 +1,36 @@
----
-layout: default
-lang: en
-redirect_to: /en/
---- 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Get browser language
+    var userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.toLowerCase().substring(0, 2);
+    
+    // Define supported languages and their paths
+    var supportedLangs = {
+      'en': '/en/',
+      'ru': '/ru/',
+      'uk': '/uk/'
+    };
+    
+    // Determine redirect path
+    var redirectPath = supportedLangs[userLang] || '/en/'; // Default to English if language not supported
+    
+    // Set canonical and perform redirect
+    document.write('<link rel="canonical" href="' + redirectPath + '">');
+    window.location.href = redirectPath;
+  </script>
+  <meta http-equiv="refresh" content="0; url=/en/"> <!-- Fallback if JavaScript is disabled -->
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <p>If you are not redirected automatically, please choose your language:</p>
+  <ul>
+    <li><a href="/en/">English</a></li>
+    <li><a href="/ru/">Русский</a></li>
+    <li><a href="/uk/">Українська</a></li>
+  </ul>
+</body>
+</html> 
