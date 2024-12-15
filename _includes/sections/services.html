@@ -1,26 +1,27 @@
+{% assign services = site.data.translations[page.lang].services %}
+
 <section class="services" id="services">
   <div class="services__container">
-    <div class="services__header">
-      <h2 class="services__title">{{ site.data.translations[page.lang].services.title }}</h2>
-      <p class="services__subtitle">{{ site.data.translations[page.lang].services.subtitle }}</p>
-    </div>
+    <header class="services__header">
+      <h2 class="services__title">{{ services.title }}</h2>
+      <p class="services__subtitle">{{ services.subtitle }}</p>
+    </header>
     
     <div class="services__grid">
-      {% for service in site.data.translations[page.lang].services.items %}
-        <div class="service-card">
-          <div class="service-card__icon">
-            <img src="{{ '/assets/images/icons/' | append: service.icon | append: '.svg' | relative_url }}" alt="{{ service.title }}">
-          </div>
-          <h3 class="service-card__title">{{ service.title }}</h3>
-          <p class="service-card__description">{{ service.description }}</p>
-          {% if service.features %}
-            <ul class="service-card__list">
-              {% for feature in service.features %}
-                <li>{{ feature }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
+      {% for service in services.items %}
+      <div class="service-card">
+        <div class="service-card__icon">
+          <img src="/assets/images/icons/{{ service.icon }}.png" alt="{{ service.title }} icon">
         </div>
+        <h3 class="service-card__title">{{ service.title }}</h3>
+        <p class="service-card__description">{{ service.description }}</p>
+        <ul class="service-card__list">
+          {% for feature in service.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        <a href="#contact" class="service-card__button">{{ services.button }}</a>
+      </div>
       {% endfor %}
     </div>
   </div>

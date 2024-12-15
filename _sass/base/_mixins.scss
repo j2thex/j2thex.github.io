@@ -123,3 +123,11 @@
   margin-bottom: $spacing-unit * 3;
   letter-spacing: -0.02em;
 }
+
+@mixin section-subtitle {
+  font-size: $font-size-h4;
+  color: $color-text-secondary;
+  margin-bottom: $spacing-unit * 4;
+  letter-spacing: $letter-spacing-base;
+  line-height: 1.5;
+}

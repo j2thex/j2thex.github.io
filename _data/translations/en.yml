@@ -16,6 +16,7 @@ hero:
 services:
   title: Our Services
   subtitle: We specialize in solutions tailored to your stage of growth
+  button: Choose
   items:
     - title: Digital Transformation
       icon: digital-transform
@@ -62,7 +63,7 @@ process:
       description: We deploy your project and provide ongoing support
 
 portfolio:
-  title: Recent projects
+  title: Recent Projects
   categories:
     all: All Projects
     web: Web Development

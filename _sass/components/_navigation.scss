@@ -17,14 +17,15 @@
   }
   
   &__logo {
-    font-family: $font-headers;
+    font-family: $font-family-base;
     font-size: $font-size-h3;
-    font-weight: 700;
+    font-weight: $font-weight-medium;
     color: $color-text;
     text-decoration: none;
+    text-transform: none;
     
     .zero {
-      font-family: $font-mono;
+      font-family: $font-family-mono;
       color: $color-accent;
     }
   }

@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-headers;
-  line-height: $line-height-headers;
-  font-weight: 700;
+  font-family: $font-family-base;
+  line-height: 1.2;
+  font-weight: $font-weight-light;
   margin-bottom: $spacing-unit * 2;
 }
 
@@ -31,7 +31,7 @@ h4 {
 }
 
 .subheader {
-  font-family: $font-subheaders;
+  font-family: $font-family-heading;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }

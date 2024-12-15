@@ -15,7 +15,7 @@
   }
   
   &__subtitle {
-    font-family: $font-subheaders;
+    font-family: $font-family-heading;
     font-size: $font-size-h4;
     color: $color-text-secondary;
     max-width: 800px;
@@ -40,7 +40,7 @@
     cursor: pointer;
     transition: $transition-base;
     border: none;
-    font-family: $font-body;
+    font-family: $font-family-base;
     font-size: $font-size-base;
     letter-spacing: $letter-spacing-base;
     
@@ -165,7 +165,7 @@
   background: rgba($color-accent, 0.1);
   border-radius: 4px;
   color: $color-accent;
-  font-family: $font-mono;
+  font-family: $font-family-mono;
   
   &--small {
     font-size: $font-size-small;
