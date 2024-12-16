@@ -105,4 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollProgress.style.setProperty('--scroll-width', `${scrolled}%`);
     });
   }
+
+  // Initialize snow effect
+  const heroSection = document.querySelector('.hero');
+  const snowContainer = heroSection.querySelector('.hero__snow-container');
+  new SnowEffect(snowContainer);
 }); 
