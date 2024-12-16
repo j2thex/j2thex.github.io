@@ -23,8 +23,8 @@ order: 13
 lang: en
 thumbnail: "/assets/images/projects/quickhot.png"
 images:
-  - "/assets/images/projects/quickhot-1.jpg"
-  - "/assets/images/projects/quickhot-2.jpg"
+  - "/assets/images/projects/quickhot.png"
+
 categories:
   - mobile
   - iot

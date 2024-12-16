@@ -21,8 +21,8 @@ order: 12
 lang: en
 thumbnail: "/assets/images/projects/pd.png"
 images:
-  - "/assets/images/projects/pd-1.jpg"
-  - "/assets/images/projects/pd-2.jpg"
+  - "/assets/images/projects/pd.png"
+
 categories:
   - web
   - education

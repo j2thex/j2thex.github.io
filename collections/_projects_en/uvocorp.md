@@ -21,8 +21,8 @@ order: 10
 lang: en
 thumbnail: "/assets/images/projects/uvocorp.png"
 images:
-  - "/assets/images/projects/uvocorp-1.jpg"
-  - "/assets/images/projects/uvocorp-2.jpg"
+  - "/assets/images/projects/uvocorp.png"
+
 categories:
   - web
   - content

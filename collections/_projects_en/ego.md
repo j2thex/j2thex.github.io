@@ -25,8 +25,8 @@ order: 3
 lang: en
 thumbnail: "/assets/images/projects/ego.png"
 images:
-  - "/assets/images/projects/ego-1.jpg"
-  - "/assets/images/projects/ego-2.jpg"
+  - "/assets/images/projects/ego.png"
+
 categories:
   - web
   - mobile

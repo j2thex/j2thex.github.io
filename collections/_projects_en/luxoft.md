@@ -21,8 +21,8 @@ order: 8
 lang: en
 thumbnail: "/assets/images/projects/luxoft.png"
 images:
-  - "/assets/images/projects/luxoft-1.jpg"
-  - "/assets/images/projects/luxoft-2.jpg"
+  - "/assets/images/projects/luxoft.png"
+
 categories:
   - web
   - fintech

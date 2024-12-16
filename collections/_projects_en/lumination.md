@@ -21,8 +21,8 @@ order: 11
 lang: en
 thumbnail: "/assets/images/projects/lumination.png"
 images:
-  - "/assets/images/projects/lumination-1.jpg"
-  - "/assets/images/projects/lumination-2.jpg"
+  - "/assets/images/projects/lumination.png"
+
 categories:
   - web
   - design
@@ -46,7 +46,7 @@ results: |
   - Maintained 100% client satisfaction rate
   - Won multiple design and development awards
   - Achieved sub-3-second load times for all projects
-website: "https://lumination.io"
+website: "https://lumination.com.ua"
 ---
 
 {{ page.full_description }} 

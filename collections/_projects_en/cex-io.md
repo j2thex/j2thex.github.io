@@ -8,8 +8,8 @@ order: 4
 lang: en
 thumbnail: "/assets/images/projects/cex.png"
 images:
-  - "/assets/images/projects/cexio-1.jpg"
-  - "/assets/images/projects/cexio-2.jpg"
+  - "/assets/images/projects/cex.png"
+
 categories:
   - web
   - fintech

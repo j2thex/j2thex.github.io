@@ -49,7 +49,7 @@ call_to_action: |
   Ready to trade with JibX? Enjoy zero fees, high leverage, and restaking rewards today! Join our [Discord](https://discord.com/jibx) to connect with our friendly team and get live support.
 website: "https://jibx.io"
 
-discord: "https://discord.com/jibx"
+
 ---
 
 {{ page.full_description }}
