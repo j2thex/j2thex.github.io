@@ -9,8 +9,6 @@
     @include container;
     max-width: 800px;
     width: 100%;
-    position: relative;
-    z-index: 2;
   }
   
   &__title {
@@ -41,16 +39,6 @@
     transform: translateX(-50%);
     color: $color-text-secondary;
     animation: bounce 2s infinite;
-  }
-  
-  &__snow-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
   }
 }
 
