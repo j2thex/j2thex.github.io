@@ -20,18 +20,18 @@ class SnowEffect {
         this.w = 0;
         this.h = 0;
         this.center = { x: 0, y: 0 };
-        this.particleAmount = 75000;
+        this.particleAmount = 50000;
         this.particlePropertiesAmount = 7;
         this.particleHolderLength = this.particleAmount * this.particlePropertiesAmount;
         this.particleHolder = null;
-        this.particleSpeedFactor = 10;
+        this.particleSpeedFactor = 8;
         this.particlesRGBMax = 255;
-        this.particlesRGBMin = 200;
+        this.particlesRGBMin = 180;
         this.deltaTime = 0.175;
         this.waveFrequency = 0.005;
         this.waveAmplitude = 2;
-        this.windStrength = 0.25;
-        this.mouseInfluence = 0.25;
+        this.windStrength = 0.15;
+        this.mouseInfluence = 0.2;
         this.pointerEasing = 0.15;
         this.buffer = null;
         this.bufferBorder = 0;
@@ -46,6 +46,11 @@ class SnowEffect {
         this.init();
         this.setupEventListeners();
         this.animate();
+        
+        this.maxSnowHeight = this.h * 0.1; // Reduced max height
+        this.snowAccumulationRate = 0.1;   // Increased accumulation rate
+        this.snowSpreadRate = 0.3;         // Reduced spread rate
+        this.slopeLimit = 2;               // Increased slope limit
     }
     
     init() {
@@ -74,6 +79,8 @@ class SnowEffect {
         this.buffer = new Uint8Array(this.w * this.h);
         this.buffer.fill(0);
         this.bufferBorder = this.h;
+        this.snowHeight = new Float32Array(this.w);
+        this.snowHeight.fill(0);
     }
     
     setupEventListeners() {
@@ -209,28 +216,38 @@ class SnowEffect {
             
             if (xRounded >= 0 && xRounded < this.w && yRounded >= 0 && yRounded < this.h) {
                 const indexBuffer = xRounded + yRounded * this.w;
-                const indexBufferBottom = xRounded + (yRounded + 1) * this.w;
                 
-                // Check neighboring pixels for more natural accumulation
-                const leftPixel = xRounded > 0 ? this.buffer[indexBuffer - 1] : 0;
-                const rightPixel = xRounded < this.w - 1 ? this.buffer[indexBuffer + 1] : 0;
-                const bottomPixel = this.buffer[indexBufferBottom];
-                
-                // Create more natural snow piling
-                if (yRounded === this.h - 1 || bottomPixel === 1) {
-                    // Check height difference with neighbors
-                    const leftHeight = this.getSnowHeight(xRounded - 1, yRounded);
-                    const rightHeight = this.getSnowHeight(xRounded + 1, yRounded);
-                    const currentHeight = this.getSnowHeight(xRounded, yRounded);
-                    
-                    // Only accumulate if it wouldn't create too steep a slope
-                    if (currentHeight <= leftHeight + 2 && currentHeight <= rightHeight + 2) {
-                        this.buffer[indexBuffer] = 1;
-                        y = 0;
-                        this.particleHolder[i + 1] = y;
+                // Check if particle should settle
+                if (yRounded >= this.h - this.snowHeight[xRounded] - 2) {
+                    if (this.snowHeight[xRounded] < this.maxSnowHeight) {
+                        // Add snow at current position
+                        this.snowHeight[xRounded] += this.snowAccumulationRate;
+                        
+                        // Spread to neighbors
+                        if (Math.random() < this.snowSpreadRate) {
+                            if (xRounded > 0) {
+                                this.snowHeight[xRounded - 1] = Math.max(
+                                    this.snowHeight[xRounded - 1],
+                                    this.snowHeight[xRounded] - this.slopeLimit
+                                );
+                            }
+                            if (xRounded < this.w - 1) {
+                                this.snowHeight[xRounded + 1] = Math.max(
+                                    this.snowHeight[xRounded + 1],
+                                    this.snowHeight[xRounded] - this.slopeLimit
+                                );
+                            }
+                        }
                     }
+                    
+                    // Reset particle
+                    y = 0;
+                    x = Math.random() * this.w;
+                    this.particleHolder[i] = x;
+                    this.particleHolder[i + 1] = y;
                 }
                 
+                // Draw particle
                 const index = indexBuffer * 4;
                 this.data[index] = r;
                 this.data[index + 1] = g;
@@ -239,13 +256,18 @@ class SnowEffect {
             }
         }
         
-        // Draw accumulated snow
-        for (let i = 0; i < this.buffer.length; i++) {
-            if (this.buffer[i] === 1) {
-                const index = i * 4;
-                this.data[index] = this.particleColor.r;
-                this.data[index + 1] = this.particleColor.g;
-                this.data[index + 2] = this.particleColor.b;
+        // After particle loop, draw accumulated snow with smoother gradient
+        for (let x = 0; x < this.w; x++) {
+            const height = Math.floor(this.snowHeight[x]);
+            for (let y = 0; y < height; y++) {
+                const actualY = this.h - y - 1;
+                if (actualY < 0) continue;
+                
+                const index = (x + actualY * this.w) * 4;
+                const brightness = 0.9 + Math.random() * 0.1; // Add slight randomness to color
+                this.data[index] = this.particleColor.r * brightness;
+                this.data[index + 1] = this.particleColor.g * brightness;
+                this.data[index + 2] = this.particleColor.b * brightness;
                 this.data[index + 3] = 255;
             }
         }
