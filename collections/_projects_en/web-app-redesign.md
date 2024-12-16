@@ -3,8 +3,7 @@ title: "Web App Redesign"
 description: "Complete redesign and modernization of a legacy web application"
 full_description: |
   A comprehensive redesign project that transformed a dated web application into a modern, responsive platform. The project involved UX research, design system creation, and full-stack implementation.
-featured: true
-order: 1
+featured: false
 lang: en
 thumbnail: "/assets/images/projects/webapp-thumb.jpg.svg"
 images:

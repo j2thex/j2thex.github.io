@@ -15,11 +15,11 @@
     </div>
 
     <div class="portfolio__grid">
-      {% assign projects = site.projects_en %}
+      {% assign projects = site.projects_en | sort: 'order' %}
       {% if page.lang == 'ru' %}
-        {% assign projects = site.projects_ru %}
+        {% assign projects = site.projects_ru | sort: 'order' %}
       {% elsif page.lang == 'uk' %}
-        {% assign projects = site.projects_uk %}
+        {% assign projects = site.projects_uk | sort: 'order' %}
       {% endif %}
 
       {% if projects %}

@@ -10,6 +10,8 @@ description: "Консалтингова компанія з цифрової т
 featured: true
 categories: ["all", "web", "design"]
 thumbnail: "/assets/images/projects/de.png"
+permalink: /uk/projects/digital-euro/
+lang: uk
 ---
 
-{{ page.description }} 
+{{ page.description }}

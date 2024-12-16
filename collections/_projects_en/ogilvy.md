@@ -10,6 +10,7 @@ description: "A leading global advertising and marketing agency leveraging techn
 featured: true
 categories: ["all", "web", "design"]
 thumbnail: "/assets/images/projects/ogilvy.png"
+order: 9
 ---
 
 {{ page.description }} 

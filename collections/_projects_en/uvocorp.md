@@ -10,6 +10,7 @@ description: "A cloud infrastructure management platform providing automated dep
 featured: true
 categories: ["all", "web"]
 thumbnail: "/assets/images/projects/uvocorp.png"
+order: 10
 ---
 
 {{ page.description }} 

@@ -10,6 +10,7 @@ description: "A high-performance cryptocurrency mining pool with advanced analyt
 featured: true
 categories: ["all", "web", "blockchain"]
 thumbnail: "/assets/images/projects/ghash.png"
+order: 5
 ---
 
 {{ page.description }} 

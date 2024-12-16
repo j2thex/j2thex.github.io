@@ -10,6 +10,7 @@ description: "A mobile-first food delivery platform connecting local restaurants
 featured: true
 categories: ["all", "mobile", "design"]
 thumbnail: "/assets/images/projects/quickhot.png"
+order: 13
 ---
 
 {{ page.description }} 

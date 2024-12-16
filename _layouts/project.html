@@ -2,27 +2,29 @@
 layout: default
 ---
 <article class="project has-fixed-header">
-  <div class="project__hero">
-    <div class="container">
-      <h1 class="project__title">
-        {% if page.translations[page.lang].title %}
-          {{ page.translations[page.lang].title }}
-        {% else %}
-          {{ page.title }}
-        {% endif %}
-      </h1>
-      
-      {% if page.technologies %}
-      <div class="project__technologies">
-        {% for tech in page.technologies %}
-          <span class="tag">{{ tech }}</span>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
-  </div>
-
   <div class="project__content container">
+    <h1 class="project__title">
+      {% if page.translations[page.lang].title %}
+        {{ page.translations[page.lang].title }}
+      {% else %}
+        {{ page.title }}
+      {% endif %}
+    </h1>
+    
+    {% if page.technologies %}
+    <div class="project__technologies">
+      {% for tech in page.technologies %}
+        <span class="tag">{{ tech }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.full_description %}
+    <div class="project__description">
+      {{ page.full_description | markdownify }}
+    </div>
+    {% endif %}
+
     <div class="project__info">
       {% if page.challenge %}
       <section class="project__section">
@@ -74,5 +76,54 @@ layout: default
       {% endif %}
     </div>
     {% endif %}
+
+    {% assign collection = site[page.collection] | sort: 'order' %}
+    {% assign current_order = page.order %}
+    {% assign prev_project = nil %}
+    {% assign next_project = nil %}
+
+    {% for project in collection %}
+      {% if project.order < current_order and project.lang == page.lang %}
+        {% assign prev_project = project %}
+      {% endif %}
+      {% if project.order > current_order and project.lang == page.lang and next_project == nil %}
+        {% assign next_project = project %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="project__navigation-links">
+      {% if prev_project %}
+        <a href="{{ prev_project.url }}" class="btn btn--outline">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Previous Project
+        </a>
+      {% else %}
+        <div class="btn-placeholder"></div>
+      {% endif %}
+
+      <a href="/{{ page.lang }}/#portfolio" class="btn btn--outline">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4H10V10H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 4H20V10H14V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 14H10V20H4V14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 14H20V20H14V14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Projects
+      </a>
+
+      {% if next_project %}
+        <a href="{{ next_project.url }}" class="btn btn--outline">
+          Next Project
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      {% else %}
+        <div class="btn-placeholder"></div>
+      {% endif %}
+    </div>
   </div>
 </article> 

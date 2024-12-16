@@ -10,6 +10,7 @@ description: "A modern e-commerce platform specializing in luxury goods with an 
 featured: true
 categories: ["all", "web", "design"]
 thumbnail: "/assets/images/projects/ego.png"
+order: 3
 ---
 
 {{ page.description }} 

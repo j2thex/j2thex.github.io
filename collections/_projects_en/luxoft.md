@@ -10,6 +10,7 @@ description: "A global technology consulting and software development company de
 featured: true
 categories: ["all", "web"]
 thumbnail: "/assets/images/projects/luxoft.png"
+order: 8
 ---
 
 {{ page.description }} 

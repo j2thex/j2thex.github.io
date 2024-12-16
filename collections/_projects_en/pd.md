@@ -10,6 +10,7 @@ description: "A developer productivity platform that streamlines workflow automa
 featured: true
 categories: ["all", "web", "design"]
 thumbnail: "/assets/images/projects/pd.png"
+order: 12
 ---
 
 {{ page.description }} 

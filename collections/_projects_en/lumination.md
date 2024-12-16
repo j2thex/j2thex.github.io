@@ -10,6 +10,7 @@ description: "An innovative digital agency creating immersive web experiences wi
 featured: true
 categories: ["all", "web", "design"]
 thumbnail: "/assets/images/projects/lumination.png"
+order: 11
 ---
 
 {{ page.description }} 

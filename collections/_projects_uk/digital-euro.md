@@ -6,10 +6,12 @@ year: "2020"
 role: "Solution Architect"
 technologies: ["Vue.js", "Python", "AWS", "Kubernetes"]
 website: "https://digitaleuro.com"
-description: "A digital transformation consultancy helping businesses modernize their operations through innovative technology solutions."
+description: "Консалтингова компанія з цифрової трансформації, що допомагає бізнесу модернізувати операції за допомогою інноваційних технологічних рішень."
 featured: true
 categories: ["all", "web", "design"]
 thumbnail: "/assets/images/projects/de.png"
+permalink: /uk/projects/digital-euro/
+lang: uk
 ---
 
 {{ page.description }} 

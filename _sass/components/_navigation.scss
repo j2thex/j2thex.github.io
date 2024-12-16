@@ -94,12 +94,15 @@
       z-index: 999;
       
       .nav__list {
+        margin-top: auto;
         margin-bottom: auto;
       }
       
       .lang-switcher {
         margin: 0;
         width: 100%;
+        order: -1;
+        margin-bottom: $spacing-unit * 4;
         
         &__current {
           width: 100%;

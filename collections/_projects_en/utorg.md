@@ -10,6 +10,7 @@ description: "A cryptocurrency exchange platform offering secure fiat-to-crypto 
 featured: true
 categories: ["all", "web", "blockchain"]
 thumbnail: "/assets/images/projects/utorg.png"
+order: 6
 ---
 
 {{ page.description }} 

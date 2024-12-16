@@ -3,7 +3,7 @@
   <rect x="0.485" y="11.692" width="23.138" height="3.861" style="paint-order: stroke markers; fill-rule: nonzero; stroke: rgb(246, 0, 0); fill: rgb(255, 0, 0);"/>
   <rect x="0.458" y="5.278" width="23.118" height="5.487" style="paint-order: stroke markers; fill-rule: nonzero; fill: rgb(29, 0, 255); stroke: rgb(27, 0, 246);"/>
   <rect x="0.49" y="0.002" width="23.051" height="4.425" style="stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255);"/>
-  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(242, 159, 204);" cx="12.726" cy="8.277" rx="8.234" ry="5.354"/>
-  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="10.746" cy="8.261" rx="1.292" ry="1.592"/>
-  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="14.905" cy="8.28" rx="1.292" ry="1.592"/>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 13.1px;" x="5.447" y="12.551" transform="matrix(1.364667, 0, 0, 1.336423, -4.090417, -2.288705)">🐽</text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px;" x="40.299" y="-3.945"> </text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px;" x="60.22" y="-7.811"> </text>
 </svg>
