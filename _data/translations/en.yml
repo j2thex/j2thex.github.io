@@ -49,7 +49,7 @@ services:
 
 process:
   title: Our Process
-  subtitle: Our plan for dealing with a new project and solve clients' problems
+  subtitle: Our plan for dealing with a new project to solve clients' problems
   steps:
     - title: Identify Goals
       description: We discuss your needs, goals, and vision for the project

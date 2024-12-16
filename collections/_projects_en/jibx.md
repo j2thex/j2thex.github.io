@@ -24,16 +24,15 @@ order: 1
 lang: en
 thumbnail: "/assets/images/projects/jibx.png"
 images:
-  - "/assets/images/projects/jibx-1.jpg"
-  - "/assets/images/projects/jibx-2.jpg"
+  - "/assets/images/projects/jibx.png"
 categories:
   - web
   - blockchain
   - fintech
 technologies:
-  - EVM-Compatible Smart Contracts
+  - EVM Smart Contracts
   - Decentralized Oracles
-  - Restaking Protocols
+  - Restaking
   - Plasma Next
 challenge: |
   Developing a high-leverage, low-fee perpetual DEX that rewards users with restaking collateral earnings. The challenge included creating a transparent and secure trading experience while delivering fast on-chain settlements at scale.
@@ -49,7 +48,7 @@ results: |
 call_to_action: |
   Ready to trade with JibX? Enjoy zero fees, high leverage, and restaking rewards today! Join our [Discord](https://discord.com/jibx) to connect with our friendly team and get live support.
 website: "https://jibx.io"
-github: ""
+
 discord: "https://discord.com/jibx"
 ---
 

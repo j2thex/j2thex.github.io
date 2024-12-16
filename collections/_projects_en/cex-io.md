@@ -1,5 +1,5 @@
 ---
-title: "Bitcoin Exchange Development"
+title: "CEX.IO: Crypto Exchange Development"
 description: "Development and scaling of a high-availability Bitcoin exchange with 99.9% uptime"
 full_description: |
   Development and strategy for CEX.IO, a revolutionary cloud mining platform, turned into a leading Crypto Exchange known for its 99.9% uptime and high-availability services. The project focused on building a robust trading platform, enhancing liquidity, and introducing advanced features such as order-driven and quote-driven markets. Additionally, implemented global AML/KYC compliance, ensuring regulatory alignment while scaling operations to support thousands of active traders.
@@ -13,6 +13,8 @@ images:
 categories:
   - web
   - fintech
+  - blockchain
+  - mobile
 technologies: ["Node.js", "React", "PostgreSQL", "FIX", "WebSocket"]
 challenge: |
   The goal was to create a secure, scalable Bitcoin exchange platform with high availability and strong regulatory compliance. Key challenges included ensuring liquidity, meeting the needs of diverse trader groups, and maintaining transparency in volatile market conditions.

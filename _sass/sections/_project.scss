@@ -22,7 +22,10 @@
   }
   
   &__technologies {
-    margin-bottom: $spacing-unit * 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-unit;
+    margin-bottom: calc($spacing-unit * 4 - $spacing-unit);
   }
   
   &__description {

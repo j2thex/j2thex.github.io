@@ -8,12 +8,12 @@ order: 7
 lang: en
 thumbnail: "/assets/images/projects/0hub.png"
 images:
-  - "/assets/images/projects/zerohub-1.jpg"
-  - "/assets/images/projects/zerohub-2.jpg"
+  - "/assets/images/projects/0hub.png"
+
 categories:
   - web
-  - education
-  - crypto
+  - blockchain
+  - fintech
 technologies:
   - Golang
   - React

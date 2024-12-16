@@ -14,7 +14,7 @@ categories:
   - mobile
   - design
   - fintech
-  - PoC
+
 technologies:
   - CBDC
   - Stellar
