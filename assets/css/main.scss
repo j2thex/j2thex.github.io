@@ -3,9 +3,12 @@
 # only Main files contain this front matter, not partials.
 ---
 
+// Import abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
 // Import base
-@import "base/variables";
-@import "base/mixins";
 @import "base/reset";
 @import "base/typography";
 @import "base/utilities";

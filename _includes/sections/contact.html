@@ -5,7 +5,52 @@
       <p class="contact__subtitle">{{ site.data.translations[page.lang].contact.subtitle }}</p>
     </div>
     <div class="contact__content">
-      <!-- Contact form will go here -->
+      <div id="contactSuccessMessage" class="contact__message contact__message--success" style="display: none;">
+        {{ site.data.translations[page.lang].contact.success }}
+      </div>
+
+      <form action="https://formsubmit.co/hello@n0thn.com" method="POST" class="contact__form">
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="{{ site.data.translations[page.lang].contact.form.name }}" 
+          required
+        >
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="{{ site.data.translations[page.lang].contact.form.email }}" 
+          required
+        >
+        <textarea 
+          name="message" 
+          placeholder="{{ site.data.translations[page.lang].contact.form.message }}" 
+          required
+        ></textarea>
+        <button type="submit" class="btn btn--primary">
+          {{ site.data.translations[page.lang].contact.form.submit }}
+        </button>
+
+        <!-- FormSubmit redirects -->
+        <input type="hidden" name="_next" value="{{ site.url }}/{{ page.lang }}/?success=true#contact">
+        <input type="hidden" name="_subject" value="New contact form submission">
+        <input type="hidden" name="_template" value="table">
+      </form>
     </div>
   </div>
-</section> 
+</section>
+
+<script>
+  // Check for success parameter in URL
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      const successMessage = document.getElementById('contactSuccessMessage');
+      if (successMessage) {
+        successMessage.style.display = 'block';
+        // Scroll to contact section
+        document.getElementById('contact').scrollIntoView();
+      }
+    }
+  });
+</script> 
