@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: $spacing-unit * 8;
+    gap: $spacing-unit * 4;
   }
   
   &__text {
@@ -53,6 +53,7 @@
     height: 150px;
     flex-shrink: 0;
     margin-top: -40px;
+    margin-right: $spacing-unit * 8;
     filter: drop-shadow(0 0 20px rgba($color-accent, 0.3));
     
     &::before {
@@ -70,18 +71,19 @@
         160px 0 0 -3px darken($color-accent, 20%),
         240px -20px 0 3px darken($color-accent, 20%),
         160px -70px 0 12px darken($color-accent, 20%);
+      z-index: 10;
     }
   }
   
   .drop {
     position: absolute;
-    top: 120px;
+    top: 100px;
     height: 20px;
     line-height: 20px;
     color: $color-accent;
     transform-origin: bottom;
     animation: animate 2s linear infinite;
-    z-index: 1;
+    z-index: 5;
     filter: brightness(1.2);
     text-shadow: 0 0 8px rgba($color-accent, 0.5);
   }
@@ -99,6 +101,7 @@
     }
 
     .cloud {
+      margin-right: 0;
       width: 300px;
       height: 150px;
       margin: 0 auto $spacing-unit * 4;
@@ -107,10 +110,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         box-shadow: 
-          -80px -20px 0 8px darken($color-accent, 10%),
-          0 0 0 -3px darken($color-accent, 10%),
-          80px -20px 0 3px darken($color-accent, 10%),
-          0 -70px 0 12px darken($color-accent, 10%);
+          -80px -20px 0 8px darken($color-accent, 20%),
+          0 0 0 -3px darken($color-accent, 20%),
+          80px -20px 0 3px darken($color-accent, 20%),
+          0 -70px 0 12px darken($color-accent, 20%);
       }
     }
   }
@@ -139,7 +142,7 @@
   100% {
     transform: translateY(300px) scaleY(0);
     transform-origin: bottom;
-    text-shadow: -180px 0 0 $color-accent, 180px 0 $color-accent;
+    text-shadow: -100px 0 0 $color-accent, 100px 0 $color-accent;
   }
 }
 
