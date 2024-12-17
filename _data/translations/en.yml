@@ -81,3 +81,9 @@ contact:
     submit: Send
   success: Thank you for your message! We'll get back to you soon.
   error: An error occurred. Please try again.
+
+footer:
+  rock_button: Click the rock
+  rock_caption: This is a rock.
+  rock_counter: You clicked the rock %count% times!
+  copyright: All rights reserved.

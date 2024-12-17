@@ -1,5 +1,5 @@
 .footer {
-  padding: $spacing-unit * 8 0;
+  padding: 0;
   background: $color-card;
   
   &__container {
@@ -8,21 +8,28 @@
   
   &__content {
     display: grid;
-    gap: $spacing-unit * 4;
-    
-    @include respond-to($breakpoint-md) {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    grid-template-columns: 1fr 2fr;
+    gap: $spacing-unit * 6;
+    padding: $spacing-unit * 8 0;
+    margin-bottom: 0;
+  }
+  
+  &__branding {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 2;
+  }
+  
+  &__address {
+    color: $color-text-secondary;
+    font-size: $font-size-small;
   }
   
   &__logo {
-    font-family: $font-family-base;
     font-size: $font-size-h4;
     font-weight: $font-weight-medium;
     color: $color-text;
     text-decoration: none;
-    text-transform: none;
-    margin-bottom: $spacing-unit * 2;
     
     .zero {
       font-family: $font-family-mono;
@@ -31,63 +38,116 @@
     }
   }
   
-  &__description {
-    color: $color-text-secondary;
-    margin-bottom: $spacing-unit * 3;
+  &__easter-egg {
+    display: flex;
+    align-items: center;
+    gap: $spacing-unit * 2;
+    margin: 0;
+    
+    .rock-button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+      padding: $spacing-unit;
+      margin: -$spacing-unit;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    
+    .rock-counter {
+      color: $color-text-secondary;
+      font-size: $font-size-small;
+    }
+  }
+  
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-unit * 4;
+  }
+  
+  &__nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 2;
+    
+    a {
+      color: $color-text-secondary;
+      text-decoration: none;
+      transition: $transition-base;
+      
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
+  
+  &__nav-title {
+    color: $color-text;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    margin-bottom: $spacing-unit;
   }
   
   &__social {
     display: flex;
+    flex-direction: column;
     gap: $spacing-unit * 2;
-    
+
     a {
       display: flex;
       align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: rgba($color-accent, 0.1);
-      border-radius: 8px;
-      color: $color-accent;
+      gap: $spacing-unit;
+      color: $color-text-secondary;
+      text-decoration: none;
       transition: $transition-base;
-      
-      &:hover {
-        background: $color-accent;
-        color: $color-white;
-      }
       
       svg {
         width: 20px;
         height: 20px;
       }
-    }
-  }
-  
-  &__title {
-    font-size: $font-size-h4;
-    margin-bottom: $spacing-unit * 3;
-  }
-  
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-unit * 2;
-  }
-  
-  &__link {
-    color: $color-text-secondary;
-    transition: $transition-base;
-    
-    &:hover {
-      color: $color-text;
+      
+      &:hover {
+        color: $color-accent;
+      }
     }
   }
   
   &__bottom {
-    margin-top: $spacing-unit * 8;
-    padding-top: $spacing-unit * 4;
+    padding-top: 0;
     border-top: 1px solid rgba($color-text, 0.1);
     text-align: center;
     color: $color-text-secondary;
+    
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-unit * 4;
+      flex-wrap: wrap;
+      min-height: $spacing-unit * 6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer__copyright {
+      margin: 0;
+      font-size: $font-size-small;
+    }
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    &__content {
+      grid-template-columns: 1fr;
+      padding: $spacing-unit * 6 0;
+    }
+    
+    &__nav {
+      grid-template-columns: 1fr;
+    }
   }
 } 
