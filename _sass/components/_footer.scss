@@ -23,6 +23,7 @@
   &__address {
     color: $color-text-secondary;
     font-size: $font-size-small;
+    white-space: pre-line;
   }
   
   &__logo {
