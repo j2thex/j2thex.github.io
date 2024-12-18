@@ -11,7 +11,7 @@ sass:
   sourcemap: never
 
 # Site settings
-languages: ["en", "ru", "uk"]
+languages: ["en", "ru", "ua"]
 default_lang: "en"
 
 # Collections
@@ -23,18 +23,18 @@ collections:
   projects_ru:
     output: true
     permalink: /ru/projects/:slug/
-  projects_uk:
+  projects_ua:
     output: true
-    permalink: /uk/projects/:slug/
+    permalink: /ua/projects/:slug/
   posts_en:
     output: true
     permalink: /en/blog/:year/:month/:day/:title/
   posts_ru:
     output: true
     permalink: /ru/blog/:year/:month/:day/:title/
-  posts_uk:
+  posts_ua:
     output: true
-    permalink: /uk/blog/:year/:month/:day/:title/
+    permalink: /ua/blog/:year/:month/:day/:title/
 
 exclude:
   - Gemfile
@@ -63,9 +63,9 @@ defaults:
       lang: "ru"
   -
     scope:
-      path: "uk"
+      path: "ua"
     values:
-      lang: "uk"
+      lang: "ua"
   -
     scope:
       path: ""
@@ -83,10 +83,10 @@ defaults:
   -
     scope:
       path: ""
-      type: "projects_uk"
+      type: "projects_ua"
     values:
       layout: "project"
-      lang: "uk"
+      lang: "ua"
   -
     scope:
       path: ""
@@ -104,10 +104,10 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts_uk"
+      type: "posts_ua"
     values:
       layout: "post"
-      lang: "uk"
+      lang: "ua"
 
 plugins:
   - jekyll-sitemap

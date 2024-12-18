@@ -18,7 +18,7 @@ full_description: |
 
 featured: true
 order: 10
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/uvocorp.png"
 images:
   - "/assets/images/projects/uvocorp.png"

@@ -18,7 +18,7 @@ full_description: |
 
 featured: true
 order: 11
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/lumination.png"
 images:
   - "/assets/images/projects/lumination.png"

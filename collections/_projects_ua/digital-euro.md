@@ -5,8 +5,8 @@ full_description: |
   Проект-прототип мобільного банківського додатку, розроблений для демонстрації інноваційних можливостей інфраструктури Цифрового Євро. Проект зосереджений на створенні масштабованої архітектури, безперебійних транскордонних транзакціях та функціях програмованих грошей при дотриманні нормативних вимог.
 featured: true
 order: 2
-lang: uk
-permalink: /uk/projects/digital-euro/
+lang: ua
+permalink: /ua/projects/digital-euro/
 thumbnail: "/assets/images/projects/de.png"
 images:
   - "/assets/images/projects/de.png"

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Блог
-lang: uk
-permalink: /uk/blog/
+lang: ua
+permalink: /ua/blog/
 ---
 <section class="blog">
   <div class="blog__hero">
@@ -15,7 +15,7 @@ permalink: /uk/blog/
   <div class="blog__content">
     <div class="container">
       <div class="blog__grid">
-        {% for post in site.posts_uk %}
+        {% for post in site.posts_ua %}
           <article class="blog-card">
             <a href="{{ post.url | relative_url }}" class="blog-card__link">
               {% if post.image %}

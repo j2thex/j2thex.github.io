@@ -18,7 +18,7 @@ full_description: |
 
 featured: true
 order: 12
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/pd.png"
 images:
   - "/assets/images/projects/pd.png"

@@ -5,7 +5,7 @@ date: 2024-01-15
 categories: [technology, trends]
 tags: [ai, cloud, automation, digital-transformation]
 image: /assets/images/posts/digital-trends-2024.svg
-lang: uk
+lang: ua
 ---
 
 Ландшафт цифрової трансформації продовжує стрімко розвиватися у 2024 році. У міру того як організації адаптуються до нових технологічних можливостей та змінних вимог ринку, з'являється кілька ключових трендів, що формують майбутнє цифрового бізнесу.

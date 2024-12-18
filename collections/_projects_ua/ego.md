@@ -22,7 +22,7 @@ full_description: |
 
 featured: true
 order: 3
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/ego.png"
 images:
   - "/assets/images/projects/ego.png"

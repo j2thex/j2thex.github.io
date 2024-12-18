@@ -22,7 +22,7 @@ full_description: |
 
 featured: true
 order: 6
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/utorg.png"
 images:
   - "/assets/images/projects/utorg.png"

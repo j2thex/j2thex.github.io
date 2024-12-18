@@ -19,7 +19,7 @@ full_description: |
 
 featured: true
 order: 9
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/ogilvy.png"
 images:
   - "/assets/images/projects/ogilvy.png"

@@ -20,7 +20,7 @@ full_description: |
 
 featured: true
 order: 13
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/quickhot.png"
 images:
   - "/assets/images/projects/quickhot.png"

@@ -18,7 +18,7 @@ full_description: |
 
 featured: true
 order: 8
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/luxoft.png"
 images:
   - "/assets/images/projects/luxoft.png"

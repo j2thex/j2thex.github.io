@@ -22,7 +22,7 @@ full_description: |
 
 featured: true
 order: 5
-lang: uk
+lang: ua
 thumbnail: "/assets/images/projects/ghash.png"
 images:
   - "/assets/images/projects/ghash.png"
