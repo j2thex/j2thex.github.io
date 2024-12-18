@@ -1,8 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
-  <clipPath id="a"><path d="M0 0v30h60V0z"/></clipPath>
-  <path d="M0 0v30h60V0z" fill="#012169"/>
-  <path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6" clip-path="url(#a)"/>
-  <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4" clip-path="url(#a)"/>
-  <path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/>
-  <path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 100">
+  <!-- Stripes -->
+  <rect width="190" height="100" fill="#fff"/>
+  <g fill="#bf0a30">
+    <rect width="190" height="7.69" y="0"/>
+    <rect width="190" height="7.69" y="15.38"/>
+    <rect width="190" height="7.69" y="30.77"/>
+    <rect width="190" height="7.69" y="46.15"/>
+    <rect width="190" height="7.69" y="61.54"/>
+    <rect width="190" height="7.69" y="76.92"/>
+    <rect width="190" height="7.69" y="92.31"/>
+  </g>
+  
+  <!-- Blue canton -->
+  <rect width="76" height="53.85" fill="#002868"/>
+  
+  <!-- Simplified star pattern for small sizes -->
+  <g fill="#fff">
+    <g id="sr">
+      <circle cx="12.67" cy="10" r="2"/>
+      <circle cx="25.33" cy="10" r="2"/>
+      <circle cx="38" cy="10" r="2"/>
+      <circle cx="50.67" cy="10" r="2"/>
+      <circle cx="63.33" cy="10" r="2"/>
+    </g>
+    <use href="#sr" y="11"/>
+    <use href="#sr" y="22"/>
+    <use href="#sr" y="33"/>
+    <use href="#sr" y="44"/>
+  </g>
 </svg> 
