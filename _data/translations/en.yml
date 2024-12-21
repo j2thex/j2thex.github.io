@@ -22,8 +22,8 @@ services:
       icon: digital-transform
       description: Modernizing your business with cutting-edge technology
       features:
-        - Full-stack web development
-        - Mobile application design
+        - Full-stack web/mobile development
+        - UI/UX and design
         - Enterprise system integration
         - Scaling MVPs or launching Series A-ready products
         - Refactoring, fixing technical debt
@@ -87,7 +87,7 @@ footer:
   rock_caption: This is a rock.
   rock_counter: You clicked the rock %count% times!
   copyright: All rights reserved.
-  address: "01133, Konovaltsya str., 37,<br>Kyiv, Ukraine 🇺🇦"
+  address: "01133, Konovaltsya str., 37,<br>Kyiv, Ukraine <span class=\"emoji-flag\">🇺🇦</span>"
 
 
 site_title: "n0thn Digital Agency"

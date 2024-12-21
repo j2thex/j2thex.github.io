@@ -24,6 +24,11 @@
     color: $color-text-secondary;
     font-size: $font-size-small;
     white-space: pre-line;
+    
+    .emoji-flag {
+      filter: none;
+      color: initial;
+    }
   }
   
   &__logo {
