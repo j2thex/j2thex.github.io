@@ -2,6 +2,7 @@ title: n0thn
 description: Digital Agency
 baseurl: ""
 url: "https://n0thn.com"
+default_image: "/assets/images/social-share.jpg"
 
 # Build settings
 markdown: kramdown
