@@ -1,44 +1,59 @@
-# Core Technologies:
-1. Static Site Generator:
+# n0thn Digital Agency Website
+
+A multilingual static website built with Jekyll, featuring a modern tech stack and optimized performance.
+
+## Core Technologies
+
+### 1. Static Site Generator
 - Jekyll 4.3.4
 - Liquid templating engine
-2. Languages:
+- Jekyll plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+### 2. Languages & Frameworks
 - HTML5
 - SCSS/SASS for styling
-- JavaScript (vanilla) for interactions
-3. CSS Architecture:
-- BEM methodology (Block Element Modifier)
+- Vanilla JavaScript for interactions
+- BEM methodology for CSS architecture
+
+### 3. CSS Architecture
 - SASS modules with @use
 - Responsive design with mixins
-- CSS Grid and Flexbox
-- CSS Variables (SASS variables)
+- CSS Grid and Flexbox layouts
+- CSS Variables (Custom Properties)
 - Mobile-first approach
-4. Design Features:
-- Dark theme
+- Dark theme support
+- Glassmorphism effects
+
+### 4. Design Features
+- Responsive design (mobile, tablet, desktop)
+- Dark/Light theme switching
 - Glassmorphism effects (backdrop-filter: blur)
 - Smooth transitions and animations
-- Custom scrolling
+- Custom scrolling behavior
 - SVG icons and flags
-- Custom font stack (Inter, Muli, Bebas Neue, Consolas)
-5. Multilingual Support:
-- Three languages (English, Russian, Ukrainian)
-- Language-specific collections
+- Custom font stack:
+  - Inter
+  - Bebas Neue
+  - System fallbacks
+
+## Multilingual Support
+
+### Languages
+- English (default)
+- Ukrainian
+- Russian
+
+### Implementation
+- Language-specific collections for posts and projects
 - YAML-based translations
-- Language switcher with URL preservation
-6. Content Organization:
-- Collections for projects and blog posts
-- Language-specific content collections
-- Markdown for content
-- YAML front matter for metadata
-7. Layout Components:
-- Fixed navigation with mobile menu
-- Hero section
-- Services grid
-- Portfolio with filtering
-- Blog with categories
-- Contact section
-- Footer
-8. Project Structure:
+- Language detection and switching
+- URL structure: /{lang}/{section}/
+- SEO-friendly URLs
+- Automatic browser language detection
+
+## Project Structure
    ├── _data/           # Translation files
    ├── _includes/       # Reusable components
    ├── _layouts/        # Page templates
