@@ -105,4 +105,13 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollProgress.style.setProperty('--scroll-width', `${scrolled}%`);
     });
   }
-}); 
+
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookieConsent').style.display = 'flex';
+  }
+});
+
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'true');
+  document.getElementById('cookieConsent').style.display = 'none';
+} 

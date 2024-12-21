@@ -1,0 +1,37 @@
+.cookie-consent {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  max-width: 24rem;
+  padding: 1.25rem 1.5rem;
+  background: #000000;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+  
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #ffffff;
+  }
+  
+  button {
+    white-space: nowrap;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+} 
