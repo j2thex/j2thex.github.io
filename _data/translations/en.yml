@@ -96,3 +96,7 @@ site_description: "Fast and reliable digital product development"
 cookies:
   message: "This website uses cookies to ensure you get the best experience."
   accept: "Got it"
+
+video_section:
+  download_pdf: "Download PDF"
+  schedule_meeting: "Schedule a Meeting"

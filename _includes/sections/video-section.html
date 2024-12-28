@@ -1,0 +1,32 @@
+<!-- DEBUG: Video Section Start -->
+<!-- DEBUG: Current language: {{ page.lang }} -->
+<!-- DEBUG: Translation object: {{ t | json }} -->
+{% assign t = site.data.translations[page.lang] %}
+<section class="video-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="video-container">
+                    <div class="video-preview" data-video-id="UCCNk9tRVYY" style="background-image: url('/assets/images/video-thumbnail.jpg');">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="buttons-container">
+                    <a href="/assets/files/company-presentation.pdf" class="download-pdf">
+                        <i class="fas fa-file-pdf"></i>
+                        {{ t.video_section.download_pdf }}
+                    </a>
+                    <a href="#contact" class="schedule-meeting">
+                        <i class="fas fa-calendar-alt"></i>
+                        {{ t.video_section.schedule_meeting }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- DEBUG: Video Section End --> 

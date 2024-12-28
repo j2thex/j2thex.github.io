@@ -96,3 +96,7 @@ cookies:
   message: "Цей сайт використовує файли cookie для кращої роботи."
   accept: "Зрозуміло"
 
+video_section:
+  download_pdf: "Завантажити PDF"
+  schedule_meeting: "Запланувати зустріч"
+
