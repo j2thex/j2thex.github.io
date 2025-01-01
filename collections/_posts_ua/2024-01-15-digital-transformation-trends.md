@@ -4,7 +4,7 @@ description: "Ключові технологічні тренди, що фор�
 date: 2024-01-15
 categories: [technology, trends]
 tags: [ai, cloud, automation, digital-transformation]
-image: /assets/images/posts/digital-trends-2024.svg
+image: /assets/images/posts/digital-trends-2024.jpg
 lang: ua
 ---
 
