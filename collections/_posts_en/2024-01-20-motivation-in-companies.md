@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Motivation: A Tool Misused by 99% of Companies"
+title: "Motivation: A tool misused by 99% of companies"
 description: "An in-depth look at how companies misunderstand and misuse motivation, with practical solutions for building effective incentive systems"
-date: 2024-01-20
+date: 2025-01-01
 author: Jeff Smith
 image: 
 categories: 
@@ -27,13 +27,13 @@ With increasing automation, only highly motivated employees will remain relevant
 
 From my experience, many companies fail because they lack structured incentives that could better align employee goals with company objectives, ultimately stunting growth.
 
-## The Right Way to Harness Motivation
+## The right way to harness motivation
 
 The right way to harness motivation is to be consistent and intentional. Companies must implement structured short-term, mid-term, and long-term incentive programs to maintain consistent motivation and alignment with company goals. Unlike sporadic rewards, structured incentives create a predictable path that keeps employees focused and engaged.
 
 > **Pro Tip:** Keep an open "Improvements Board" where anyone can post an idea for boosting motivation. No manager filtering—just let people speak up and share ideas.
 
-## Short-Term Incentives
+## Short-term incentives
 
 ![Give me more](/assets/images/posts/motivation/gimme.gif)
 
@@ -46,7 +46,7 @@ Immediate rewards make people feel seen and appreciated, driving them to tackle 
 ![Nice](/assets/images/posts/motivation/nice.jpg)
 
 
-## Mid-Term Incentives
+## Mid-term incentives
 
 Mid-term incentives help bridge the gap between immediate rewards and long-term growth. They provide ongoing motivation and encourage employees to stay engaged beyond short-term wins while working towards bigger career milestones.
 
@@ -56,13 +56,13 @@ Regular promotions or skills-based raises keep employees motivated beyond the da
 
 ![I like this](/assets/images/posts/motivation/i-like.gif)
 
-## Motivation Through Ownership and Autonomy
+## Motivation through ownership and autonomy
 
 Allowing employees to make strategic decisions encourages a deep sense of purpose and ownership, directly boosting their motivation. Motivation often thrives when we feel in control of our work. Autonomy—the ability to make key decisions—makes employees feel trusted and valued. This sense of ownership is what drives meaningful progress.
 
 > **Example:** Look at Atlassian's "ShipIt Days," where employees pick projects they care about. Or Microsoft's hack weeks, where teams chase new ideas. When people own a project, they pour their hearts into it.
 
-## Motivation by Leading with Impact
+## Motivation through leading with impact
 
 There's no bigger motivator than seeing how your work matters. Understanding the broader impact of your work—how new solutions transform user interactions and bring significant industry changes—gives it meaning. 
 
@@ -72,7 +72,7 @@ For example, when developers at Slack saw how their communication tool improved 
 
 ![Wow](/assets/images/posts/motivation/wow.gif)
 
-## Motivation Fueled by Constant Learning
+## Motivation fueled by constant learning
 
 Continuous learning is especially important in fast-evolving industries like tech, blockchain, and AI. According to LinkedIn's Workplace Learning Report, 94% of employees say they would stay at a company longer if it invested in their career development.
 
@@ -80,7 +80,7 @@ Involvement in courses, masterclasses, workshops, or even watching a smart emplo
 
 > **Tip:** Pair newbies with seasoned pros for quick skill-building sessions. That on-the-spot coaching can boost morale even more than formal programs.
 
-## Long-Term Incentives
+## Long-term incentives
 
 Long-term incentives are where most companies screw up. Often, they lack clarity, transparency, or are not meaningful enough to make employees feel genuinely invested, e.g "percentage of perspective". Many companies also fail to communicate how these incentives align with the company's success, which results in employees viewing them as unattainable or irrelevant. In worst case scenarios companies just don't follow through with their obligations. 
 
@@ -99,9 +99,9 @@ Creating pathways to leadership and ownership allows employees to feel like they
 
 A paycheck alone is boring, just tossing a bonus every now and then isn't going to cut it as well. What you need is a layered approach:
 
-1. **Short-Term Incentives:** Public recognition, small cash bonuses, extra PTO for hitting certain milestones
-2. **Mid-Term Incentives:** Regular promotions or skills-based raises, funded learning opportunities—sense of ownership, motivation through skill-building
-3. **Long-Term Incentives:** Stock options, profit-sharing, and leadership opportunities—they're what retain people in the long haul
+1. **Short-term incentives:** Public recognition, small cash bonuses, extra PTO for hitting certain milestones
+2. **Mid-term incentives:** Regular promotions or skills-based raises, funded learning opportunities—sense of ownership, motivation through skill-building
+3. **Long-term incentives:** Stock options, profit-sharing, and leadership opportunities—they're what retain people in the long haul
 
 Motivation is contagious, but so is demotivation. It's a tool that can either propel a company forward or hold it back. Leaders play a critical role in setting the tone—motivated leaders inspire their teams, while disengaged leaders can quickly spread demotivation throughout the entire organization.
 
