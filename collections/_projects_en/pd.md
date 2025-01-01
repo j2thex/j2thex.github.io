@@ -46,7 +46,7 @@ results: |
   - Achieved 95% accuracy in plagiarism detection
   - Processed millions of documents successfully
   - Saved educational institutions significant costs
-website: "https://pd.dev"
+
 ---
 
 {{ page.full_description }} 
