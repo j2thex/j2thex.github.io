@@ -22,7 +22,7 @@ order: 9
 lang: ru
 thumbnail: "/assets/images/projects/ogilvy.png"
 images:
-  - "/assets/images/projects/ogilvy.png"
+
 
 categories:
   - web

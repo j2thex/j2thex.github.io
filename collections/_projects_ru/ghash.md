@@ -25,7 +25,7 @@ order: 5
 lang: ru
 thumbnail: "/assets/images/projects/ghash.png"
 images:
-  - "/assets/images/projects/ghash.png"
+  - "/assets/images/projects/ghash2.png"
 categories:
   - web
   - blockchain

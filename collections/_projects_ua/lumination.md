@@ -21,7 +21,7 @@ order: 11
 lang: ua
 thumbnail: "/assets/images/projects/lumination.png"
 images:
-  - "/assets/images/projects/lumination.png"
+
 
 categories:
   - web

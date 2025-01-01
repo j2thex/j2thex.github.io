@@ -8,7 +8,7 @@ order: 4
 lang: ua
 thumbnail: "/assets/images/projects/cex.png"
 images:
-  - "/assets/images/projects/cex.png"
+  - "/assets/images/projects/cex2.png"
 
 categories:
   - web

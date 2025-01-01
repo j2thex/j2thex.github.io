@@ -21,7 +21,7 @@ order: 12
 lang: ru
 thumbnail: "/assets/images/projects/pd.png"
 images:
-  - "/assets/images/projects/pd.png"
+
 
 categories:
   - web

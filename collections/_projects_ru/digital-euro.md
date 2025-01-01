@@ -9,7 +9,7 @@ lang: ru
 permalink: /ru/projects/digital-euro/
 thumbnail: "/assets/images/projects/de.png"
 images:
-  - "/assets/images/projects/de.png"
+  - "/assets/images/projects/de2.png"
 categories:
   - mobile
   - design

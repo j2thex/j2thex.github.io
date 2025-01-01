@@ -21,7 +21,7 @@ order: 8
 lang: en
 thumbnail: "/assets/images/projects/luxoft.png"
 images:
-  - "/assets/images/projects/luxoft.png"
+
 
 categories:
   - web

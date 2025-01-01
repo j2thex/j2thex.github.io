@@ -25,7 +25,7 @@ order: 3
 lang: ru
 thumbnail: "/assets/images/projects/ego.png"
 images:
-  - "/assets/images/projects/ego.png"
+  - "/assets/images/projects/ego2.png"
 
 categories:
   - web

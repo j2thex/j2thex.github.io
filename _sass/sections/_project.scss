@@ -111,14 +111,18 @@
   &__image {
     width: 100%;
     height: auto;
-    max-height: 500px;
-    object-fit: cover;
+    max-width: 100%;
+    object-fit: contain;
     border-radius: 12px;
-    margin: $spacing-unit * 8 0;
+    margin: $spacing-unit * 4 0;
+    display: block;
   }
 
   &__gallery {
-    margin: $spacing-unit * 8 0;
+    margin: $spacing-unit * 4 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 4;
   }
 
   &__links {
@@ -190,6 +194,18 @@
       .btn {
         justify-content: center !important;
       }
+    }
+  }
+
+  &__thumbnail {
+    margin: $spacing-unit * 3 0;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
     }
   }
 } 

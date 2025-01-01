@@ -8,7 +8,7 @@ order: 7
 lang: ru
 thumbnail: "/assets/images/projects/0hub.png"
 images:
-  - "/assets/images/projects/0hub.png"
+  - "/assets/images/projects/0hub2.png"
 
 categories:
   - web

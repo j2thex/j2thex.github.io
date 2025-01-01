@@ -10,6 +10,12 @@ layout: default
         {{ page.title }}
       {% endif %}
     </h1>
+
+    {% if page.thumbnail %}
+    <div class="project__thumbnail">
+      <img src="{{ page.thumbnail }}" alt="{{ page.title }} thumbnail">
+    </div>
+    {% endif %}
     
     {% if page.technologies %}
     <div class="project__technologies">

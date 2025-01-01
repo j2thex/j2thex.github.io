@@ -24,7 +24,7 @@ order: 1
 lang: en
 thumbnail: "/assets/images/projects/jibx.png"
 images:
-  - "/assets/images/projects/jibx.png"
+  - "/assets/images/projects/jibx2.png"
 categories:
   - web
   - blockchain

@@ -23,7 +23,7 @@ order: 13
 lang: ru
 thumbnail: "/assets/images/projects/quickhot.png"
 images:
-  - "/assets/images/projects/quickhot.png"
+
 
 categories:
   - mobile

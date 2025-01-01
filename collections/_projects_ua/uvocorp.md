@@ -21,7 +21,7 @@ order: 10
 lang: ua
 thumbnail: "/assets/images/projects/uvocorp.png"
 images:
-  - "/assets/images/projects/uvocorp.png"
+
 
 categories:
   - web

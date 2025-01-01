@@ -25,7 +25,7 @@ order: 6
 lang: ru
 thumbnail: "/assets/images/projects/utorg.png"
 images:
-  - "/assets/images/projects/utorg.png"
+  - "/assets/images/projects/utorg2.png"
 
 categories:
   - mobile
