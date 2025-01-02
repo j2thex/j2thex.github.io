@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Motivation: a tool misused by 99% of companies"
-description: "An in-depth look at how companies misunderstand and misuse motivation, with practical solutions for building effective incentive systems"
+title: "Motivation (employee stimulation): a tool misused by 99% of companies"
+description: "An in-depth look at how companies misunderstand and misuse employee stimulation, with practical solutions for building effective incentive systems"
 date: 2025-01-01
 author: Jeff Smith
 image: /assets/images/posts/motivation/wow.gif
