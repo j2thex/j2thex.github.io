@@ -12,12 +12,13 @@ categories:
   - motivation
 lang: en
 ---
+The term "motivation" is often used broadly, encompassing both intrinsic motives and external incentives. However, from a theoretical standpoint, it is more accurate to refer to "stimulation" when discussing employer actions aimed at influencing employee behavior.
 
-Most companies think they understand motivation, but they don't. The typical approaches of relying solely on a fixed monthly salary and sporadic bonuses are outdated, ineffective and doesn't address what truly drives people.
+Most companies think they understand stimulation, but they don't. The typical approaches of relying solely on a fixed monthly salary and sporadic bonuses are outdated, ineffective and doesn't address what truly drives people.
 
 ![Not impressed](/assets/images/posts/motivation/mot.gif)
 
-These outdated methods are no longer enough to motivate a person to achieve more than the bare minimum and even lead to employees only trying to avoid being fired rather than genuinely invested in their work.
+These outdated methods are no longer enough to stimulate a person to achieve more than the bare minimum and even lead to employees only trying to avoid being fired rather than genuinely invested in their work.
 
 > **Fun Fact:** According to Gallup, engaged teams see about 20% higher productivity. That's a big number to ignore.
 
@@ -28,9 +29,9 @@ With increasing automation, only highly motivated employees will remain relevant
 
 From my experience, many companies fail because they lack structured incentives that could better align employee goals with company objectives, ultimately stunting growth.
 
-## The right way to harness motivation
+## The right way to harness stimulation
 
-The right way to harness motivation is to be consistent and intentional. Companies must implement structured short-term, mid-term, and long-term incentive programs to maintain consistent motivation and alignment with company goals. Unlike sporadic rewards, structured incentives create a predictable path that keeps employees focused and engaged.
+The right way to harness stimulation is to be consistent and intentional. Companies must implement structured short-term, mid-term, and long-term incentive programs to maintain consistent motivation and alignment with company goals. Unlike sporadic rewards, structured incentives create a predictable path that keeps employees focused and engaged.
 
 > **Pro Tip:** Keep an open "Improvements Board" where anyone can post an idea for boosting motivation. No manager filtering—just let people speak up and share ideas.
 
@@ -57,13 +58,13 @@ Regular promotions or skills-based raises keep employees motivated beyond the da
 
 ![I like this](/assets/images/posts/motivation/i-like.gif)
 
-## Motivation through ownership and autonomy
+## Stimulation through ownership and autonomy
 
 Allowing employees to make strategic decisions encourages a deep sense of purpose and ownership, directly boosting their motivation. Motivation often thrives when we feel in control of our work. Autonomy—the ability to make key decisions—makes employees feel trusted and valued. This sense of ownership is what drives meaningful progress.
 
 > **Example:** Look at Atlassian's "ShipIt Days," where employees pick projects they care about. Or Microsoft's hack weeks, where teams chase new ideas. When people own a project, they pour their hearts into it.
 
-## Motivation through leading with impact
+## Stimulation through leading with impact
 
 There's no bigger motivator than seeing how your work matters. Understanding the broader impact of your work—how new solutions transform user interactions and bring significant industry changes—gives it meaning. 
 
@@ -92,7 +93,23 @@ Creating pathways to leadership and ownership allows employees to feel like they
 
 > **Important:** Consistency is everything. If you promise a new role or bonus at a certain milestone, follow through. Break that trust once, and motivation drains faster than you can fix it.
 
+## Interesting Facts and Observations
 
+Here are some lesser-known observations and psychological effects that can help you better understand motivation and work organization:
+
+- **Ringelmann Effect:** Individual productivity decreases as group size increases. This happens because participants start relying on the efforts of others. Solution — small teams with clearly defined responsibilities. For example, Amazon uses the "two-pizza rule": a team should be small enough to be fed with two pizzas.
+
+- **Zeigarnik Effect:** People remember unfinished tasks better than completed ones. Break projects into stages with intermediate goals to keep employees engaged.
+
+- **IKEA Effect:** People tend to overvalue things they’ve created themselves, even if they are not perfect. Involve employees in decision-making processes so they feel ownership of success.
+
+- **Parkinson’s Law:** Work expands to fill the time available for its completion. Set reasonable but firm deadlines to increase productivity.
+
+- **Hawthorne Effect:** People perform better when they know they’re being observed. Attention from management can act as a powerful motivator.
+
+- **Curse of Knowledge:** Experts often forget that others may not share their level of understanding. This hinders effective communication. Explain complex concepts in simple terms.
+
+These facts will help you better understand employee motivation and build more effective processes in your company.
 
 ## Conclusion, TL;DR
 
