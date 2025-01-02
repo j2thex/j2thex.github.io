@@ -4,7 +4,8 @@ title: "Motivation: a tool misused by 99% of companies"
 description: "An in-depth look at how companies misunderstand and misuse motivation, with practical solutions for building effective incentive systems"
 date: 2025-01-01
 author: Jeff Smith
-image: 
+image: /assets/images/posts/motivation/wow.gif
+share_image: /assets/images/posts/motivation/wow.gif
 categories: 
   - management
   - leadership

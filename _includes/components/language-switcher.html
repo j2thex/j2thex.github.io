@@ -22,7 +22,10 @@
     {% for lang in site.languages %}
       {% if lang != page.lang %}
         {% assign lang_name = lang | upcase %}
-        {% if page.url contains "/blog/" %}
+        {% if page.layout == "post" and page.date %}
+          {% capture post_date %}{{ page.date | date: "%Y/%m/%d" }}{% endcapture %}
+          {% assign target_url = "/" | append: lang | append: "/blog/" | append: post_date | append: "/" | append: page.slug | append: "/" %}
+        {% elsif page.url contains "/blog/" %}
           {% assign target_url = "/" | append: lang | append: "/blog/" %}
         {% elsif page.url contains "/projects/" %}
           {% if page.slug %}

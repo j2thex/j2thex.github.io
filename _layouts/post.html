@@ -39,10 +39,6 @@ layout: default
 
   <div class="post__content">
     <div class="container">
-      {% if page.image %}
-        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post__image">
-      {% endif %}
-      
       <div class="post__body">
         {{ content }}
       </div>
