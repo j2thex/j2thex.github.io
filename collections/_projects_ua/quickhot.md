@@ -48,7 +48,7 @@ results: |
   - Досягли 30% зниження енергоспоживання
   - Забезпечили точний контроль температури (±0.5°C)
   - Рейтинг 4.8/5 зірок в App Store
-website: "https://quickhot.app"
+website: 
 ---
 
 {{ page.full_description }}

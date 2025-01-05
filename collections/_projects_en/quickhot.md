@@ -48,7 +48,7 @@ results: |
   - Achieved 30% reduction in energy consumption
   - Maintained precise temperature control (±0.5°C)
   - 4.8/5 star rating on the App Store
-website: "https://quickhot.app"
+website: 
 ---
 
 {{ page.full_description }} 
