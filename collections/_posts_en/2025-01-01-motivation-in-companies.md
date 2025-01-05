@@ -20,11 +20,11 @@ Most companies think they understand stimulation, but they don't. The typical ap
 
 These outdated methods are no longer enough to stimulate a person to achieve more than the bare minimum and even lead to employees only trying to avoid being fired rather than genuinely invested in their work.
 
-> **Fun Fact:** According to Gallup, engaged teams see about 20% higher productivity. That's a big number to ignore.
+> **Fun fact:** According to Gallup, engaged teams see about 20% higher productivity. That's a big number to ignore.
 
 With increasing automation, only highly motivated employees will remain relevant. Automation handles repetitive tasks, but it's the motivated employees who bring creativity, problem-solving, and adaptability—skills that are difficult to automate and are essential.
 
-> **Quick Tip:** Run quarterly pulse surveys—3 to 5 questions—so you can catch low motivation before it spreads. Then act on that data right away.
+> **Quick tip:** Run quarterly pulse surveys—3 to 5 questions—so you can catch low motivation before it spreads. Then act on that data right away.
 
 
 From my experience, many companies fail because they lack structured incentives that could better align employee goals with company objectives, ultimately stunting growth.
@@ -93,21 +93,21 @@ Creating pathways to leadership and ownership allows employees to feel like they
 
 > **Important:** Consistency is everything. If you promise a new role or bonus at a certain milestone, follow through. Break that trust once, and motivation drains faster than you can fix it.
 
-## Interesting Facts and Observations
+## Interesting facts and observations
 
 Here are some lesser-known observations and psychological effects that can help you better understand motivation and work organization:
 
-- **Ringelmann Effect:** Individual productivity decreases as group size increases. This happens because participants start relying on the efforts of others. Solution — small teams with clearly defined responsibilities. For example, Amazon uses the "two-pizza rule": a team should be small enough to be fed with two pizzas.
+- **Ringelmann effect:** Individual productivity decreases as group size increases. This happens because participants start relying on the efforts of others. Solution — small teams with clearly defined responsibilities. For example, Amazon uses the "two-pizza rule": a team should be small enough to be fed with two pizzas.
 
-- **Zeigarnik Effect:** People remember unfinished tasks better than completed ones. Break projects into stages with intermediate goals to keep employees engaged.
+- **Zeigarnik effect:** People remember unfinished tasks better than completed ones. Break projects into stages with intermediate goals to keep employees engaged.
 
-- **IKEA Effect:** People tend to overvalue things they’ve created themselves, even if they are not perfect. Involve employees in decision-making processes so they feel ownership of success.
+- **IKEA effect:** People tend to overvalue things they’ve created themselves, even if they are not perfect. Involve employees in decision-making processes so they feel ownership of success.
 
-- **Parkinson’s Law:** Work expands to fill the time available for its completion. Set reasonable but firm deadlines to increase productivity.
+- **Parkinson’s law:** Work expands to fill the time available for its completion. Set reasonable but firm deadlines to increase productivity.
 
-- **Hawthorne Effect:** People perform better when they know they’re being observed. Attention from management can act as a powerful motivator.
+- **Hawthorne effect:** People perform better when they know they’re being observed. Attention from management can act as a powerful motivator.
 
-- **Curse of Knowledge:** Experts often forget that others may not share their level of understanding. This hinders effective communication. Explain complex concepts in simple terms.
+- **Curse of knowledge:** Experts often forget that others may not share their level of understanding. This hinders effective communication. Explain complex concepts in simple terms.
 
 These facts will help you better understand employee motivation and build more effective processes in your company.
 
