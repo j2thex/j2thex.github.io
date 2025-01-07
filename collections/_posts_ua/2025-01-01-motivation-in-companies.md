@@ -2,7 +2,7 @@
 layout: post
 title: "Мотивація (стимулювання співробітників): інструмент, який 99% компаній використовують неправильно"
 description: "Аналіз, чому компанії помиляються в підходах до стимулювання співробітників, і практичні поради зі створення ефективних бонусних систем."
-date: 2025-01-01
+date: 2025-01-07
 author: Jeff Smith
 image: /assets/images/posts/motivation/wow.gif
 share_image: /assets/images/posts/motivation/wow.gif

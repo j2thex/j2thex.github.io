@@ -99,3 +99,13 @@ cookies:
 video_section:
   download_pdf: "Скачать PDF"
   schedule_meeting: "Запланировать встречу"
+
+project:
+  challenge_title: "Задача"
+  solution_title: "Решение"
+  results_title: "Результаты"
+  view_live: "Открыть сайт"
+  view_code: "Посмотреть код"
+  previous_project: "Предыдущий проект"
+  next_project: "Следующий проект"
+  back_to_projects: "К проектам"

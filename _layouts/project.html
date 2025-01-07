@@ -34,21 +34,21 @@ layout: default
     <div class="project__info">
       {% if page.challenge %}
       <section class="project__section">
-        <h2>{% if page.translations[page.lang].challenge_title %}{{ page.translations[page.lang].challenge_title }}{% else %}Challenge{% endif %}</h2>
+        <h2>{% if site.data.translations[page.lang].project.challenge_title %}{{ site.data.translations[page.lang].project.challenge_title }}{% else %}Challenge{% endif %}</h2>
         <p>{% if page.translations[page.lang].challenge %}{{ page.translations[page.lang].challenge }}{% else %}{{ page.challenge }}{% endif %}</p>
       </section>
       {% endif %}
 
       {% if page.solution %}
       <section class="project__section">
-        <h2>{% if page.translations[page.lang].solution_title %}{{ page.translations[page.lang].solution_title }}{% else %}Solution{% endif %}</h2>
+        <h2>{% if site.data.translations[page.lang].project.solution_title %}{{ site.data.translations[page.lang].project.solution_title }}{% else %}Solution{% endif %}</h2>
         <p>{% if page.translations[page.lang].solution %}{{ page.translations[page.lang].solution }}{% else %}{{ page.solution }}{% endif %}</p>
       </section>
       {% endif %}
 
       {% if page.results %}
       <section class="project__section">
-        <h2>{% if page.translations[page.lang].results_title %}{{ page.translations[page.lang].results_title }}{% else %}Results{% endif %}</h2>
+        <h2>{% if site.data.translations[page.lang].project.results_title %}{{ site.data.translations[page.lang].project.results_title }}{% else %}Results{% endif %}</h2>
         <p>{% if page.translations[page.lang].results %}{{ page.translations[page.lang].results }}{% else %}{{ page.results }}{% endif %}</p>
       </section>
       {% endif %}
@@ -72,12 +72,12 @@ layout: default
     <div class="project__links">
       {% if page.website %}
         <a href="{{ page.website }}" class="btn btn--primary" target="_blank" rel="noopener">
-          {% if page.translations[page.lang].view_live %}{{ page.translations[page.lang].view_live }}{% else %}View Live{% endif %}
+          {% if site.data.translations[page.lang].project.view_live %}{{ site.data.translations[page.lang].project.view_live }}{% else %}View Live{% endif %}
         </a>
       {% endif %}
       {% if page.github %}
         <a href="{{ page.github }}" class="btn btn--outline" target="_blank" rel="noopener">
-          {% if page.translations[page.lang].view_code %}{{ page.translations[page.lang].view_code }}{% else %}View Code{% endif %}
+          {% if site.data.translations[page.lang].project.view_code %}{{ site.data.translations[page.lang].project.view_code }}{% else %}View Code{% endif %}
         </a>
       {% endif %}
     </div>
@@ -104,7 +104,7 @@ layout: default
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          Previous Project
+          {% if site.data.translations[page.lang].project.previous_project %}{{ site.data.translations[page.lang].project.previous_project }}{% else %}Previous Project{% endif %}
         </a>
       {% else %}
         <div class="btn-placeholder"></div>
@@ -117,12 +117,12 @@ layout: default
           <path d="M4 14H10V20H4V14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M14 14H20V20H14V14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        Back to Projects
+        {% if site.data.translations[page.lang].project.back_to_projects %}{{ site.data.translations[page.lang].project.back_to_projects }}{% else %}Back to Projects{% endif %}
       </a>
 
       {% if next_project %}
         <a href="{{ next_project.url }}" class="btn btn--outline">
-          Next Project
+          {% if site.data.translations[page.lang].project.next_project %}{{ site.data.translations[page.lang].project.next_project }}{% else %}Next Project{% endif %}
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>

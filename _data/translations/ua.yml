@@ -100,3 +100,13 @@ video_section:
   download_pdf: "Завантажити PDF"
   schedule_meeting: "Запланувати зустріч"
 
+project:
+  challenge_title: "Завдання"
+  solution_title: "Рішення"
+  results_title: "Результати"
+  view_live: "Відкрити сайт"
+  view_code: "Переглянути код"
+  previous_project: "Попередній проект"
+  next_project: "Наступний проект"
+  back_to_projects: "До проектів"
+
