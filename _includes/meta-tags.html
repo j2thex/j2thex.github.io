@@ -2,6 +2,11 @@
 {% assign page_description = page.description | default: site.translations[page.lang].site_description | default: site.description %}
 {% assign page_image = page.share_image | default: page.image | default: site.translations[page.lang].social_image | default: site.default_image | absolute_url %}
 
+<!-- Debug Info -->
+<!-- Share Image: {{ page.share_image }} -->
+<!-- Regular Image: {{ page.image }} -->
+<!-- Final Image Used: {{ page_image }} -->
+
 <!-- Primary Meta Tags -->
 <title>{{ page_title }}</title>
 <meta name="title" content="{{ page_title }}">
