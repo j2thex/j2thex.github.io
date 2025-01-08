@@ -68,6 +68,8 @@ If you're not already practicing dogfooding, here's how to get started:
 
 4. **Iterate and improve**: Use the insights you gain to refine your product and make it even better. For instance, if employees report that a feature is confusing, prioritize redesigning it before the next release.
 
+![Dog with cupcakes](/assets/images/posts/dogfood/cupcake-cute.gif){:width="300px"}
+
 ## The bottom line
 
 Eating your own dog food isn't just a catchy phrase—it's a mindset. It's about taking pride in your work, being accountable to your customers, and continuously striving for excellence. By using your own product, you'll not only improve its quality but also build trust, foster innovation, and create a stronger connection with your audience. It's a practice that transcends industries, from tech giants like Microsoft to coffee shops like Starbucks, proving its universal value.
