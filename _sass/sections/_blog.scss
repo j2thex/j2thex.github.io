@@ -300,4 +300,54 @@
     flex-wrap: wrap;
     gap: $spacing-unit;
   }
+}
+
+.post-feedback {
+  margin-top: $spacing-unit * 8;
+  padding: $spacing-unit * 4;
+  border-top: 1px solid $color-border;
+  text-align: center;
+
+  &__question {
+    margin-bottom: $spacing-unit * 3;
+    
+    p {
+      color: $color-text-secondary;
+      font-size: $font-size-base;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $spacing-unit * 2;
+    justify-content: center;
+    margin-top: $spacing-unit * 3;
+  }
+
+  &__button {
+    padding: $spacing-unit * 1.5 $spacing-unit * 4;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    background: $color-card;
+    color: $color-text;
+    cursor: pointer;
+    transition: $transition-base;
+    font-size: $font-size-base;
+
+    &:hover {
+      background: rgba($color-accent, 0.1);
+      border-color: $color-accent;
+    }
+
+    &.selected {
+      background: rgba($color-accent, 0.2);
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+
+  &__thanks {
+    color: $color-accent;
+    font-size: $font-size-base;
+  }
 } 

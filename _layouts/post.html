@@ -41,6 +41,7 @@ layout: default
     <div class="container">
       <div class="post__body">
         {{ content }}
+        {% include components/post-feedback.html %}
       </div>
       
       {% if page.tags %}

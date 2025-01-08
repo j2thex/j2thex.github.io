@@ -1,0 +1,30 @@
+{% assign feedback_text = "Was this article helpful?" %}
+{% assign yes_text = "Yes" %}
+{% assign no_text = "No" %}
+{% assign thanks_text = "Thank you for your feedback!" %}
+
+{% case page.lang %}
+  {% when 'ua' %}
+    {% assign feedback_text = "Чи була ця стаття корисною?" %}
+    {% assign yes_text = "Так" %}
+    {% assign no_text = "Ні" %}
+    {% assign thanks_text = "Дякуємо за ваш відгук!" %}
+  {% when 'ru' %}
+    {% assign feedback_text = "Была ли эта статья полезной?" %}
+    {% assign yes_text = "Да" %}
+    {% assign no_text = "Нет" %}
+    {% assign thanks_text = "Спасибо за ваш отзыв!" %}
+{% endcase %}
+
+<div class="post-feedback" data-post-id="{{ page.id }}">
+  <div class="post-feedback__question">
+    <p>{{ feedback_text }}</p>
+    <div class="post-feedback__buttons">
+      <button class="post-feedback__button" data-value="yes">{{ yes_text }}</button>
+      <button class="post-feedback__button" data-value="no">{{ no_text }}</button>
+    </div>
+  </div>
+  <div class="post-feedback__thanks" style="display: none;">
+    <p>{{ thanks_text }}</p>
+  </div>
+</div> 

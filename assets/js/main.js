@@ -129,6 +129,53 @@ document.addEventListener('DOMContentLoaded', function() {
       this.appendChild(iframe);
     });
   }
+
+  // Post feedback handling
+  const feedbackContainer = document.querySelector('.post-feedback');
+  if (!feedbackContainer) return;
+
+  const postId = feedbackContainer.dataset.postId;
+  const storageKey = `post_feedback_${postId}`;
+  
+  // Check if feedback was already given
+  if (localStorage.getItem(storageKey)) {
+    showThanks();
+    return;
+  }
+
+  const buttons = feedbackContainer.querySelectorAll('.post-feedback__button');
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      const value = this.dataset.value;
+      
+      // Store the feedback
+      localStorage.setItem(storageKey, value);
+      
+      // Send event to Google Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'article_feedback', {
+          'event_category': 'Engagement',
+          'event_label': postId,
+          'value': value === 'yes' ? 1 : 0
+        });
+      }
+      
+      // Mark button as selected
+      buttons.forEach(btn => btn.classList.remove('selected'));
+      this.classList.add('selected');
+      
+      // Show thanks message
+      setTimeout(showThanks, 500);
+    });
+  });
+
+  function showThanks() {
+    const questionEl = feedbackContainer.querySelector('.post-feedback__question');
+    const thanksEl = feedbackContainer.querySelector('.post-feedback__thanks');
+    
+    questionEl.style.display = 'none';
+    thanksEl.style.display = 'block';
+  }
 });
 
 function acceptCookies() {
