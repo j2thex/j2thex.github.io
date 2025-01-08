@@ -124,4 +124,9 @@ A paycheck alone is boring, just tossing a bonus every now and then isn't going 
 Motivation is contagious, but so is demotivation. It's a tool that can either propel a company forward or hold it back. Leaders play a critical role in setting the tone—motivated leaders inspire their teams, while disengaged leaders can quickly spread demotivation throughout the entire organization.
 
 Keep it real. Don't toss out empty slogans. Use data, keep communication flowing, and celebrate real progress. Motivation requires active work—like watering a plant before it wilts, not after.
+
+---
+
+{:.acknowledgment}
+*I would like to extend my heartfelt thanks to Cheegreen for their invaluable assistance in revising, proofreading, and offering insightful comments to improve this article. Your support and expertise have been instrumental in shaping the final version, and I am deeply grateful for your time and effort.*
  

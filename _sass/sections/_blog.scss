@@ -300,6 +300,16 @@
     flex-wrap: wrap;
     gap: $spacing-unit;
   }
+  
+  &__acknowledgment {
+    margin-top: $spacing-unit * 6;
+    padding-top: $spacing-unit * 3;
+    font-size: $font-size-small;
+    font-style: italic;
+    color: rgba($color-text-secondary, 0.8);
+    border-top: 1px solid rgba($color-border, 0.5);
+    line-height: 1.6;
+  }
 }
 
 .post-feedback {
