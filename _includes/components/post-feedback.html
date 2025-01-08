@@ -16,7 +16,8 @@
     {% assign thanks_text = "Спасибо за ваш отзыв!" %}
 {% endcase %}
 
-<div class="post-feedback" data-post-id="{{ page.id }}">
+{% assign base_id = page.id | split: "/" | last %}
+<div class="post-feedback" data-post-id="{{ base_id }}">
   <div class="post-feedback__question">
     <p>{{ feedback_text }}</p>
     <div class="post-feedback__buttons">

@@ -137,8 +137,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const postId = feedbackContainer.dataset.postId;
   const storageKey = `post_feedback_${postId}`;
   
+  // Debug log
+  console.log('Feedback initialized for post:', postId);
+  console.log('Previous feedback:', localStorage.getItem(storageKey));
+  
   // Check if feedback was already given
   if (localStorage.getItem(storageKey)) {
+    console.log('Previous feedback found, showing thanks');
     showThanks();
     return;
   }
@@ -153,11 +158,20 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Send event to Google Analytics
       if (typeof gtag !== 'undefined') {
+        console.log('Sending GA event:', {
+          event_name: 'article_feedback',
+          event_category: 'Engagement',
+          event_label: postId,
+          value: value === 'yes' ? 1 : 0
+        });
+        
         gtag('event', 'article_feedback', {
           'event_category': 'Engagement',
           'event_label': postId,
           'value': value === 'yes' ? 1 : 0
         });
+      } else {
+        console.error('Google Analytics not initialized (gtag not found)');
       }
       
       // Mark button as selected
