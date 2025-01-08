@@ -5,7 +5,7 @@ description: "Why companies should use their own products, how this practice ens
 date: 2025-01-08
 author: Jeff Smith
 image: "/assets/images/posts/dogfood/guy-eating.gif"
-share_image: /assets/images/posts/dogfood/guy-eating.gif
+share_image: /assets/images/posts/dogfood/dogfood-utencils.jpg
 categories: 
   - best-practices
   - product management

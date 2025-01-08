@@ -5,7 +5,7 @@ description: "Почему компании должны использоват�
 date: 2025-01-08
 author: Jeff Smith
 image: "/assets/images/posts/dogfood/guy-eating.gif"
-share_image: /assets/images/posts/dogfood/guy-eating.gif
+share_image: /assets/images/posts/dogfood/dogfood-utencils.jpg
 categories: 
   - best-practices
   - product management
