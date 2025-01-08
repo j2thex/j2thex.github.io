@@ -1,6 +1,6 @@
 {% assign page_title = page.title | default: site.translations[page.lang].site_title | default: site.title %}
 {% assign page_description = page.description | default: site.translations[page.lang].site_description | default: site.description %}
-{% assign page_image = page.image | default: site.translations[page.lang].social_image | default: site.default_image | absolute_url %}
+{% assign page_image = page.share_image | default: page.image | default: site.translations[page.lang].social_image | default: site.default_image | absolute_url %}
 
 <!-- Primary Meta Tags -->
 <title>{{ page_title }}</title>
