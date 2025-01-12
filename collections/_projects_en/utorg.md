@@ -48,7 +48,7 @@ results: |
 call_to_action: |
   Manage your cryptocurrency effortlessly with UTORG. Visit [UTORG](https://utorg.pro/) to explore more.
 website: "https://utorg.pro/"
-github: ""
+
 ---
 
 {{ page.full_description }}

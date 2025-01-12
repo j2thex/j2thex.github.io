@@ -49,7 +49,7 @@ results: |
 call_to_action: |
   Управляйте своей криптовалютой без усилий с UTORG. Посетите [UTORG](https://utorg.pro/) чтобы узнать больше.
 website: "https://utorg.pro/"
-github: ""
+
 ---
 
 {{ page.full_description }}
