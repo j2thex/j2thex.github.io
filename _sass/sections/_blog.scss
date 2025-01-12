@@ -170,6 +170,19 @@
       margin: 0 auto;
       padding: $spacing-unit * 4 $container-padding;
     }
+
+    a {
+      color: $color-text;
+      text-decoration: none;
+      background-color: rgba($color-accent, 0.3);
+      padding: 0 2px;
+      border-radius: 2px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba($color-accent, 0.7);
+      }
+    }
   }
   
   &__body {

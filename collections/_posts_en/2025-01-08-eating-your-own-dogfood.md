@@ -43,9 +43,7 @@ Beyond the obvious quality benefits, dogfooding offers practical advantages. It 
 
 Perhaps most importantly, it builds customer trust. When a company uses its own products, it demonstrates genuine confidence and long-term commitment to quality.
 
-> **Case study:** When Binance launched its blockchain, they took the bold step of migrating their own platform first. This move wasn't just about testing – it showed they trusted their technology enough to bet their core business on it.
-
-> **Example from practice:** When Binance launched their blockchain, they made a bold move by being the first to migrate their own platform to it. This step wasn't just testing – it showed they trusted their technology enough to stake their core business on it.
+> **Case study:** When Binance launched its BSC blockchain, they took the bold step of migrating their own platform first. This move wasn't just about testing – it showed they trusted their technology enough to bet their core business on it.
 
 > **Personal experience:** When running a major cryptocurrency exchange, I strongly encouraged employees to actively trade on our platform to experience it firsthand. However, it's important to note that legally we couldn't make this mandatory. This highlights an important consideration in dogfooding: while using your own product is valuable, there may be legal or regulatory limitations in certain industries that affect how you implement it.
 

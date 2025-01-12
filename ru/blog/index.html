@@ -15,7 +15,8 @@ permalink: /ru/blog/
   <div class="blog__content">
     <div class="container">
       <div class="blog__grid">
-        {% for post in site.posts_ru %}
+        {% assign sorted_posts = site.posts_ru | sort: 'date' | reverse %}
+        {% for post in sorted_posts %}
           <article class="blog-card">
             <a href="{{ post.url | relative_url }}" class="blog-card__link">
               {% if post.image %}
