@@ -65,15 +65,6 @@ Dogfooding isn't all smooth sailing. While it excels at early bug detection and 
 
 Remember that while dogfooding is powerful, it shouldn't replace professional QA testing. Think of it as an additional layer of validation that brings unique insights from real-world usage.
 
-## Making it happen
-
-Starting a dogfooding program requires careful planning and execution. Begin by defining clear objectives and success metrics. Create a diverse testing team that includes both technical and non-technical users, and make sure leadership actively participates to set the example.
-
-Establish clear feedback channels and documentation processes, but keep them simple enough that people will actually use them. Regular check-ins and progress tracking help maintain momentum, while a systematic approach to handling feedback ensures that valuable insights don't get lost.
-
-The key is to make dogfooding part of your company culture rather than treating it as just another testing phase. Celebrate successes, share learnings, and continuously refine the process based on what works for your team.
-
-
 ## The implementation guide
 
 ![Dog rejects food](/assets/images/posts/dogfood/dog-reject.gif){:width="250px"}
@@ -87,6 +78,8 @@ The process needs to be straightforward yet thorough. While you'll need proper d
 Regular monitoring helps maintain momentum. Schedule check-ins to discuss findings, but keep them focused and action-oriented. A simple dashboard can help track progress, while clear communication channels ensure critical issues get immediate attention.
 
 Most importantly, create a cycle of continuous improvement. When people see their feedback leading to real changes, they become more invested in the process. Share success stories, celebrate improvements, and keep refining your approach based on what works best for your team.
+
+Make dogfooding part of your company culture rather than treating it as just another testing phase. Celebrate successes, share learnings, and continuously refine the process based on what works for your team.
 
 ## The bottom line
 
