@@ -23,10 +23,10 @@ services:
       description: Modernizing your business with cutting-edge technology
       features:
         - Full-stack web/mobile development
-        - UI/UX and design
-        - Enterprise system integration
-        - Scaling MVPs or launching Series A-ready products
-        - Refactoring, fixing technical debt
+        - Smart contract development
+        - Blockchain integration
+        - NFT marketplace development
+        - DeFi solutions & dApps
     - title: Innovation Acceleration
       icon: innovation
       description: Fast-tracking your ideas to market
@@ -36,16 +36,16 @@ services:
         - Proof of concept creation
         - Quick iteration cycles
         - Faster go-to-market
-    - title: Strategic Upgrades
+    - title: AI Solutions
       icon: strategic
-      description: Leveraging emerging technologies for growth
+      description: Leveraging AI to transform your business
       features:
-        - Custom AI solution design
-        - Natural language processing
+        - Custom AI model development
+        - Large Language Model integration
+        - AI-powered automation
+        - Computer vision solutions
         - Predictive analytics
-        - Decentralized applications
-        - Smart contracts
-        - Crypto payment infrastructure
+      link: /en/ai-solutions/
 
 process:
   title: Our Process

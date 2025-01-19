@@ -20,7 +20,7 @@
           <li>{{ feature }}</li>
           {% endfor %}
         </ul>
-        <a href="#contact" class="service-card__button">{{ services.button }}</a>
+        <a href="{% if service.link %}{{ service.link }}{% else %}#contact{% endif %}" class="service-card__button">{{ services.button }}</a>
       </div>
       {% endfor %}
     </div>
