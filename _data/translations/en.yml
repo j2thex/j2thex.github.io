@@ -100,3 +100,7 @@ cookies:
 video_section:
   download_pdf: "Download PDF"
   schedule_meeting: "Schedule a Meeting"
+
+ai_solutions:
+  learn_more: Learn More
+  schedule_meeting: Schedule Meeting

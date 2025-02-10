@@ -10,15 +10,19 @@
           {{ site.data.translations[page.lang].hero.subtitle }}
         </p>
         <div class="hero__buttons">
-          <a href="#contact" class="btn btn--primary btn--large">
-            {{ site.data.translations[page.lang].hero.cta_primary }}
-          </a>
-          <a href="#portfolio" class="btn btn--outline btn--large">
-            {{ site.data.translations[page.lang].hero.cta_secondary }}
-          </a>
+          <a href="#services" class="btn btn--primary btn--large js-scroll">{{ site.data.translations[page.lang].ai_solutions.learn_more }}</a>
+          <a href="#portfolio" class="btn btn--outline btn--large">{{ site.data.translations[page.lang].hero.cta_secondary }}</a>
+          <a href="https://calendly.com/n0thn" class="btn btn--outline btn--large" rel="nofollow" target="_blank">{{ site.data.translations[page.lang].ai_solutions.schedule_meeting }}</a>
         </div>
       </div>
       <div class="cloud" id="rainCloud"></div>
     </div>
   </div>
 </section>
+
+<script>
+document.querySelector('.js-scroll').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.querySelector('.services').scrollIntoView({ behavior: 'smooth' });
+});
+</script>

@@ -43,8 +43,19 @@
   
   &__buttons {
     display: flex;
-    align-items: center;
     gap: $spacing-unit * 2;
+    margin-top: $spacing-unit * 4;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+      
+      .btn {
+        width: 100%;
+        min-height: 60px;
+        white-space: nowrap;
+      }
+    }
   }
   
   .cloud {

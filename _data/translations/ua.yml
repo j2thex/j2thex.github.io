@@ -110,3 +110,7 @@ project:
   next_project: "Наступний проект"
   back_to_projects: "До проектів"
 
+ai_solutions:
+  learn_more: Дізнатись Більше
+  schedule_meeting: Запланувати Зустріч
+

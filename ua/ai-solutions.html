@@ -73,8 +73,20 @@ permalink: /ua/ai-solutions/
   </div>
 
   <div class="ai-solutions__cta">
-    <h2>Готові Трансформувати Ваш Бізнес?</h2>
-    <p>Обговорімо, як AI може розвинути ваш бізнес</p>
-    <a href="/ua/#contact" class="button button--primary">Розпочати</a>
+    <div class="container">
+      <h2>Готові Трансформувати Ваш Бізнес?</h2>
+      <p>Обговорімо, як AI може розвинути ваш бізнес</p>
+      <div class="ai-solutions__buttons">
+        <a href="#features" class="btn btn--primary js-scroll">{{ site.data.translations[page.lang].ai_solutions.learn_more }}</a>
+        <a href="https://calendly.com/n0thn" class="btn btn--outline" rel="nofollow" target="_blank">{{ site.data.translations[page.lang].ai_solutions.schedule_meeting }}</a>
+      </div>
+    </div>
   </div>
-</section> 
+</section>
+
+<script>
+document.querySelector('.js-scroll').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.querySelector('.ai-solutions__features').scrollIntoView({ behavior: 'smooth' });
+});
+</script> 

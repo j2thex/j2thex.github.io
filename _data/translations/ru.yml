@@ -109,3 +109,7 @@ project:
   previous_project: "Предыдущий проект"
   next_project: "Следующий проект"
   back_to_projects: "К проектам"
+
+ai_solutions:
+  learn_more: Узнать Больше
+  schedule_meeting: Запланировать Встречу
