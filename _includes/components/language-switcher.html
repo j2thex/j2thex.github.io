@@ -1,4 +1,17 @@
-<!-- Debug info -->
+<!-- ============================================================================
+     Language Switcher Component
+     ============================================================================
+     This component provides intelligent language switching that maintains
+     context across different page types (homepage, blog posts, projects, etc.)
+     
+     Features:
+     - Detects current page language
+     - Routes to equivalent page in target language
+     - Maintains URL structure (dates, slugs, etc.)
+     - Handles special pages like AI Solutions landing page
+     ============================================================================ -->
+
+<!-- Debug info (visible only in source, not rendered) -->
 {% comment %}
   Current page lang: {{ page.lang }}
   Available languages: {{ site.languages | join: ', ' }}
@@ -22,20 +35,29 @@
     {% for lang in site.languages %}
       {% if lang != page.lang %}
         {% assign lang_name = lang | upcase %}
+        
+        {# Intelligent URL routing based on page type #}
         {% if page.layout == "post" and page.date %}
+          {# Blog post: Maintain date and slug structure #}
+          {# Example: /en/blog/2025/02/10/post-title/ -> /ru/blog/2025/02/10/post-title/ #}
           {% capture post_date %}{{ page.date | date: "%Y/%m/%d" }}{% endcapture %}
           {% assign target_url = "/" | append: lang | append: "/blog/" | append: post_date | append: "/" | append: page.slug | append: "/" %}
         {% elsif page.url contains "/blog/" %}
+          {# Blog index page: Route to language-specific blog index #}
           {% assign target_url = "/" | append: lang | append: "/blog/" %}
         {% elsif page.url contains "/projects/" %}
+          {# Project pages: Maintain project slug #}
           {% if page.slug %}
             {% assign target_url = "/" | append: lang | append: "/projects/" | append: page.slug | append: "/" %}
           {% else %}
+            {# Project index page #}
             {% assign target_url = "/" | append: lang | append: "/projects/" %}
           {% endif %}
         {% elsif page.url contains "/ai-solutions/" %}
+          {# AI Solutions landing page: Route to language-specific version #}
           {% assign target_url = "/" | append: lang | append: "/ai-solutions/" %}
         {% else %}
+          {# Default: Homepage or other pages #}
           {% assign target_url = "/" | append: lang | append: "/" %}
         {% endif %}
         <a href="{{ target_url }}">

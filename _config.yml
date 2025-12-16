@@ -1,79 +1,125 @@
+# ============================================================================
+# n0thn Digital Agency - Jekyll Configuration
+# ============================================================================
+# This file configures Jekyll static site generator for the n0thn website.
+# The site is multilingual (English, Russian, Ukrainian) and uses collections
+# for blog posts and projects organized by language.
+# ============================================================================
+
+# Site Identity
+# ----------------------------------------------------------------------------
 title: n0thn
 description: Digital Agency
-baseurl: ""
-url: "https://n0thn.com"
-default_image: "/assets/images/social-share.jpg"
+baseurl: ""  # Empty for root domain deployment
+url: "https://n0thn.com"  # Production URL
+default_image: "/assets/images/social-share.jpg"  # Default OG image for social sharing
 
-# Build settings
+# Build Settings
+# ----------------------------------------------------------------------------
+# Markdown processor: kramdown provides extended Markdown features
 markdown: kramdown
+
+# SASS/SCSS compilation settings
 sass:
-  style: compressed
-  sass_dir: _sass
-  sourcemap: never
+  style: compressed  # Minify CSS output for production
+  sass_dir: _sass    # Source directory for SCSS files
+  sourcemap: never   # Disable source maps in production
 
-# Site settings
+# Multilingual Configuration
+# ----------------------------------------------------------------------------
+# Supported languages: English (default), Russian, Ukrainian
+# These are used throughout the site for language detection and switching
 languages: ["en", "ru", "ua"]
-default_lang: "en"
+default_lang: "en"  # Fallback language if browser language not detected
 
-# Collections
-collections_dir: collections
+# Collections Configuration
+# ----------------------------------------------------------------------------
+# Collections organize content by type and language. Each collection:
+# - Has language-specific variants (_en, _ru, _ua)
+# - Outputs static HTML files
+# - Uses custom permalink patterns for SEO-friendly URLs
+collections_dir: collections  # Base directory for all collections
 collections:
+  # Project Collections
+  # Each language has its own project collection with language-specific permalinks
   projects_en:
-    output: true
-    permalink: /en/projects/:slug/
+    output: true  # Generate static HTML files
+    permalink: /en/projects/:slug/  # URL pattern: /en/projects/project-name/
   projects_ru:
     output: true
-    permalink: /ru/projects/:slug/
+    permalink: /ru/projects/:slug/  # URL pattern: /ru/projects/project-name/
   projects_ua:
     output: true
-    permalink: /ua/projects/:slug/
+    permalink: /ua/projects/:slug/  # URL pattern: /ua/projects/project-name/
+  
+  # Blog Post Collections
+  # Posts use date-based permalinks for better SEO and organization
   posts_en:
     output: true
-    permalink: /en/blog/:year/:month/:day/:title/
+    permalink: /en/blog/:year/:month/:day/:title/  # URL: /en/blog/2025/02/10/post-title/
   posts_ru:
     output: true
-    permalink: /ru/blog/:year/:month/:day/:title/
+    permalink: /ru/blog/:year/:month/:day/:title/  # URL: /ru/blog/2025/02/10/post-title/
   posts_ua:
     output: true
-    permalink: /ua/blog/:year/:month/:day/:title/
+    permalink: /ua/blog/:year/:month/:day/:title/  # URL: /ua/blog/2025/02/10/post-title/
 
+# Excluded Files
+# ----------------------------------------------------------------------------
+# Files/directories to exclude from Jekyll processing
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - .git
-  - README.md
+  - Gemfile          # Ruby dependency file
+  - Gemfile.lock     # Locked dependency versions
+  - node_modules     # Node.js dependencies (if any)
+  - vendor           # Vendor directory
+  - .git             # Git repository files
+  - README.md        # Documentation (not needed in build)
 
+# Default Front Matter
+# ----------------------------------------------------------------------------
+# These defaults apply front matter values automatically based on file location
+# This reduces repetition and ensures consistency across the site
 defaults:
+  # Global defaults: all files use default layout and English language
   -
     scope:
-      path: ""
+      path: ""  # All files
     values:
-      layout: "default"
-      lang: "en"
+      layout: "default"  # Base layout template
+      lang: "en"         # Default language
+  
+  # Language-specific path defaults
+  # Files in /en/ directory automatically get lang: "en"
   -
     scope:
       path: "en"
     values:
       lang: "en"
+  
+  # Files in /ru/ directory automatically get lang: "ru"
   -
     scope:
       path: "ru"
     values:
       lang: "ru"
+  
+  # Files in /ua/ directory automatically get lang: "ua"
   -
     scope:
       path: "ua"
     values:
       lang: "ua"
+  
+  # Project collection defaults
+  # All items in projects_en collection use project layout
   -
     scope:
       path: ""
-      type: "projects_en"
+      type: "projects_en"  # Collection type
     values:
-      layout: "project"
+      layout: "project"    # Project detail page layout
       lang: "en"
+  
   -
     scope:
       path: ""
@@ -81,6 +127,7 @@ defaults:
     values:
       layout: "project"
       lang: "ru"
+  
   -
     scope:
       path: ""
@@ -88,13 +135,17 @@ defaults:
     values:
       layout: "project"
       lang: "ua"
+  
+  # Blog post collection defaults
+  # All items in posts_en collection use post layout
   -
     scope:
       path: ""
       type: "posts_en"
     values:
-      layout: "post"
+      layout: "post"  # Blog post layout template
       lang: "en"
+  
   -
     scope:
       path: ""
@@ -102,6 +153,7 @@ defaults:
     values:
       layout: "post"
       lang: "ru"
+  
   -
     scope:
       path: ""
@@ -110,6 +162,9 @@ defaults:
       layout: "post"
       lang: "ua"
 
+# Jekyll Plugins
+# ----------------------------------------------------------------------------
+# Plugins extend Jekyll functionality
 plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-sitemap    # Auto-generates sitemap.xml for SEO
+  - jekyll-seo-tag    # Adds SEO meta tags and Open Graph tags automatically

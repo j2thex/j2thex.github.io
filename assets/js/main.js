@@ -1,5 +1,24 @@
+/**
+ * ============================================================================
+ * Main JavaScript - n0thn Website
+ * ============================================================================
+ * This file contains all interactive functionality for the website:
+ * - Navigation menu toggle (mobile)
+ * - Language switcher dropdown
+ * - Portfolio filtering with animations
+ * - Scroll progress indicator
+ * - Cookie consent management
+ * - Video lazy loading
+ * - Post feedback system with Google Analytics
+ * ============================================================================
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Navigation toggle
+  // ==========================================================================
+  // Navigation Toggle (Mobile Menu)
+  // ==========================================================================
+  // Handles the hamburger menu toggle for mobile devices
+  // Toggles active classes on menu, toggle button, and body
   const toggle = document.querySelector('.nav__toggle');
   const menu = document.querySelector('.nav__menu');
   
@@ -21,7 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Language switcher
+  // ==========================================================================
+  // Language Switcher
+  // ==========================================================================
+  // Handles the language dropdown toggle and click-outside-to-close functionality
   const langSwitcher = document.querySelector('.lang-switcher__current');
   const langDropdown = document.querySelector('.lang-switcher__dropdown');
   
@@ -41,7 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Portfolio filtering
+  // ==========================================================================
+  // Portfolio Filtering
+  // ==========================================================================
+  // Implements category-based filtering for portfolio items with fade animations
+  // Prevents rapid clicking during animation transitions
   const filterButtons = document.querySelectorAll('.portfolio__filter');
   const portfolioItems = document.querySelectorAll('.portfolio__item');
 
@@ -93,7 +119,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // ==========================================================================
   // Scroll Progress Bar
+  // ==========================================================================
+  // Visual indicator showing reading progress on long pages
+  // Updates CSS custom property --scroll-width based on scroll position
   const scrollProgress = document.querySelector('.scroll-progress');
   if (scrollProgress) {
     window.addEventListener('scroll', () => {
@@ -106,11 +136,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // ==========================================================================
+  // Cookie Consent
+  // ==========================================================================
+  // Shows cookie consent banner if user hasn't accepted yet
+  // Uses localStorage to persist consent across sessions
   if (!localStorage.getItem('cookieConsent')) {
     document.getElementById('cookieConsent').style.display = 'flex';
   }
 
-  // Video Section
+  // ==========================================================================
+  // Video Section (Lazy Loading)
+  // ==========================================================================
+  // Replaces video preview thumbnail with YouTube iframe on click
+  // Improves page load performance by deferring video embed
   const videoPreview = document.querySelector('.video-preview');
   if (videoPreview) {
     videoPreview.addEventListener('click', function() {
@@ -130,18 +169,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Post feedback handling
+  // ==========================================================================
+  // Post Feedback System
+  // ==========================================================================
+  // Collects user feedback (helpful/not helpful) on blog posts
+  // - Stores feedback in localStorage to prevent duplicate submissions
+  // - Sends events to Google Analytics for engagement tracking
+  // - Shows thank you message after feedback is submitted
   const feedbackContainer = document.querySelector('.post-feedback');
   if (!feedbackContainer) return;
 
   const postId = feedbackContainer.dataset.postId;
   const storageKey = `post_feedback_${postId}`;
   
-  // Debug log
+  // Debug logging (remove in production if desired)
   console.log('Feedback initialized for post:', postId);
   console.log('Previous feedback:', localStorage.getItem(storageKey));
   
-  // Check if feedback was already given
+  // Check if feedback was already given (prevents multiple submissions)
   if (localStorage.getItem(storageKey)) {
     console.log('Previous feedback found, showing thanks');
     showThanks();
@@ -192,6 +237,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+/**
+ * Cookie Consent Handler
+ * Called when user clicks "Accept" on cookie consent banner
+ * Stores consent in localStorage and hides the banner
+ */
 function acceptCookies() {
   localStorage.setItem('cookieConsent', 'true');
   document.getElementById('cookieConsent').style.display = 'none';
