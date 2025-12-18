@@ -4,8 +4,8 @@ title: "The 7 Levels of Trust: Building Strong Relationships in Business and Lif
 description: "Explore the seven distinct levels of trust and learn how to build stronger, more meaningful relationships in both professional and personal contexts."
 date: 2025-02-10
 author: Jeff Smith
-image: "/assets/images/posts/trust/level1.png"
-share_image: "/assets/images/posts/trust/level1.png"
+image: "/assets/images/posts/trust/trust-preview.png"
+share_image: "/assets/images/posts/trust/trust-preview.png"
 categories:
   - leadership
   - business

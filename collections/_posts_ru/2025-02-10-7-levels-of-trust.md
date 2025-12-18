@@ -4,8 +4,8 @@ title: "7 Уровней Доверия: Построение Крепких О�
 description: "Исследуйте семь различных уровней доверия и узнайте, как строить более крепкие и содержательные отношения как в профессиональном, так и в личном контексте."
 date: 2025-02-10
 author: Jeff Smith
-image: "/assets/images/posts/trust/level1.png"
-share_image: "/assets/images/posts/trust/level1.png"
+image: "/assets/images/posts/trust/trust-preview.png"
+share_image: "/assets/images/posts/trust/trust-preview.png"
 categories: 
   - leadership
   - business

@@ -4,8 +4,8 @@ title: "7 Рівнів довіри: побудова міцних віднос�
 description: "Дослідіть сім різних рівнів довіри та дізнайтеся, як будувати міцніші та змістовніші відносини як у професійному, так і в особистому контексті."
 date: 2025-02-10
 author: Jeff Smith
-image: "/assets/images/posts/trust/level1.png"
-share_image: "/assets/images/posts/trust/level1.png"
+image: "/assets/images/posts/trust/trust-preview.png"
+share_image: "/assets/images/posts/trust/trust-preview.png"
 categories: 
   - leadership
   - business
