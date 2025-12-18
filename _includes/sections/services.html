@@ -1,14 +1,16 @@
-{# ============================================================================
-   Services Section Component
-   ============================================================================
-   Displays the three main service offerings:
-   1. Digital Transformation (with blockchain focus)
-   2. Innovation Acceleration
-   3. AI Solutions (with custom landing page link)
-   
-   Services are defined in _data/translations/{lang}.yml
-   Each service can have a custom link (e.g., AI Solutions -> /en/ai-solutions/)
-   ============================================================================ #}
+{% comment %}
+  ============================================================================
+  Services Section Component
+  ============================================================================
+  Displays the three main service offerings:
+  1. Digital Transformation (with blockchain focus)
+  2. Innovation Acceleration
+  3. AI Solutions (with custom landing page link)
+  
+  Services are defined in _data/translations/{lang}.yml
+  Each service can have a custom link (e.g., AI Solutions -> /en/ai-solutions/)
+  ============================================================================
+{% endcomment %}
 
 {% assign services = site.data.translations[page.lang].services %}
 
@@ -32,7 +34,7 @@
           <li>{{ feature }}</li>
           {% endfor %}
         </ul>
-        {# Service button: Uses custom link if defined, otherwise links to contact section #}
+        {% comment %} Service button: Uses custom link if defined, otherwise links to contact section {% endcomment %}
         <a href="{% if service.link %}{{ service.link }}{% else %}#contact{% endif %}" class="service-card__button">{{ services.button }}</a>
       </div>
       {% endfor %}

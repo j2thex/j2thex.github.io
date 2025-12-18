@@ -75,7 +75,7 @@
   &__image {
     position: relative;
     width: 100%;
-    padding-top: 38.89%; // Same as portfolio thumbnails
+    padding-top: 60%; // Taller aspect ratio to show more of the image (3:5 ratio)
     overflow: hidden;
     
     img {
@@ -85,6 +85,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top; // Crop from bottom only, align to top
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }

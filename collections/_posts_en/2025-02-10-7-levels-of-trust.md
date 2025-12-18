@@ -4,8 +4,8 @@ title: "The 7 Levels of Trust: Building Strong Relationships in Business and Lif
 description: "Explore the seven distinct levels of trust and learn how to build stronger, more meaningful relationships in both professional and personal contexts."
 date: 2025-02-10
 author: Jeff Smith
-image: "/assets/images/posts/trust/trust-levels.jpg"
-share_image: "/assets/images/posts/trust/trust-levels-share.jpg"
+image: "/assets/images/posts/trust/level1.png"
+share_image: "/assets/images/posts/trust/level1.png"
 categories:
   - leadership
   - business
@@ -16,7 +16,7 @@ lang: en
 
 ## Level 1: Micromanagement
 
-![image.png](/assets/images/posts/trust/overwhelmed.png){:width="250px"}
+![Level 1: Micromanagement](/assets/images/posts/trust/level1.png){:width="100%"}
 
 Micromanagement is the lowest level of autonomy, where excessive control over employees stifles creativity and innovation. Managers closely monitor tasks, often with good intentions, but this approach leads to a toxic work environment.
 
@@ -26,6 +26,8 @@ Micromanagement is the lowest level of autonomy, where excessive control over em
 - **High Turnover and Burnout:** Lack of trust pushes employees to seek opportunities elsewhere, increasing hiring costs and reducing organizational stability.
 
 ## Level 2: Limited Autonomy
+
+![Level 2: Limited Autonomy](/assets/images/posts/trust/level2.png){:width="100%"}
 
 This level marks the beginning of delegation while maintaining oversight. Leaders set clear expectations but allow some flexibility in execution.
 
@@ -38,6 +40,8 @@ This level marks the beginning of delegation while maintaining oversight. Leader
 
 ## Level 3: Controlled Autonomy
 
+![Level 3: Controlled Autonomy](/assets/images/posts/trust/level3.png){:width="100%"}
+
 At this stage, employees gain more independence, but within defined boundaries. Leaders shift from direct oversight to goal-based management.
 
 ### Implementation:
@@ -48,6 +52,8 @@ At this stage, employees gain more independence, but within defined boundaries. 
 
 ## Level 4: Managed Autonomy
 
+![Level 4: Managed Autonomy](/assets/images/posts/trust/level4.png){:width="100%"}
+
 Employees operate independently but with clear objectives. Managers act as mentors rather than overseers.
 
 ### Best Practices:
@@ -57,6 +63,8 @@ Employees operate independently but with clear objectives. Managers act as mento
 - **Promote Team Collaboration:** Employees work together without over-relying on managerial input.
 
 ## Level 5: Collaborative Autonomy
+
+![Level 5: Collaborative Autonomy](/assets/images/posts/trust/level5.png){:width="100%"}
 
 This level emphasizes teamwork and shared decision-making, where employees collaborate to solve problems and drive innovation.
 
@@ -69,7 +77,9 @@ This level emphasizes teamwork and shared decision-making, where employees colla
 
 ## Level 6: Empowered Autonomy
 
-Employees have full ownership of their work, making independent decisions within the company’s strategic framework.
+![Level 6: Empowered Autonomy](/assets/images/posts/trust/level6.png){:width="100%"}
+
+Employees have full ownership of their work, making independent decisions within the company's strategic framework.
 
 ### Strategies for Success:
 - **Set Clear Objectives:** Define what needs to be achieved but leave the execution to employees.
@@ -78,6 +88,8 @@ Employees have full ownership of their work, making independent decisions within
 - **Ongoing Support:** Managers act as coaches, providing guidance only when needed.
 
 ## Level 7: Full Autonomy
+
+![Level 7: Full Autonomy](/assets/images/posts/trust/level7.png){:width="100%"}
 
 At this final stage, employees are entirely self-directed, aligning their work with company goals without managerial oversight. Companies like Valve and GitLab operate at this level, where employees define their own projects based on organizational needs.
 

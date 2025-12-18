@@ -36,28 +36,28 @@
       {% if lang != page.lang %}
         {% assign lang_name = lang | upcase %}
         
-        {# Intelligent URL routing based on page type #}
+        {% comment %} Intelligent URL routing based on page type {% endcomment %}
         {% if page.layout == "post" and page.date %}
-          {# Blog post: Maintain date and slug structure #}
-          {# Example: /en/blog/2025/02/10/post-title/ -> /ru/blog/2025/02/10/post-title/ #}
+          {% comment %} Blog post: Maintain date and slug structure {% endcomment %}
+          {% comment %} Example: /en/blog/2025/02/10/post-title/ -> /ru/blog/2025/02/10/post-title/ {% endcomment %}
           {% capture post_date %}{{ page.date | date: "%Y/%m/%d" }}{% endcapture %}
           {% assign target_url = "/" | append: lang | append: "/blog/" | append: post_date | append: "/" | append: page.slug | append: "/" %}
         {% elsif page.url contains "/blog/" %}
-          {# Blog index page: Route to language-specific blog index #}
+          {% comment %} Blog index page: Route to language-specific blog index {% endcomment %}
           {% assign target_url = "/" | append: lang | append: "/blog/" %}
         {% elsif page.url contains "/projects/" %}
-          {# Project pages: Maintain project slug #}
+          {% comment %} Project pages: Maintain project slug {% endcomment %}
           {% if page.slug %}
             {% assign target_url = "/" | append: lang | append: "/projects/" | append: page.slug | append: "/" %}
           {% else %}
-            {# Project index page #}
+            {% comment %} Project index page {% endcomment %}
             {% assign target_url = "/" | append: lang | append: "/projects/" %}
           {% endif %}
         {% elsif page.url contains "/ai-solutions/" %}
-          {# AI Solutions landing page: Route to language-specific version #}
+          {% comment %} AI Solutions landing page: Route to language-specific version {% endcomment %}
           {% assign target_url = "/" | append: lang | append: "/ai-solutions/" %}
         {% else %}
-          {# Default: Homepage or other pages #}
+          {% comment %} Default: Homepage or other pages {% endcomment %}
           {% assign target_url = "/" | append: lang | append: "/" %}
         {% endif %}
         <a href="{{ target_url }}">
