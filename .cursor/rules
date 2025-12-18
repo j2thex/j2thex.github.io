@@ -1,0 +1,53 @@
+# Cursor rules for n0thn website
+
+## Header capitalization rules
+
+**All markdown headers (H2, H3, H4, etc.) should have only the first letter capitalized.**
+
+### Correct examples:
+- `## Level 1: Micromanagement`
+- `### Negative impacts:`
+- `### Key elements:`
+- `## Уровень 1: Микроменеджмент`
+- `### Негативные последствия:`
+
+### Incorrect examples:
+- `## Level 1: Micromanagement` ❌ (if "Micromanagement" is not a proper noun)
+- `### Negative Impacts:` ❌ (should be "Negative impacts:")
+- `### Key Elements:` ❌ (should be "Key elements:")
+- `### Негативные Последствия:` ❌ (should be "Негативные последствия:")
+
+### Rules:
+1. Only the first word of a header should be capitalized (unless it's a proper noun)
+2. Subsequent words should be lowercase (unless they are proper nouns, acronyms, or brand names)
+3. This applies to all languages: English, Russian, and Ukrainian
+4. Exception: Proper nouns, brand names, and acronyms maintain their standard capitalization
+
+### Examples by Language:
+
+**English:**
+- ✅ `## Level 1: Micromanagement`
+- ✅ `### Key elements:`
+- ✅ `### Best practices:`
+- ❌ `### Key Elements:`
+- ❌ `### Best Practices:`
+
+**Russian:**
+- ✅ `## Уровень 1: Микроменеджмент`
+- ✅ `### Ключевые элементы:`
+- ✅ `### Негативные последствия:`
+- ❌ `### Ключевые Элементы:`
+- ❌ `### Негативные Последствия:`
+
+**Ukrainian:**
+- ✅ `## Рівень 1: Мікроменеджмент`
+- ✅ `### Ключові елементи:`
+- ✅ `### Негативні наслідки:`
+- ❌ `### Ключові Елементи:`
+- ❌ `### Негативні Наслідки:`
+
+## When Editing Content
+
+When creating or editing markdown files (blog posts, project descriptions, etc.), always ensure headers follow this capitalization rule. This maintains consistency across all content on the website.
+Do not use em dashes (—) in headers. Use en dashes (–) instead.
+
