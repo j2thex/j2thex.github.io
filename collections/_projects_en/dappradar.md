@@ -1,5 +1,5 @@
 ---
-title: "DappRadar: Product Analytics & Blockchain Metrics Platform"
+title: "DappRadar: Web3 Discovery Platform with Blockchain Metrics"
 description: "Led product analytics, experimentation, and UX optimization for the world's leading dApp analytics platform"
 full_description: |
   Our team worked with DappRadar to lead strategic initiatives focused on product analytics, user retention, blockchain metrics expansion, and A/B testing. Key achievements include expanding metrics coverage to 70+ blockchains, improving performance scores from under 20 to over 50, and building a developer monetization system with Stripe integration. We also co-shaped the AI agent ecosystem strategy, pivoting from RWA to gaming-focused initiatives based on data insights, and introduced two new trend pages: RWA and Gambling.
