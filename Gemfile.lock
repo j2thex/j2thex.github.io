@@ -116,6 +116,7 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   kramdown-parser-gfm
+  listen (~> 3.0)
   logger
   ostruct
   tzinfo-data

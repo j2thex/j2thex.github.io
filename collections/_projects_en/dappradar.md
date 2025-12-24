@@ -8,7 +8,7 @@ order: 0
 lang: en
 thumbnail: "/assets/images/projects/dappradar.png"
 images:
-  - "/assets/images/projects/dappradar.png"
+  - "/assets/images/projects/dr_website.png"
 
 categories:
   - web

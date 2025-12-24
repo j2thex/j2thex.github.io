@@ -4,6 +4,7 @@ gem "jekyll", "~> 3.10.0"
 gem "webrick"
 gem "bigdecimal"
 gem "kramdown-parser-gfm"
+gem "listen", "~> 3.0"
 
 group :jekyll_plugins do
   gem "jekyll-sass-converter", "~> 1.5.2"
